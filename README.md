@@ -16,7 +16,3 @@ EdgeWake 是一个专注于语音唤醒的开源项目，帮助开发者完成�
 除了语音唤醒，EdgeWake 还将逐步加入 VAD 语音活动检测、AEC 回声消除、语音降噪和自动增益等前端处理能力，提高唤醒模型在噪声、远场和回声环境中的可靠性。
 
 EdgeWake 专注于“小型、快速、可部署”的端侧语音唤醒能力，不以通用语音识别为目标。
-
-**English tagline**
-
-> EdgeWake — Train, optimize and deploy wake-word models on edge devices.
