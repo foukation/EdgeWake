@@ -29,7 +29,7 @@ def test_build_command_contains_approved_text_and_parameters(
     assert command[:4] == [
         "python-test",
         "-m",
-        "piper_sample_generator",
+        "edgewake.tts.piper_runner",
         "灵犀灵犀",
     ]
     assert command[command.index("--max-samples") + 1] == "30"

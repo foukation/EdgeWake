@@ -26,15 +26,28 @@ EdgeWake 专注于“小型、快速、可部署”的端侧语音唤醒能力�
 python --version
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+python scripts\setup_tts.py
 ```
 
 要求Python 3.10或更高版本。
 
+请使用项目提供的安装脚本，不要直接执行 `pip install -e ".[dev]"`。
+上游 `piper-sample-generator 3.2.0` 会在Windows上尝试编译当前流程不使用的
+`webrtcvad`；安装脚本会跳过这项无关依赖，因此不需要Microsoft C++ Build Tools。
+
 Python依赖安装在仓库内的 `.venv`，Piper模型和生成的WAV保存在
 `F:\WorkHome\China-Mobile\workSpace\EdgeWake`。运行路径和生成参数定义在
 [`configs/tts.yaml`](configs/tts.yaml)。
+
+运行数据目录包括：
+
+```text
+F:\WorkHome\China-Mobile\workSpace\EdgeWake\
+├── models\piper\       # 三个中文ONNX音色
+├── g2pW\               # 中文拼音模型
+├── cache\huggingface\  # 中文分词资源缓存
+└── datasets\tts\       # 生成的WAV
+```
 
 ### 检查执行计划
 

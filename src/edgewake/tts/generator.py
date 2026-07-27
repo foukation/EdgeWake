@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable, Sequence
 import logging
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -30,7 +31,7 @@ def build_generation_command(
     output_dir: Path,
     python_executable: str | Path | None = None,
 ) -> list[str]:
-    """Build the official ``piper_sample_generator`` CLI command."""
+    """Build the command for the official generator through our ONNX adapter."""
 
     if sample_count <= 0:
         raise GenerationError("每个音色的样本数量必须大于0")
@@ -39,7 +40,7 @@ def build_generation_command(
     command = [
         executable,
         "-m",
-        "piper_sample_generator",
+        "edgewake.tts.piper_runner",
         config.wake_word,
         "--model",
         str(config.voice_model_path(voice)),
@@ -135,8 +136,21 @@ def generate_samples(
                 existing_count,
                 missing_count,
             )
+            child_environment = os.environ.copy()
+            # Keep Chinese phonemizer and Hugging Face runtime assets beside the
+            # configured models instead of allowing them into the Git checkout
+            # or the user's global cache.
+            child_environment["HF_HOME"] = str(
+                config.workspace_root / "cache" / "huggingface"
+            )
+            child_environment["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
             try:
-                runner(command, check=True)
+                runner(
+                    command,
+                    check=True,
+                    cwd=config.workspace_root,
+                    env=child_environment,
+                )
             except (OSError, subprocess.CalledProcessError) as error:
                 raise GenerationError(
                     f"音色 {voice.name} 的TTS生成失败"

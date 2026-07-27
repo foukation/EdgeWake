@@ -43,7 +43,8 @@ F:\WorkHome\China-Mobile\workSpace\EdgeWake
 - YAML 配置：定义唤醒词、工作目录、三个中文音色、下载地址和生成参数。
 - 配置加载器：解析配置、校验字段并解析绝对路径。
 - 模型下载器：下载 `.onnx` 和 `.onnx.json`，使用临时文件和原子替换，避免留下不完整模型。
-- 样本生成器：调用 `python -m piper_sample_generator`，按音色分别输出 WAV。
+- 兼容入口：绕过上游wheel中仅影响ONNX启动的缺失可选导入，再执行官方生成器CLI。
+- 样本生成器：通过兼容入口调用 `piper_sample_generator`，按音色分别输出 WAV。
 - CLI 脚本：提供 `download`、`generate` 和 `all` 命令，并允许覆盖每个音色的样本数量。
 
 ## 默认参数

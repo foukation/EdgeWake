@@ -9,8 +9,10 @@ description = "Edge wake-word data generation and training toolkit"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "piper-sample-generator==3.2.0",
+    "numpy>=2,<3",
+    "piper-tts[zh]==1.4.2",
     "PyYAML>=6.0,<7",
+    "torch>=2,<3",
 ]
 
 [project.optional-dependencies]
@@ -30,4 +32,3 @@ where = ["src"]
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]
-
