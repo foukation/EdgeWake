@@ -46,7 +46,9 @@ F:\WorkHome\China-Mobile\workSpace\EdgeWake\
 ├── models\piper\       # 三个中文ONNX音色
 ├── g2pW\               # 中文拼音模型
 ├── cache\huggingface\  # 中文分词资源缓存
-└── datasets\tts\       # 生成的WAV
+└── datasets\tts\lingxi_lingxi\
+    ├── raw\            # Piper原始WAV，始终保留
+    └── cleaned\        # 尾部淡出并补静音的训练候选WAV
 ```
 
 ### 检查执行计划
@@ -72,14 +74,34 @@ python scripts/generate_tts.py all --samples-per-voice 30
 python scripts/generate_tts.py all
 ```
 
+断点续生成会根据已有样本数量继续轮换语速和噪声参数，不会每次从第一组参数开始。
+生成流程保留Piper原始WAV，并自动为每条原始音频创建对应的`cleaned`副本。
+
+`cleaned`音频最后50毫秒使用余弦淡出，并追加100毫秒数字静音。此步骤不改变
+Piper的22,050 Hz采样率；用于microWakeWord训练前，还需要在后续数据增强阶段
+重采样为16 kHz。
+
+如果已有`raw`缺少对应的`cleaned`文件，可单独补做清理，不会重新执行TTS：
+
+```powershell
+python scripts/generate_tts.py clean
+```
+
+如需重新生成全部`cleaned`文件，同时继续保留`raw`：
+
+```powershell
+python scripts/generate_tts.py clean --overwrite
+```
+
 如需删除各音色目录中的已有WAV并重新生成：
 
 ```powershell
 python scripts/generate_tts.py generate --overwrite
 ```
 
-模型下载失败不会替换已有的有效模型。生成过程先写入临时目录，成功后才把WAV移动到
-正式数据目录。
+模型下载失败不会替换已有的有效模型。生成过程先写入临时目录，成功后才把原始WAV
+移动到`raw`，随后原子写入`cleaned`。正式训练应使用`cleaned`，`raw`仅用于
+溯源和试听对比。
 
 更多第三方项目、版本和许可证信息见
 [`docs/third-party.md`](docs/third-party.md)。

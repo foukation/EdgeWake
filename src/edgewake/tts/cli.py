@@ -9,7 +9,11 @@ import sys
 
 from edgewake.tts.config import ConfigError, load_config
 from edgewake.tts.downloader import ModelDownloadError, download_models
-from edgewake.tts.generator import GenerationError, generate_samples
+from edgewake.tts.generator import (
+    GenerationError,
+    clean_samples,
+    generate_samples,
+)
 
 
 LOGGER = logging.getLogger(__name__)
@@ -52,6 +56,21 @@ def build_parser() -> argparse.ArgumentParser:
     generate = commands.add_parser("generate", help="仅生成TTS正样本")
     _add_generation_options(generate)
 
+    clean = commands.add_parser(
+        "clean",
+        help="从raw生成淡出并补静音的cleaned样本",
+    )
+    clean.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="重新生成已有的cleaned WAV，不修改raw",
+    )
+    clean.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="只显示计划，不写入文件",
+    )
+
     all_command = commands.add_parser("all", help="先下载模型，再生成TTS")
     all_command.add_argument(
         "--force-download",
@@ -87,6 +106,12 @@ def main(argv: list[str] | None = None) -> int:
             generate_samples(
                 config,
                 samples_per_voice=args.samples_per_voice,
+                overwrite=args.overwrite,
+                dry_run=args.dry_run,
+            )
+        elif args.command == "clean":
+            clean_samples(
+                config,
                 overwrite=args.overwrite,
                 dry_run=args.dry_run,
             )
@@ -150,4 +175,3 @@ def _positive_int(value: str) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

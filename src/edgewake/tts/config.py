@@ -71,6 +71,18 @@ class TtsConfig:
             / "raw"
         )
 
+    @property
+    def cleaned_dataset_root(self) -> Path:
+        """Return the root directory for cleaned positive TTS samples."""
+
+        return (
+            self.workspace_root
+            / "datasets"
+            / "tts"
+            / self.dataset_slug
+            / "cleaned"
+        )
+
     def voice_model_dir(self, voice: Voice) -> Path:
         """Return the model directory assigned to ``voice``."""
 
@@ -87,9 +99,14 @@ class TtsConfig:
         return self.voice_model_dir(voice) / voice.metadata.filename
 
     def voice_output_dir(self, voice: Voice) -> Path:
-        """Return the WAV output directory assigned to ``voice``."""
+        """Return the raw WAV output directory assigned to ``voice``."""
 
         return self.dataset_root / voice.name
+
+    def voice_cleaned_dir(self, voice: Voice) -> Path:
+        """Return the cleaned WAV output directory assigned to ``voice``."""
+
+        return self.cleaned_dataset_root / voice.name
 
 
 def load_config(path: str | Path) -> TtsConfig:
