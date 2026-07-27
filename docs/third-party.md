@@ -10,7 +10,7 @@ EdgeWake 的 TTS 正样本生成流程使用以下上游项目。
 
 `piper-sample-generator 3.2.0` 固定声明 `piper-tts==1.3.0`，但当前中文音色使用
 `phoneme_type: pinyin`，需要Piper新增的中文拼音支持。因此EdgeWake明确安装
-`piper-tts[zh]==1.4.2`，并只使用生成器的标准ONNX路径。
+`piper-tts[zh]==1.6.0`，并只使用生成器的标准ONNX路径。
 
 版本3.2.0的上游wheel还存在两个与本项目相关的兼容问题：
 
