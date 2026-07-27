@@ -1,0 +1,28 @@
+# Python virtual environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Packaging outputs
+build/
+dist/
+*.egg-info/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local logs and temporary download files
+*.log
+*.part
+
+# Keep large runtime artifacts outside Git even if the data root is changed later.
+models/
+datasets/
+generated/
+
