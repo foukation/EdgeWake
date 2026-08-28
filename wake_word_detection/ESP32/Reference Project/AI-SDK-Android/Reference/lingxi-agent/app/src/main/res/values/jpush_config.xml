@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 极光推送配置 -->
+    <string name="jpush_app_key">6c6b9df7a3c72fcca64c5d9e</string>
+    <string name="jpush_channel">developer-default</string>
+</resources>

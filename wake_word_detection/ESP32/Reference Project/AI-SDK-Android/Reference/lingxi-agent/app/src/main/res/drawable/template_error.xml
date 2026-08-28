@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="90dp"
+    android:viewportWidth="120"
+    android:viewportHeight="90"
+    android:tint="?attr/colorError">
+    
+    <!-- 背景 -->
+    <path
+        android:fillColor="#FFEBEE"
+        android:pathData="M0,0h120v90h-120z"/>
+    
+    <!-- 错误图标 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M60,25m-15,0a15,15 0,1 1,30 0a15,15 0,1 1,-30 0"/>
+    
+    <!-- 感叹号 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58,18h4v12h-4z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58,32h4v4h-4z"/>
+    
+    <!-- 错误文本 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M35,55h50v3h-50z"/>
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M40,62h40v2h-40z"/>
+    
+</vector>

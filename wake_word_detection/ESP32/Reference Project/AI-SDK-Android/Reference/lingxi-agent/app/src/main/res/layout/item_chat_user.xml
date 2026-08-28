@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="right"
+    android:layout_marginBottom="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/tv_user_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_60"
+        android:background="@drawable/bg_user_message"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/font_16"
+        android:lineSpacingMultiplier="1.5"
+        android:maxWidth="@dimen/dp_303" />
+
+</LinearLayout>

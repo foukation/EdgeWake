@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_12">
+
+    <!-- 第一行颜色 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 彩虹色（全部） -->
+        <View
+            android:id="@+id/color_all"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_rainbow"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- 红色 -->
+        <View
+            android:id="@+id/color_red"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#FF4444"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- 橙色 -->
+        <View
+            android:id="@+id/color_orange"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#FF8800"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- 绿色 -->
+        <View
+            android:id="@+id/color_green"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#44AA44"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- 橙红色 -->
+<!--        <View-->
+<!--            android:id="@+id/color_orange_red"-->
+<!--            android:layout_width="@dimen/dp_20"-->
+<!--            android:layout_height="@dimen/dp_20"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:background="@drawable/bg_color_circle"-->
+<!--            android:backgroundTint="#FF6600"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true" />-->
+
+        <!-- 蓝色 -->
+        <View
+            android:id="@+id/color_blue"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#4488FF"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- 紫色 -->
+        <View
+            android:id="@+id/color_purple"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#8844FF"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        <!-- 青色 -->
+<!--        <View-->
+<!--            android:id="@+id/color_cyan"-->
+<!--            android:layout_width="@dimen/dp_20"-->
+<!--            android:layout_height="@dimen/dp_20"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:background="@drawable/bg_color_circle"-->
+<!--            android:backgroundTint="#44AAAA"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true" />-->
+
+        <!-- 粉色 -->
+        <View
+            android:id="@+id/color_pink"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/bg_color_circle"
+            android:backgroundTint="#FF44AA"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

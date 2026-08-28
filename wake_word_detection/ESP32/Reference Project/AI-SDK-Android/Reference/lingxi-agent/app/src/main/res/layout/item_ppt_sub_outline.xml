@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sub_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_6"
+    android:layout_marginStart="@dimen/dp_24"
+    android:padding="@dimen/dp_10"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/bg_outline_item_selector">
+
+    <!-- Vue版本的圆点图标 -->
+    <View
+        android:id="@+id/dot_icon"
+        android:layout_width="@dimen/dp_5"
+        android:layout_height="@dimen/dp_5"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@drawable/dot_icon" />
+
+    <!-- 子标题输入框 -->
+    <EditText
+        android:id="@+id/sub_title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/dot_icon"
+        android:layout_toStartOf="@id/sub_button_container"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:text="@string/title_subtitle"
+        android:textSize="@dimen/font_14"
+        android:textColor="@android:color/black"
+        android:hint="@string/hint_subtitle"
+        android:padding="@dimen/dp_2"
+        android:minHeight="@dimen/dp_32"
+        android:enabled="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false" />
+
+    <!-- 按钮容器 - 固定在右侧 -->
+    <LinearLayout
+        android:id="@+id/sub_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/dp_4">
+
+        <!-- 添加按钮 -->
+        <ImageButton
+            android:id="@+id/add_sub_button"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
+            android:tint="#666666"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:padding="@dimen/dp_4" />
+
+        <!-- 删除按钮 -->
+        <ImageButton
+            android:id="@+id/delete_sub_button"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:tint="#999999"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:padding="@dimen/dp_4" />
+
+    </LinearLayout>
+
+</RelativeLayout>

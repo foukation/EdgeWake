@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- Top Navigation Bar with Integrated Tab Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Row: Back Button, Title, Actions -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_13"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <!-- Meeting Title -->
+            <TextView
+                android:id="@+id/tv_meeting_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_22"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_14"
+                android:text="@string/label_meeting_date_sample_2"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:gravity="center" />
+
+            <!-- Top Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_13"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Export Button -->
+                <ImageView
+                    android:id="@+id/iv_export"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/icon_export"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Tab Navigation - Integrated in Top Navigation Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_16">
+
+            <!-- Tab Container with exact Figma positioning -->
+            <LinearLayout
+                android:id="@+id/tab_container"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_22"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/tab_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="@string/tab_meeting_content"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_16"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/tab_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="@string/tab_meeting_summary"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"  />
+
+                <TextView
+                    android:id="@+id/tab_topics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="@string/tab_meeting_topics"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"  />
+
+                <TextView
+                    android:id="@+id/tab_qa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_22"
+                    android:text="@string/title_smart_qa"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                   android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"  />
+
+            </LinearLayout>
+
+            <!-- Tab Indicator - positioned exactly as in Figma CSS -->
+            <View
+                android:id="@+id/tab_indicator"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_2"
+                android:layout_below="@id/tab_container"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginStart="0dp"
+                android:background="@color/tab_indicator" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Tab Navigation is now integrated in Top Navigation Bar above -->
+
+    <!-- Main Content Area - adjusted for integrated tab navigation -->
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:fillViewport="true">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Content container for child fragments -->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+<!--    </ScrollView>-->
+
+</LinearLayout>

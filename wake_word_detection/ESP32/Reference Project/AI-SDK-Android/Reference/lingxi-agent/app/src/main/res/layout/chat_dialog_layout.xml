@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_160"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_dialog_bg"
+    android:outlineProvider="background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_copy"
+        style="@style/TextActionItem"
+        android:drawableStart="@drawable/ic_copy"
+        android:drawableTint="@color/figma_text_primary"
+        android:text="@string/btn_copy" />
+
+
+    <TextView
+        android:id="@+id/tv_read"
+        style="@style/TextActionItem"
+        android:drawableStart="@drawable/ic_voice"
+        android:drawableTint="@color/figma_text_primary"
+        android:text="@string/btn_read_aloud" />
+
+    <TextView
+        android:id="@+id/tv_share"
+        style="@style/TextActionItem"
+        android:drawableStart="@drawable/ic_share"
+        android:drawableTint="@color/figma_text_primary"
+        android:text="@string/btn_share" />
+
+    <TextView
+        android:id="@+id/tv_collect"
+        style="@style/TextActionItem"
+        android:drawableStart="@drawable/ic_bookmark_outline"
+        android:drawableTint="@color/figma_text_primary"
+        android:text="@string/btn_favorite"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        style="@style/TextActionItem"
+        android:drawableStart="@drawable/ic_delete"
+        android:drawableTint="@color/figma_text_primary"
+        android:text="@string/btn_delete_record"
+        android:layout_marginBottom="@dimen/dp_16" />
+
+
+</LinearLayout>

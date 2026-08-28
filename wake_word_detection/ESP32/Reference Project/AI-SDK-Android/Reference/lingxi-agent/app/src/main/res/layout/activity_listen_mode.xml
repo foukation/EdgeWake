@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 内容区：纵向排布 -->
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 顶部标题栏 -->
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_si_listen_mode"
+                android:textSize="@dimen/font_16"
+                android:textColor="@color/text_primary"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-medium"
+                android:textFontWeight="600"
+                />
+
+            <!-- 右侧为前进箭头，保留 id 以保持逻辑不变 -->
+            <ImageView
+                android:id="@+id/iv_settings"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_export"
+                android:tint="@color/text_primary"
+                android:background="?attr/selectableItemBackgroundBorderless"
+               />
+        </RelativeLayout>
+
+        <!-- 语言选择卡片（圆角+轻阴影） -->
+        <FrameLayout
+            android:id="@+id/language_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:background="@drawable/bg_language_bar_capsule">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20">
+
+                <LinearLayout
+                    android:id="@+id/ll_source_language"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_source_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_chinese"
+                        android:textColor="@color/figma_text_primary"
+                        android:textSize="@dimen/font_14" />
+                    <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:background="@drawable/ic_translate_down_arrow"
+                        />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginHorizontal="@dimen/dp_24"
+                    android:src="@drawable/ic_translate_listen_to"
+                    android:tint="@color/text_primary" />
+                <LinearLayout
+                    android:id="@+id/ll_target_language"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_target_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_english_2"
+                        android:textSize="@dimen/font_14"
+                        android:textColor="@color/figma_text_primary"  />
+                    <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:background="@drawable/ic_translate_down_arrow"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 结果展示卡片：背景 F7F7F7，底部触达 24dp（麦克风悬浮其上） -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/bg_f7_r16">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_results"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_20"
+                android:clipToPadding="false" />
+        </FrameLayout>
+
+        <!-- 底部按钮容器 -->
+        <LinearLayout
+            android:id="@+id/bottom_buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 播放/暂停按钮 -->
+            <FrameLayout
+                android:id="@+id/btn_pause_container"
+                android:layout_width="@dimen/dp_74"
+                android:layout_height="@dimen/dp_74"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_pause_mask"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_74"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_translate_mic_mask"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/btn_pause"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_74"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_listen_pause"/>
+            </FrameLayout>
+
+            <!-- 麦克风按钮（结束按钮） -->
+            <FrameLayout
+                android:id="@+id/btn_microphone"
+                android:layout_width="@dimen/dp_74"
+                android:layout_height="@dimen/dp_74"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!--            <ImageView-->
+                <!--                android:id="@+id/iv_mic_mask"-->
+                <!--                android:layout_width="@dimen/dp_64"-->
+                <!--                android:layout_height="@dimen/dp_64"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:src="@drawable/ic_translate_mic_mask"-->
+                <!--                android:visibility="gone" />-->
+
+                <ImageView
+                    android:id="@+id/iv_mic"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_74"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_listen_mic" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- 提示文字：位于麦克风上方 -->
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/msg_click_mic_to_translate"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/figma_text_primary" />
+
+</RelativeLayout>

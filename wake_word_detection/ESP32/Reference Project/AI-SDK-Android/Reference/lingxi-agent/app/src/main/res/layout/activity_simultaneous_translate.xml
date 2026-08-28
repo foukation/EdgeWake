@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:paddingHorizontal="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+             />
+
+    </RelativeLayout>
+
+    <!-- 主内容区域 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/dp_59"
+            android:paddingBottom="@dimen/dp_30"
+            android:paddingHorizontal="@dimen/dp_32">
+
+            <!-- 品牌区域 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dp_40">
+
+                <!-- Logo -->
+                <View
+                    android:layout_width="@dimen/dp_64"
+                    android:layout_height="@dimen/dp_64"
+                    android:background="@drawable/ic_translate_logo"
+                    android:layout_marginBottom="@dimen/dp_8" />
+
+                <!-- 标题 -->
+                <!--            <com.fxzs.lingxiagent.view.common.GradientTextView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:text="@string/title_simultaneous_interpretation"-->
+                <!--                android:textSize="40sp"-->
+                <!--                android:textStyle="bold"-->
+                <!--                android:layout_marginBottom="18dp"-->
+                <!--                app:startColor="#7922E7"-->
+                <!--                app:endColor="#43CCFD"-->
+                <!--                app:gradientOrientation="horizontal" />-->
+
+                <ImageView
+                    android:layout_width="@dimen/dp_165"
+                    android:layout_height="@dimen/dp_48"
+                    android:src="@drawable/icon_translate"
+                    />
+
+                <!-- 描述 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_accurate_translation"
+                    android:textSize="@dimen/font_16"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="@dimen/dp_18"
+                    />
+
+            </LinearLayout>
+
+            <!-- 模式选择卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- 聆听模式 -->
+                <LinearLayout
+                    android:id="@+id/ll_listen_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_selectable"
+                    android:padding="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 图标 -->
+                    <View
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_56"
+                        android:background="@mipmap/ic_listen_logo"
+                        android:layout_marginBottom="@dimen/dp_16" />
+
+                    <!-- 文字内容 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_listen_mode"
+                            android:textSize="@dimen/font_20"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/dp_4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/content_listen_mode_desc"
+                            android:textSize="@dimen/font_14"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 对话模式 -->
+                <LinearLayout
+                    android:id="@+id/ll_dialog_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_selectable"
+                    android:padding="@dimen/dp_20"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- 图标 -->
+                    <View
+                        android:layout_width="@dimen/dp_56"
+                        android:layout_height="@dimen/dp_56"
+                        android:background="@mipmap/ic_dialog_logo"
+                        android:layout_marginEnd="@dimen/dp_16" />
+
+                    <!-- 文字内容 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_conversation_mode"
+                            android:textSize="@dimen/font_20"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/dp_4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/content_conversation_mode_desc"
+                            android:textSize="@dimen/font_15"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_online_temp_item_outer"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_25"
+    android:paddingHorizontal="@dimen/dp_14"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_chat_action_btn">
+    <ImageView
+        android:id="@+id/chat_action_icon"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:src="@drawable/float_close_icon"
+        />
+    <TextView
+        android:id="@+id/chat_action_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_10" />
+</LinearLayout>

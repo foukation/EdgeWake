@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/dp_12">
+
+    <!-- 实时原文（按需求不展示，仍保留控件避免改动逻辑） -->
+    <TextView
+        android:id="@+id/tv_mid_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text=""
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/text_hint"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:layout_marginBottom="0dp" />
+
+    <!-- 三个点的加载动画容器 -->
+    <LinearLayout
+        android:id="@+id/layout_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_2">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+    </LinearLayout>
+
+</LinearLayout>

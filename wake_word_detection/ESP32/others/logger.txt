@@ -1,0 +1,643 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400490d5
+--- 0x400490d5: usb_uart_device_rx_one_char in ROM
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x205c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0x1064
+load:0x403cb700,len:0x3514
+entry 0x403c89a0
+I (26) boot: ESP-IDF v5.4.3 2nd stage bootloader
+I (27) boot: compile time Mar 13 2026 09:30:44
+I (27) boot: Multicore bootloader
+D (27) bootloader_flash: non-XMC chip detected by SFDP Read (46), skip.
+D (27) bootloader_flash: mmu set block paddr=0x00000000 (was 0xffffffff)
+I (28) boot: chip revision: v0.2
+I (28) boot: efuse block revision: v1.3
+D (28) qio_mode: Probing for QIO mode enable...
+D (28) qio_mode: Raw SPI flash chip id 0x464018
+D (28) qio_mode: Manufacturer ID 0x46 chip ID 0x4018
+I (29) qio_mode: Enabling default flash chip QIO
+D (29) qio_mode: Initial flash chip status 0x2
+D (29) qio_mode: QIO mode already enabled in flash
+D (29) qio_mode: Enabling QIO mode...
+D (29) boot.esp32s3: magic e9
+D (30) boot.esp32s3: segments 04
+D (30) boot.esp32s3: spi_mode 02
+D (30) boot.esp32s3: spi_speed 0f
+D (30) boot.esp32s3: spi_size 04
+I (30) boot.esp32s3: Boot SPI Speed : 80MHz
+I (30) boot.esp32s3: SPI Mode       : QIO
+I (31) boot.esp32s3: SPI Flash Size : 16MB
+D (31) boot: Enabling RTCWDT(9000 ms)
+I (31) boot: Enabling RNG early entropy source...
+D (31) bootloader_flash: rodata starts from paddr=0x00008000, size=0xc00, will be mapped to vaddr=0x3c000000
+D (32) boot: mapped partition table 0x8000 at 0x3c008000
+D (32) flash_parts: partition table verified, 8 entries
+I (32) boot: Partition Table:
+I (32) boot: ## Label            Usage          Type ST Offset   Length
+D (33) boot: load partition table entry 0x3c008000
+D (33) boot: type=1 subtype=2
+I (33) boot:  0 nvs              WiFi data        01 02 0000a000 00006000
+D (33) boot: load partition table entry 0x3c008020
+D (34) boot: type=1 subtype=0
+I (34) boot:  1 otadata          OTA data         01 00 00010000 00002000
+D (34) boot: load partition table entry 0x3c008040
+D (34) boot: type=1 subtype=1
+I (35) boot:  2 phy_init         RF data          01 01 00012000 00001000
+D (35) boot: load partition table entry 0x3c008060
+D (35) boot: type=0 subtype=10
+I (35) boot:  3 ota_0            OTA app          00 10 00020000 00300000
+D (36) boot: load partition table entry 0x3c008080
+D (36) boot: type=0 subtype=11
+I (36) boot:  4 ota_1            OTA app          00 11 00320000 00300000
+D (36) boot: load partition table entry 0x3c0080a0
+D (37) boot: type=1 subtype=82
+I (37) boot:  5 spiffs           Unknown data     01 82 00620000 009d0000
+D (37) boot: load partition table entry 0x3c0080c0
+D (37) boot: type=1 subtype=2
+I (38) boot:  6 nvs_user         WiFi data        01 02 00ff0000 00010000
+I (38) boot: End of partition table
+D (38) boot: OTA data offset 0x10000
+D (38) bootloader_flash: rodata starts from paddr=0x00010000, size=0x2000, will be mapped to vaddr=0x3c000000
+D (39) boot: otadata[0]: sequence values 0x00000001
+D (39) boot: otadata[1]: sequence values 0xffffffff
+D (39) boot_comm: Only otadata[0] is valid
+D (39) boot: Active otadata[0]
+D (40) boot: Mapping seq 0 -> OTA slot 0
+D (40) boot: Trying partition index 0 offs 0x20000 size 0x300000
+D (40) esp_image: reading image header @ 0x20000
+D (40) bootloader_flash: mmu set block paddr=0x00020000 (was 0xffffffff)
+D (41) esp_image: image header: 0xe9 0x06 0x02 0x04 40379844
+I (41) esp_image: segment 0: paddr=00020020 vaddr=3c170020 size=82414h (533524) map
+D (41) esp_image: free data page_count 0x00000200
+D (42) bootloader_flash: rodata starts from paddr=0x00020020, size=0x82414, will be mapped to vaddr=0x3c000000
+D (121) bootloader_flash: mmu set block paddr=0x000a0000 (was 0xffffffff)
+I (122) esp_image: segment 1: paddr=000a243c vaddr=3fca7000 size=0705ch ( 28764) load
+D (122) esp_image: free data page_count 0x00000200
+D (122) bootloader_flash: rodata starts from paddr=0x000a243c, size=0x705c, will be mapped to vaddr=0x3c000000
+D (128) bootloader_flash: mmu set block paddr=0x000a0000 (was 0xffffffff)
+I (128) esp_image: segment 2: paddr=000a94a0 vaddr=40378000 size=06b78h ( 27512) load
+D (129) esp_image: free data page_count 0x00000200
+D (129) bootloader_flash: rodata starts from paddr=0x000a94a0, size=0x6b78, will be mapped to vaddr=0x3c000000
+D (134) bootloader_flash: mmu set block paddr=0x000b0000 (was 0xffffffff)
+I (135) esp_image: segment 3: paddr=000b0020 vaddr=42000020 size=16a140h (1483072) map
+D (135) esp_image: free data page_count 0x00000200
+D (135) bootloader_flash: rodata starts from paddr=0x000b0020, size=0x16a140, will be mapped to vaddr=0x3c000000
+D (356) bootloader_flash: mmu set block paddr=0x00210000 (was 0xffffffff)
+I (356) esp_image: segment 4: paddr=0021a168 vaddr=4037eb78 size=183ach ( 99244) load
+D (357) esp_image: free data page_count 0x00000200
+D (357) bootloader_flash: rodata starts from paddr=0x0021a168, size=0x183ac, will be mapped to vaddr=0x3c000000
+D (376) bootloader_flash: mmu set block paddr=0x00230000 (was 0xffffffff)
+I (376) esp_image: segment 5: paddr=0023251c vaddr=50000000 size=0001ch (    28) load
+D (377) esp_image: free data page_count 0x00000200
+D (377) bootloader_flash: rodata starts from paddr=0x0023251c, size=0x1c, will be mapped to vaddr=0x3c000000
+D (378) bootloader_flash: mmu set block paddr=0x00230000 (was 0xffffffff)
+D (378) boot: Calculated hash: 4c944fbf59fb2d1f65482c8f839c2906dd33c1c4c55382b071c0517bfad39e18
+I (390) boot: Loaded app from partition at offset 0x20000
+I (390) boot: Disabling RNG early entropy source...
+D (391) boot: Mapping segment 0 as DROM
+D (391) boot: Mapping segment 3 as IROM
+D (391) boot: calling set_cache_and_start_app
+D (391) boot: configure drom and irom and start
+D (391) boot: start: 0x40379844
+--- 0x40379844: call_start_cpu0 at C:/Espressif/frameworks/esp-idf-v5.4.3/components/esp_system/port/cpu_start.c:387
+I (392) octal_psram: vendor id    : 0x0d (AP)
+I (392) octal_psram: dev id       : 0x02 (generation 3)
+I (392) octal_psram: density      : 0x03 (64 Mbit)
+I (393) octal_psram: good-die     : 0x01 (Pass)
+I (393) octal_psram: Latency      : 0x01 (Fixed)
+I (393) octal_psram: VCC          : 0x01 (3V)
+I (393) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (394) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (394) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (394) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (394) octal_psram: DriveStrength: 0x00 (1/1)
+I (395) MSPI Timing: PSRAM timing tuning index: 5
+I (395) esp_psram: Found 8MB PSRAM device
+I (395) esp_psram: Speed: 80MHz
+I (396) cpu_start: Multicore app
+I (405) cpu_start: Pro cpu start user code
+I (405) cpu_start: cpu freq: 160000000 Hz
+I (405) app_init: Application information:
+I (405) app_init: Project name:     esp32s3-ai-box
+I (405) app_init: App version:      1.0.0_251210
+I (405) app_init: Compile time:     Mar 13 2026 09:30:39
+I (405) app_init: ELF file SHA256:  82ff41a27...
+I (406) app_init: ESP-IDF:          v5.4.3
+I (406) efuse_init: Min chip rev:     v0.0
+I (406) efuse_init: Max chip rev:     v0.99
+I (406) efuse_init: Chip rev:         v0.2
+I (406) heap_init: Initializing. RAM available for dynamic allocation:
+I (407) heap_init: At 3FCB62A0 len 00033470 (205 KiB): RAM
+I (407) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (407) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (407) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (407) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (408) spi_flash: detected chip: generic
+I (408) spi_flash: flash io: qio
+I (409) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (410) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (410) coexist: coex firmware version: b0bcc39
+I (411) coexist: coexist rom version e7ae62f
+I (411) main_task: Started on CPU0
+I (412) esp_psram: Reserving pool of 64K of internal memory for DMA/internal allocations
+I (412) main_task: Calling app_main()
+I (413) APP: ========================================
+I (413) APP:   ESP32S3-AI-BOX v1.0.0
+I (413) APP:   Build: Mar 13 2026 09:30:45
+I (413) APP: ========================================
+I (413) APP: Chip: esp32s3, 2 cores, WiFi/BLE
+I (413) APP: Flash: 16 MB
+I (413) APP: PSRAM: 8 MB
+I (414) APP: Heap: Free=8564432, Min=8564432
+I (414) APP: ========================================
+I (431) APP: NVS initialized
+I (431) APP: System events initialized
+I (431) APP: Initializing SPIFFS...
+I (1154) APP: SPIFFS: Total=9450401, Used=6513199 (68.9%)
+I (1155) APP: System initialization complete
+I (1155) APP: Free heap: 8555596 bytes
+I (1155) ConverseFSM: Timeout timer created
+I (1155) App: ========================================
+I (1156) App: ESP32S3-AI-BOX Starting
+I (1156) App: ========================================
+I (1156) ModuleMgr: ========================================
+I (1156) ModuleMgr: Starting module initialization
+I (1156) ModuleMgr: ========================================
+I (1156) ModuleMgr: [1/14] Initializing Settings...
+I (1157) App: Init progress: Settings [1/14]
+I (1157) Settings: Initializing Settings...
+I (1157) Settings: Initializing partition: nvs_user
+I (1183) Settings: NVS partition 'nvs_user' initialized
+I (1183) Settings: Loading settings from NVS
+I (1183) Settings: NVS WiFi count key read: ret=ESP_OK, count=2
+I (1185) Settings:   WiFi[0]: SSID='ChinaNet-s5N6tR'
+I (1186) Settings:   WiFi[1]: SSID='dog'
+I (1186) Settings: Loaded 2 WiFi configurations
+I (1189) Settings: Boot count: 24
+I (1190) ModuleMgr: Boot count: 24
+I (1191) ModuleMgr: [2/14] Initializing SystemMonitor...
+I (1191) App: Init progress: SystemMonitor [2/14]
+I (1191) SystemMonitor: Initializing SystemMonitor
+I (1192) SystemMonitor: === System Info ===
+I (1192) SystemMonitor: Chip: ESP32-S3 (rev 2, 2 cores @ 160 MHz)
+I (1192) SystemMonitor: Flash: 16 MB
+I (1192) SystemMonitor: PSRAM: 8 MB
+I (1192) SystemMonitor: MAC: 98:A3:16:C3:4F:44
+I (1192) SystemMonitor: IDF: v5.4.3
+I (1193) SystemMonitor: App: 1.0.0_251210
+I (1193) SystemMonitor: Reset reason: Unknown
+I (1193) SystemMonitor: === Memory Info ===
+I (1193) SystemMonitor: Internal RAM:
+I (1193) SystemMonitor:   Total: 330 KB
+I (1193) SystemMonitor:   Free: 230 KB (30.3% used)
+I (1194) SystemMonitor:   Min free: 230 KB
+I (1194) SystemMonitor:   Largest block: 104 KB
+I (1194) SystemMonitor: PSRAM:
+I (1194) SystemMonitor:   Total: 8192 KB
+I (1194) SystemMonitor:   Free: 8185 KB (0.1% used)
+I (1194) SystemMonitor:   Min free: 8185 KB
+I (1194) SystemMonitor: Configuring task watchdog (timeout: 30000 ms)
+I (1196) SystemMonitor: Monitor task started (interval: 10000 ms)
+I (1196) ModuleMgr: [3/14] Initializing I2C Bus...
+I (1196) App: Init progress: I2C Bus [3/14]
+I (1196) I2C: Initializing I2C bus (SDA=17, SCL=18, 400kHz)
+I (1197) I2C: I2C bus initialized successfully
+I (1197) I2C:   SDA: GPIO17, SCL: GPIO18
+I (1198) I2C:   Frequency: 400000 Hz
+I (1198) I2C:   Glitch filter: 15 cycles
+I (1198) I2C:   Internal pullup: enabled
+I (1198) ModuleMgr: [4/14] Initializing TCA9554...
+I (1198) App: Init progress: TCA9554 [4/14]
+I (1198) TCA9554: Initializing TCA9554 at address 0x20
+I (1199) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2
+I (1200) TCA9554: INT GPIO 15 configured
+I (1201) TCA9554: TCA9554 initialized, registers:
+I (1201) TCA9554:   INPUT:    0xF3 (P7-P0: 1111 0011)
+I (1201) TCA9554:   OUTPUT:   0x03 (P7-P0: 0000 0011)
+I (1202) TCA9554:   POLARITY: 0x00
+I (1202) TCA9554:   CONFIG:   0xF0 (1=input, 0=output)
+I (1202) ModuleMgr: [5/14] Initializing PowerManager...
+I (1202) App: Init progress: PowerManager [5/14]
+I (1202) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1203) POWER: Initializing power manager...
+I (1203) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1203) POWER: Power GPIO initialized (POWER_ONOFF=46)
+I (1203) POWER: Initializing ADC...
+I (1204) POWER: ADC initialized: BAT(GPIO4->CH3), USB(GPIO5->CH4)
+I (1204) POWER: Power manager initialized
+I (1204) ModuleMgr: [6/14] Initializing ButtonHandler...
+I (1205) App: Init progress: ButtonHandler [6/14]
+I (1205) gpio: GPIO[6]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0
+I (1205) POWER: Button handler initialized (GPIO=6, active_low=1)
+I (1205) ModuleMgr: Button callback registered for GPIO6
+I (1206) ModuleMgr: [7/14] Initializing Motor...
+I (1206) App: Init progress: Motor [7/14]
+I (1206) Motor: Initializing motor on GPIO 7
+I (1206) gpio: GPIO[7]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1206) Motor: Motor initialized
+I (1207) ModuleMgr: [8/14] Initializing Display...
+I (1207) App: Init progress: Display [8/14]
+I (1207) DisplayService: Initializing DisplayService
+I (1207) DISPLAY: Initializing dual LCD driver...
+I (1207) DISPLAY: Initializing SPI bus...
+I (1207) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1209) DISPLAY: DMA TX buffer allocated (4096 bytes)
+I (1209) DISPLAY: SPI initialized (MOSI=0, CLK=1, DC=2, 12MHz, mode=0)
+I (1209) DISPLAY: Initializing LCD0...
+I (1210) DISPLAY: LCD config: MADCTL=0x08, col_offset=0, row_offset=0
+I (1491) DISPLAY: LCD0 initialized
+I (1491) DISPLAY: Initializing LCD1...
+I (1491) DISPLAY: LCD config: MADCTL=0x08, col_offset=0, row_offset=0
+I (1772) DISPLAY: LCD1 initialized
+I (1772) DISPLAY: Dual LCD driver initialized (backlight off)
+W (1772) Motor: Already initialized
+I (1772) EmotionEngine: Initializing EmotionEngine (GIF mode)
+I (1772) ResourceMgr: Initializing SPIFFS...
+I (2535) ResourceMgr: SPIFFS mounted: total=9228 KB, used=6360 KB (68.9%)
+I (2536) FileService: Initializing FileService...
+I (2536) FileService:   GIF slot size: 600 KB x 2 slots
+I (2536) FileService:   Audio slot size: 128 KB x 2 slots
+I (2536) FileService:   GIF slot 0: 0x3c213e5c (600 KB)
+I (2537) FileService:   GIF slot 1: 0x3c2abe60 (600 KB)
+I (2537) FileService:   Audio slot 0: 0x3c343e64 (128 KB)
+I (2537) FileService:   Audio slot 1: 0x3c363e68 (128 KB)
+I (2537) FileService: Total PSRAM allocated: 1456 KB
+I (2537) FileService: FileService task started
+I (2538) FileService: FileService initialized successfully
+I (2538) EmotionEngine: FileService enabled, GIF will be loaded via FileService
+I (2538) EmotionEngine: EmotionEngine initialized (GIF mode)
+I (2592) EmotionEngine: Starting animation
+I (2974) FileService: Loaded: /spiffs/emotions/neutral.gif (179893 bytes)
+I (2974) GifPlayer: Loading GIF from memory: /spiffs/emotions/neutral.gif (179893 bytes)
+I (2996) EmotionEngine: Animation task using PSRAM stack
+I (2996) EmotionEngine: Animation task started (GIF mode)
+I (2996) DisplayService: DisplayService initialized (backlight off, waiting for app to enable)
+I (2996) ModuleMgr: [9/14] Initializing Audio...
+I (2997) App: Init progress: Audio [9/14]
+I (2997) AUDIO: Initializing ES8311 (esp_codec_dev)...
+I (2997) AUDIO:   I2C addr (7-bit): 0x18
+I (2997) AUDIO:   Sample rate: 16000 Hz
+I (2997) AUDIO:   PA pin: GPIO48 (active high)
+I (2998) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (2998) AUDIO: Initializing I2S...
+I (3000) AUDIO: I2S initialized: MCLK=16, BCLK=9, WS=45, DOUT=8, DIN=10
+I (3007) ES8311: Work in Slave mode
+I (3011) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1
+I (3011) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:1
+I (3012) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:1
+I (3012) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:1
+I (3029) Adev_Codec: Open codec device OK
+I (3031) AUDIO: esp_codec_dev ready (version: 1.3.1)
+I (3031) I2S_IF: Pending out channel for in channel running
+I (3032) AUDIO: ES8311 initialized (esp_codec_dev) successfully
+I (3032) AudioManager: Initializing AudioManager
+I (3032) AudioManager:   Sample rate: 16000
+I (3033) AudioManager:   Channels: 1
+I (3033) AudioManager:   Bits per sample: 16
+I (3033) AudioManager:   Output block size: 1920 bytes
+I (3033) AudioManager:   Output block count: 8
+I (3035) AudioManager: AudioManager initialized
+I (3035) ModuleMgr: [10/14] Initializing AudioPlayer...
+I (3035) App: Init progress: AudioPlayer [10/14]
+I (3036) OggDecoder: OGG decoder initialized: 16000Hz, 1 ch
+I (3036) AudioPlayer: FileService enabled for audio loading
+I (3037) AudioPlayer: Player task started
+I (3037) AudioPlayer: Player task using PSRAM stack
+I (3037) AudioPlayer: AudioPlayer initialized (FileService: enabled)
+I (3038) ModuleMgr: [11/14] Initializing Wakeup...
+I (3038) App: Init progress: Wakeup [11/14]
+I (3038) WakeupService: Initializing WakeupService
+I (3038) WakeupService:   Voice wakeup: enabled
+I (3038) WakeupService:   Button wakeup: enabled
+I (3038) WakeupService:   Touch wakeup: enabled
+I (3039) EspWakeWord: Initializing ESP-SR WakeNet
+E (3039) MODEL_LOADER: Can not find model in partition table
+W (3039) EspWakeWord: SR model partition not found - wake word disabled
+W (3039) EspWakeWord: System will continue without voice wake feature
+I (3040) WakeupService: Voice wakeup initialized, chunk size: 512
+I (3040) WakeupService: WakeupService initialized
+I (3040) ModuleMgr: [12/14] Initializing Network...
+I (3040) App: Init progress: Network [12/14]
+I (3040) NetworkManager: Initializing NetworkManager
+I (3042) pp: pp rom version: e7ae62f
+I (3042) net80211: net80211 rom version: e7ae62f
+I (3044) wifi:wifi driver task: 3fcdb2e0, prio:23, stack:6656, core=0
+I (3055) wifi:wifi firmware version: e8ce6e2
+I (3056) wifi:wifi certification version: v7.0
+I (3056) wifi:config NVS flash: enabled
+I (3056) wifi:config nano formatting: disabled
+I (3056) wifi:Init data frame dynamic rx buffer num: 32
+I (3057) wifi:Init static rx mgmt buffer num: 5
+I (3057) wifi:Init management short buffer num: 32
+I (3057) wifi:Init static tx buffer num: 16
+I (3058) wifi:Init tx cache buffer num: 32
+I (3058) wifi:Init static tx FG buffer num: 2
+I (3059) wifi:Init static rx buffer size: 1600
+I (3059) wifi:Init static rx buffer num: 10
+I (3059) wifi:Init dynamic rx buffer num: 32
+I (3060) wifi_init: rx ba win: 6
+I (3060) wifi_init: accept mbox: 6
+I (3060) wifi_init: tcpip mbox: 32
+I (3061) wifi_init: udp mbox: 6
+I (3061) wifi_init: tcp mbox: 6
+I (3061) wifi_init: tcp tx win: 5760
+I (3061) wifi_init: tcp rx win: 5760
+I (3061) wifi_init: tcp mss: 1440
+I (3061) wifi_init: WiFi/LWIP prefer SPIRAM
+I (3061) wifi_init: WiFi IRAM OP enabled
+I (3061) wifi_init: WiFi RX IRAM OP enabled
+I (3062) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10
+I (3106) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)
+I (3124) wifi:mode : sta (98:a3:16:c3:4f:44)
+I (3124) wifi:enable tsf
+W (3126) NetworkManager: No saved config found
+I (3126) NetworkManager: WiFi started
+I (3126) NetworkManager: NetworkManager initialized
+I (3127) ModuleMgr: [13/14] Initializing AiService...
+I (3127) App: Init progress: AiService [13/14]
+I (3131) ModuleMgr: Mobile AI SDK config loaded: productId=2031262928870518785, deviceNoType=SN
+I (3132) ModuleMgr: [14/14] Initializing Sensors...
+I (3132) App: Init progress: Sensors [14/14]
+I (3132) SensorMgr: Initializing SensorManager
+I (3133) TTY6759: Initializing TTY6759 at address 0x53
+I (3163) TTY6759: TTY6759 initialized, initial key state: 0x0000
+I (3163) TTY6759:   Note: INT pin should be connected to TCA9554 P7
+I (3163) TTY6759:   Note: INT is active LOW, falling edge on key change
+I (3163) TouchService: Initializing TouchService
+I (3164) TouchService: TouchService initialized
+I (3164) TouchService: Starting TouchService (interrupt-driven)
+I (3164) FSV8023: Initializing FSV8023 at address 0x55
+I (3165) FSV8023: Initial registers: NC_REG=0x41, NS_REG=0x00
+I (3166) FSV8023: SetFdCondition: NC_REG before=0x41, FD_ON=0, FD_OFF=0
+I (3166) FSV8023: SetFdCondition: NC_REG after=0x41
+I (3167) FSV8023: FSV8023 initialized successfully
+I (3167) NfcService: NFC 服务初始化完成
+I (3168) NfcService: NFC 服务已启动 (interrupt-driven)
+I (3169) SensorMgr: QMI8658A not found at 0x6A, trying 0x6B
+W (3169) SensorMgr: QMI8658A not found on I2C (tried 0x6A and 0x6B), skip IMU
+I (3169) BM8563: Initializing BM8563 at address 0x51
+I (3170) BM8563: BM8563 initialized
+I (3170) SensorMgr: SensorManager initialized
+I (3170) ModuleMgr: ========================================
+I (3170) ModuleMgr: Module initialization complete
+I (3171) ModuleMgr: ========================================
+I (3171) ModuleMgr:   Settings: OK
+I (3171) ModuleMgr:   SystemMonitor: OK
+I (3171) ModuleMgr:   I2C Bus: OK
+I (3171) ModuleMgr:   TCA9554: OK
+I (3171) ModuleMgr:   PowerManager: OK
+I (3171) ModuleMgr:   ButtonHandler: OK
+I (3172) ModuleMgr:   Motor: OK
+I (3172) ModuleMgr:   Display: OK
+I (3172) ModuleMgr:   Audio: OK
+I (3172) ModuleMgr:   AudioPlayer: OK
+I (3172) ModuleMgr:   Wakeup: OK
+I (3172) ModuleMgr:   Network: OK
+I (3172) ModuleMgr:   AiService: OK
+I (3173) ModuleMgr:   Sensors: OK
+I (3173) PowerFSM: State: INIT -> NORMAL
+I (3173) App: Power: INIT -> NORMAL
+I (3173) PowerFSM: System running normally
+I (3174) App: Main loop started
+I (3174) App: Application started
+I (3175) SensorMgr: System time loaded from RTC: 2026-03-13 09:33:00
+I (3175) App: Initial time loaded from RTC
+I (3175) App: NetworkManager callback registered
+I (3175) ChargingAnim: Charging animation initialized
+I (3176) OtaDisplay: OTA progress display initialized
+I (3176) IdleTimer: Idle timer manager initialized
+I (3176) EmoPriority: 表情优先级管理器初始化完成
+I (3177) FirstBoot: FirstBootHandler initialized, is_first_boot: no
+I (3177) App: Enabling LCD backlight...
+I (3177) App:   Power: NORMAL
+I (3177) App:   Network: DISCONNECTED
+I (3178) App:   Conversation: IDLE
+I (3277) DISPLAY: SetLcd0Backlight(1) = ESP_OK, OUTPUT=0x0B
+I (3277) DISPLAY: SetLcd1Backlight(1) = ESP_OK, OUTPUT=0x0F
+I (3277) DISPLAY: Backlight ON for LCDBOTH
+I (3278) DisplayService: Backlight: ON
+I (3278) FirstBoot: Not first boot, skipping
+I (3278) DisplayService: Setting ExtEmotion: happy (motor: 0)
+I (3286) EmotionEngine: Queue emotion switch at loop boundary: neutral -> happy
+I (3633) AudioPlayer: Queued file: /spiffs/audio/prompts/power_on.ogg
+I (3633) App: Waiting for power-on audio to finish before connecting WiFi...
+I (3636) FileService: Loaded: /spiffs/audio/prompts/power_on.ogg (1924 bytes)
+I (3637) AudioPlayer: Loaded via FileService: /spiffs/audio/prompts/power_on.ogg (1924 bytes)
+I (3637) AudioManager: Starting playback
+I (3638) AUDIO: PA ON (GPIO48 = 1)
+I (3639) AUDIO: Output enabled
+I (3640) OggDecoder: OpusHead: channels=1, sample_rate=16000, serial=0x0476D06D
+I (4629) AudioManager: Stopping playback
+I (4630) AUDIO: PA OFF (GPIO48 = 0)
+I (4630) AUDIO: Output disabled
+I (4650) App: Power-on audio finished, starting WiFi connection...
+I (4650) NetworkFSM: Event [Connect] received in state [DISCONNECTED]
+I (4650) NetworkFSM: State: DISCONNECTED -> CONNECTING
+I (4650) App: Network: DISCONNECTED -> CONNECTING
+I (4650) App: Initiating WiFi connection...
+I (4651) NetworkManager: ========================================
+I (4651) NetworkManager: Loading WiFi config list from Settings...
+I (4653) Settings: GetWifiSettings[0]: ssid_ret=ESP_OK, pwd_ret=ESP_OK, auto_ret=ESP_OK
+I (4653) Settings:   SSID='ChinaNet-s5N6tR', Password length=8, auto_connect=1
+I (4653) Settings:   Password preview: 'duc***' (first 3 chars)
+I (4654) NetworkManager:   [1] SSID: 'ChinaNet-s5N6tR', Password length: 8
+I (4655) Settings: GetWifiSettings[1]: ssid_ret=ESP_OK, pwd_ret=ESP_OK, auto_ret=ESP_OK
+I (4655) Settings:   SSID='dog', Password length=10, auto_connect=1
+I (4656) Settings:   Password preview: '123***' (first 3 chars)
+I (4656) NetworkManager:   [2] SSID: 'dog', Password length: 10
+I (4656) Settings: GetWifiSettings[2]: ssid_ret=ESP_ERR_NVS_NOT_FOUND, pwd_ret=ESP_ERR_NVS_NOT_FOUND, auto_ret=ESP_ERR_NVS_NOT_FOUND
+I (4657) Settings:   SSID='', Password length=0, auto_connect=1
+W (4657) Settings:   Password is EMPTY!
+I (4657) NetworkManager: Found 2 WiFi config(s), starting connection sequence...
+I (4657) NetworkManager: ========================================
+I (4658) NetworkManager: Trying WiFi [1/2]: ChinaNet-s5N6tR
+I (4658) NetworkManager: Connecting to WiFi: SSID='ChinaNet-s5N6tR', pwd_len=8
+I (4658) NetworkManager: Auth mode: WPA_PSK (allows WPA/WPA2/WPA3)
+I (4661) NetworkFSM: Connecting to WiFi...
+I (4661) WakeupService: Starting wakeup detection (voice:on, button:on, touch:on)
+I (4669) wifi:new:<8,1>, old:<1,0>, ap:<255,255>, sta:<8,1>, prof:1, snd_ch_cfg:0x0
+I (4670) wifi:state: init -> auth (0xb0)
+I (4692) wifi:state: auth -> assoc (0x0)
+I (4699) wifi:state: assoc -> run (0x10)
+I (4728) wifi:connected with ChinaNet-s5N6tR, aid = 18, channel 8, 40U, bssid = 20:3a:eb:fc:e6:4a
+I (4729) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (4732) wifi:pm start, type: 1
+
+I (4732) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (4733) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000
+I (4735) NetworkManager: WiFi connected to: ChinaNet-s5N6tR
+I (4735) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4741) wifi:<ba-add>idx:0 (ifx:0, 20:3a:eb:fc:e6:4a), tid:0, ssn:2, winSize:64
+I (7994) esp_netif_handlers: sta ip: 192.168.2.134, mask: 255.255.255.0, gw: 192.168.2.1
+I (7995) NetworkManager: Got IP: 192.168.2.134
+I (7995) NetworkManager: Updating WiFi priority: SSID='ChinaNet-s5N6tR', pwd_len=8
+I (7995) Settings: AddWifiSettings called: SSID='ChinaNet-s5N6tR', Password length=8
+I (7996) Settings: NVS WiFi count key read: ret=ESP_OK, count=2
+I (7998) Settings:   WiFi[0]: SSID='ChinaNet-s5N6tR'
+I (7999) Settings:   WiFi[1]: SSID='dog'
+I (7999) Settings: Loaded 2 WiFi configurations
+I (8000) Settings: WiFi config 'ChinaNet-s5N6tR' exists at index 0, moving to first
+I (8000) Settings: ========================================
+I (8000) Settings: Saving WiFi settings to NVS...
+I (8001) Settings: Saved WiFi count: 2
+I (8001) Settings: Saving WiFi[0]: SSID='ChinaNet-s5N6tR', Password length=8
+I (8002) Settings: WiFi[0] saved successfully: SSID='ChinaNet-s5N6tR', pwd_len=8
+I (8002) Settings: Saving WiFi[1]: SSID='dog', Password length=10
+I (8003) Settings: WiFi[1] saved successfully: SSID='dog', pwd_len=10
+I (8004) Settings: WiFi settings save completed (2 configs)
+I (8004) Settings: ========================================
+I (8004) NetworkManager: WiFi config 'ChinaNet-s5N6tR' moved to first priority
+I (8006) App: NetworkManager callback: WiFi connected, IP=192.168.2.134
+I (8006) NetworkFSM: Event [ConnectSuccess] received in state [CONNECTING]
+I (8006) NetworkFSM: State: CONNECTING -> CONNECTED
+I (8007) App: Network: CONNECTING -> CONNECTED
+I (8007) App: WiFi connected: SSID=ChinaNet-s5N6tR, IP=192.168.2.134, RSSI=-43 dBm
+I (8007) NetworkFSM: WiFi connected: SSID=ChinaNet-s5N6tR, IP=192.168.2.134
+I (8008) App: WiFi connected: ChinaNet-s5N6tR (192.168.2.134)
+I (8008) NetworkFSM: State: CONNECTED -> SYNCING_TIME
+I (8008) App: Network: CONNECTED -> SYNCING_TIME
+I (8008) NetworkFSM: Starting time synchronization...
+I (8008) App: ========================================
+I (8009) App: Entering SYNCING_TIME state
+I (8009) App: Starting NTP time synchronization...
+I (8009) App: ========================================
+I (8009) App: Initializing SNTP for time synchronization...
+I (8010) App: NTP server 0: ntp.aliyun.com
+I (8010) App: NTP server 1: cn.ntp.org.cn
+I (8010) App: NTP server 2: pool.ntp.org
+I (8010) App: SNTP initialized, waiting for time sync...
+I (8010) App: NTP timeout timer started (15000 ms)
+I (8010) App: ========================================
+I (8011) App: System Status Report
+I (8011) App: ========================================
+I (8011) App: Current time: 2026-03-13 09:33:04 (UTC+8)
+I (8012) App: Battery: 3.70V (58%), Charging
+I (8014) App: USB: 4.91V, Connected: Yes
+I (8014) App: ========================================
+I (8015) App: NetworkManager callback: WiFi connected, IP=192.168.2.134
+I (8015) NetworkFSM: Event [ConnectSuccess] received in state [SYNCING_TIME]
+I (10930) App: NTP time synchronized!
+I (10930) App: ========================================
+I (10930) App: Current time: 2026-03-13 09:33:08 (UTC+8)
+I (10931) App: Battery: 3.67V (55%), State: Charging
+I (10931) App: USB: 4.91V, Connected: Yes, Valid: Yes
+I (10932) App: ========================================
+I (10933) BM8563: Time set to: 2026-03-13 09:33:08
+I (10933) SensorMgr: System time synced to RTC: 2026-03-13 09:33:08
+I (10933) App: Notifying FSM: time sync complete
+I (10934) App: ========================================
+I (10934) App: NTP sync complete callback triggered
+I (10934) App: NTP timeout timer stopped
+I (10934) App: Synchronized time: 2026-03-13 09:33:08 (UTC+8)
+I (10934) App: ========================================
+I (10935) App: Sending TimeSyncComplete event to FSM...
+I (10935) NetworkFSM: Event [TimeSyncComplete] received in state [SYNCING_TIME]
+I (10935) NetworkFSM: Time sync complete, network ready
+I (10935) NetworkFSM: State: SYNCING_TIME -> READY
+I (10935) App: Network: SYNCING_TIME -> READY
+I (10936) NetworkFSM: Network ready (time synced, cloud services available)
+I (10936) App: ========================================
+I (10936) App: Network READY - Time synced, ready for cloud services
+I (10936) App: ========================================
+I (10937) App: System time: 2026-03-13 09:33:08 (UTC+8)
+I (10943) AiService: Using provisioned mobile AI credentials: deviceNo=AIXL2026010001 deviceId=2031263813603106818
+I (10956) AudioPlayer: Queued file: /spiffs/audio/prompts/wifi_connected.ogg
+I (10957) EmoPriority: 表情更新: neutral (优先级: 10)
+I (10957) DisplayService: Setting ExtEmotion: neutral (motor: 0)
+I (10962) App: ========================================
+I (10964) FileService: Loaded: /spiffs/audio/prompts/wifi_connected.ogg (3981 bytes)
+I (10965) AudioPlayer: Loaded via FileService: /spiffs/audio/prompts/wifi_connected.ogg (3981 bytes)
+I (10965) AudioManager: Starting playback
+I (10966) AUDIO: PA ON (GPIO48 = 1)
+I (10967) AUDIO: Output enabled
+I (10968) OggDecoder: OpusHead: channels=1, sample_rate=16000, serial=0xFD0E3496
+I (11111) esp-x509-crt-bundle: Certificate validated
+I (11167) esp-x509-crt-bundle: Certificate validated
+I (11869) AiService: Device report success: code=500
+I (11890) AiService: Gateway fetched: status=0 expires=0
+I (13097) AudioManager: Stopping playback
+I (13098) AUDIO: PA OFF (GPIO48 = 0)
+I (13098) AUDIO: Output disabled
+I (18465) SensorMgr: TOUCH_INT(P7) changed: 1 -> 0
+I (18585) TouchService: Touch status changed: 0x0000 -> 0x0020
+I (18585) TouchService: K5 pressed
+I (18585) TTY6759: Touch key detected: K4=0, K5=1
+I (18594) ConverseFSM: State: IDLE -> WAKING
+I (18594) App: Conversation: IDLE -> WAKING
+I (18594) IdleTimer: Pausing idle timers
+I (18594) WakeupService: Stopping wakeup detection
+I (18595) EspWakeWord: Stopping wake word detection
+I (18595) AudioManager: Starting recording
+I (18596) AUDIO: Input enabled
+I (18596) AudioManager: Input task started
+I (18762) SensorMgr: TOUCH_INT(P7) changed: 0 -> 1
+I (18763) TouchService: Touch status changed: 0x0020 -> 0x0000
+I (18763) TouchService: K5 released
+I (19298) AudioPlayer: Queued file: /spiffs/audio/prompts/listening.ogg
+I (19299) ConverseFSM: Waking up from touch
+I (19299) DisplayService: Setting ExtEmotion: happy (motor: 1)
+I (19299) EmotionEngine: Queue emotion switch at loop boundary: neutral -> happy
+I (19299) Motor: Motor pattern: on=500 ms, off=300 ms, cycles=3
+I (19300) App: Wakeup from: touch
+I (19300) App: Wakeup conditions met, starting conversation...
+I (19303) websocket_client: Started
+I (19310) FileService: Loaded: /spiffs/audio/prompts/listening.ogg (1788 bytes)
+I (19311) AudioPlayer: Loaded via FileService: /spiffs/audio/prompts/listening.ogg (1788 bytes)
+I (19312) AudioManager: Starting playback
+I (19312) AUDIO: PA ON (GPIO48 = 1)
+I (19314) AUDIO: Output enabled
+I (19316) OggDecoder: OpusHead: channels=1, sample_rate=16000, serial=0xFFB8DB4E
+I (19415) esp-x509-crt-bundle: Certificate validated
+I (19988) AiService: Mobile AI SDK connected
+I (19996) DisplayService: Setting ExtEmotion: neutral (motor: 0)
+I (20001) ConverseFSM: State: WAKING -> LISTENING
+I (20001) App: Conversation: WAKING -> LISTENING
+I (20002) ConverseFSM: Listening... (timeout: 30000ms)
+I (20416) AudioManager: Stopping playback
+I (20416) I2S_IF: Pending out channel for in channel running
+I (20417) AUDIO: PA OFF (GPIO48 = 0)
+I (20418) AUDIO: Output disabled
+W (22543) transport_ws: esp_transport_ws_poll_connection_closed: unexpected data readable on socket=54
+W (22544) websocket_client: Connection terminated while waiting for clean TCP close
+I (22545) AiService: Mobile AI SDK dialogue complete
+W (50002) ConverseFSM: Timeout in state: LISTENING
+W (50002) ConverseFSM: Listening timeout
+I (50002) ConverseFSM: State: LISTENING -> PROCESSING
+I (50003) App: Conversation: LISTENING -> PROCESSING
+I (50003) AudioManager: Stopping recording
+I (50004) AUDIO: Input disabled
+I (50004) AudioManager: Input task stopped
+I (50014) DisplayService: Setting ExtEmotion: thinking (motor: 0)
+I (50016) EmotionEngine: Queue emotion switch at loop boundary: neutral -> thinking
+I (50016) ConverseFSM: Processing... (timeout: 15000ms)
+I (54284) EmotionEngine: Apply queued emotion switch at loop boundary: neutral -> thinking
+I (54998) FileService: Loaded: /spiffs/emotions/thinking.gif (240305 bytes)
+I (54999) GifPlayer: Loading GIF from memory: /spiffs/emotions/thinking.gif (240305 bytes)
+W (65016) ConverseFSM: Timeout in state: PROCESSING
+W (65017) ConverseFSM: Processing timeout
+I (65017) ConverseFSM: State: PROCESSING -> IDLE
+I (65017) App: Conversation: PROCESSING -> IDLE
+I (65018) DisplayService: Setting ExtEmotion: neutral (motor: 0)
+I (65020) EmotionEngine: Queue emotion switch at loop boundary: thinking -> neutral
+I (65021) WakeupService: Starting wakeup detection (voice:on, button:on, touch:on)
+I (65021) IdleTimer: Resuming idle timers
+I (65022) ConverseFSM: Idle, waiting for wakeup
+I (71875) EmotionEngine: Apply queued emotion switch at loop boundary: thinking -> neutral
+I (71875) GifPlayer: Loading GIF from memory: /spiffs/emotions/neutral.gif (179893 bytes)
+I (75021) IdleTimer: 10s idle timeout - entering bored state
+I (75022) IdleTimer: Entering bored state
+I (75022) App: Idle: entering bored state
+I (91713) SystemMonitor: Heap: 117KB free (64.5%), PSRAM: 6370KB free (22.2%)
+I (191736) SystemMonitor: Heap: 117KB free (64.5%), PSRAM: 6370KB free (22.2%)
+I (255022) IdleTimer: 3min idle timeout - playing wink animation
+I (255072) App: Idle: wink timeout
+I (291759) SystemMonitor: Heap: 117KB free (64.5%), PSRAM: 6370KB free (22.2%)
+I (391785) SystemMonitor: Heap: 117KB free (64.5%), PSRAM: 6370KB free (22.2%)
+I (455864) SensorMgr: NFC_FD(P6) changed: 1 -> 0
+I (455865) SensorMgr: NFC_FD(P6) changed: 0 -> 1
+I (491808) SystemMonitor: Heap: 117KB free (64.5%), PSRAM: 6370KB free (22.2%)

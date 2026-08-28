@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.fxzs.lingxiagent.view.widget.GradientGlowCardView
+        android:id="@+id/ll_bottom_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.fxzs.lingxiagent.lingxi.float_manager.GradientBorderLayout
+        android:id="@+id/voice_gbl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/dp_56"
+                android:id="@+id/wakeEd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:hint="@string/hint_listening_speak"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_hint_color"
+                android:textSize="@dimen/font_16"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingStart="@dimen/dp_16" />
+
+            <com.fxzs.lingxiagent.view.widget.WaveFloatView
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:id="@+id/btn_wx_voice2"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_52"
+                android:layout_gravity="bottom|end"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/dp_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/iv_voice"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_voice"
+                />
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/dp_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/iv_send"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_send"
+                android:visibility="gone"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.fxzs.lingxiagent.lingxi.float_manager.GradientBorderLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

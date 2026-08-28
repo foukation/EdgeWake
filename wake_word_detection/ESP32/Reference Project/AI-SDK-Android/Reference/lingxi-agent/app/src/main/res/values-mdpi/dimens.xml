@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 160dpi 设备：10dp = 10px -->
+    <dimen name="dp_10">10dp</dimen>
+</resources>
+    

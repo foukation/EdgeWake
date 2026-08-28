@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_2">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:src="@android:drawable/ic_menu_revert" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/label_meeting_date_sample_2"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:src="@android:drawable/ic_menu_share" />
+
+    </RelativeLayout>
+
+    <!-- Tab Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tab_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tab_meeting_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tab_summary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tab_meeting_summary"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tab_topic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tab_meeting_topics"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/tab_qa"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/title_smart_qa"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/font_16" />
+
+    </LinearLayout>
+
+    <!-- Tab indicator -->
+    <View
+        android:id="@+id/tab_indicator"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/text_primary"
+        android:layout_marginStart="@dimen/dp_30" />
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Meeting Content -->
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <TextView
+                android:id="@+id/tv_meeting_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_meeting_content"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_16"
+                android:padding="@dimen/dp_16" />
+            
+        </LinearLayout>
+
+        <!-- Meeting Summary -->
+        <ScrollView
+            android:id="@+id/layout_summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <!-- Summary Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_meeting_summary"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_20"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/dp_16" />
+
+                <!-- Summary Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="@dimen/dp_16">
+
+                    <TextView
+                        android:id="@+id/tv_summary_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/content_taobao_intro_full"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/font_16"
+                        android:lineSpacingExtra="@dimen/dp_8" />
+
+                </LinearLayout>
+
+                <!-- Topic List Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_meeting_todos"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_20"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginBottom="@dimen/dp_16" />
+
+                <!-- Topic List -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="@dimen/dp_16">
+
+                    <!-- Topic Item 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bullet_1"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_company_intro"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                    <!-- Topic Item 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bullet_2"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_training_development"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                    <!-- Topic Item 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bullet_3"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_security_compliance"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                    <!-- Topic Item 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/dp_12">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bullet_4"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/sample_taobao_history"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                    <!-- Topic Item 5 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_bullet_5"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/title_corporate_culture"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/font_16" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Meeting Topics -->
+        <LinearLayout
+            android:id="@+id/layout_topic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="@dimen/dp_16">
+            
+            <TextView
+                android:id="@+id/tv_topic_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_meeting_topic_content"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_16" />
+            
+        </LinearLayout>
+
+        <!-- Q&A -->
+        <LinearLayout
+            android:id="@+id/layout_qa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="@dimen/dp_16">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_smart_qa"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_16" />
+            
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Bottom Action Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_4">
+
+        <LinearLayout
+            android:id="@+id/btn_audio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@android:drawable/ic_media_play" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_copy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@android:drawable/ic_menu_edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_refresh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@android:drawable/ic_popup_sync" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@android:drawable/ic_menu_more" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

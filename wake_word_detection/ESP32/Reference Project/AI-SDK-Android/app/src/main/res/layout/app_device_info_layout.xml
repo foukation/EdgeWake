@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtDeviceNoType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/deviceNoType"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtDeviceNoTypeResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDeviceNoType"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider_DeviceNoType"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtDeviceNoTypeResult"
+        android:background="#00FF00" />
+
+    <TextView
+        android:id="@+id/txtDeviceNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_DeviceNoType"
+        android:padding="8dp"
+        android:text="@string/deviceNo"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtDeviceNoResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDeviceNo"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider_DeviceNo"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtDeviceNoResult"
+        android:background="#00FF00" />
+
+    <TextView
+        android:id="@+id/txtProductId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_DeviceNo"
+        android:padding="8dp"
+        android:text="@string/productId"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtProductIdNoResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductId"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider_ProductId"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtProductIdNoResult"
+        android:background="#00FF00" />
+
+    <TextView
+        android:id="@+id/txtProductKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_ProductId"
+        android:padding="8dp"
+        android:text="@string/productKey"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtProductKeyResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductKey"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider_ProductKey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtProductKeyResult"
+        android:background="#00FF00" />
+
+    <TextView
+        android:id="@+id/txtDeviceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_ProductKey"
+        android:padding="8dp"
+        android:text="@string/deviceInfo"
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtDeviceInfoResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDeviceInfo"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#00FF00"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 外圆形边框 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E5E5E5" />
+        </shape>
+    </item>
+    
+    <!-- 内部彩虹渐变 -->
+    <item android:inset="2dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="sweep"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#FF0000"
+                android:centerColor="#00FF00"
+                android:endColor="#0000FF" />
+        </shape>
+    </item>
+    
+</layer-list>

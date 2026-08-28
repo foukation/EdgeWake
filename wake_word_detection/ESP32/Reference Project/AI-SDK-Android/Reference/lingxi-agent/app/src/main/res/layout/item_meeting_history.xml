@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 会议历史记录条目 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:background="?android:attr/selectableItemBackground">
+
+        <!-- 会议图标 -->
+        <ImageView
+            android:id="@+id/ivMeetingIcon"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_nav_meeting"
+            android:background="@drawable/bg_circle_ai_avatar"
+            android:padding="@dimen/dp_8"
+            android:scaleType="centerInside" />
+
+        <!-- 会议信息容器 -->
+        <LinearLayout
+            android:id="@+id/llMeetingInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivMeetingIcon"
+            android:layout_toStartOf="@id/ivMoreOptions"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:orientation="vertical">
+
+            <!-- 会议标题 -->
+            <TextView
+                android:id="@+id/tvMeetingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_ai_realtime_meeting"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- 会议时间 -->
+            <TextView
+                android:id="@+id/tvMeetingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="@string/label_datetime_sample"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/font_12"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- 会议内容摘要 -->
+            <TextView
+                android:id="@+id/tvMeetingContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="@string/hint_meeting_summary"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/font_14"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+        <!-- 更多选项按钮 -->
+        <ImageView
+            android:id="@+id/ivMoreOptions"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more_dots"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/dp_4"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_marginStart="@dimen/dp_68"
+        android:background="@color/divider_color" />
+
+</LinearLayout>

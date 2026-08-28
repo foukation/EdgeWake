@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_16"
+    android:orientation="horizontal">
+
+    <include layout="@layout/lingxi_base_radio_layout"
+        android:id="@+id/radio_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:id="@+id/ll_content"
+        app:layout_constraintStart_toEndOf="@+id/radio_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_f7_r16"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_12">
+
+        <LinearLayout
+            android:id="@+id/ll_thinking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_thinking_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_thinking_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_thinking"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:id="@+id/iv_thinking_dash"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_24"
+                    android:background="@mipmap/thinking_dash" />
+
+                <ImageView
+                    android:id="@+id/iv_thinking_arrow"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:background="@mipmap/home_down_arrow"
+                    android:backgroundTint="@color/text_hint_color" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_chat_think_start"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@mipmap/chat_think_start"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_thinking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Legacy recycler_view_ai disabled to avoid measurement/layout interference -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_ai"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/markdown_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E0E0E0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_chat_copy"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/chat_copy" />
+
+                <ImageView
+                    android:id="@+id/iv_chat_play"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@mipmap/chat_tts" />
+
+
+                <ImageView
+                    android:id="@+id/iv_chat_share"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@mipmap/chat_share" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_chat_refresh"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@mipmap/chat_refresh"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_chat_export"
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@mipmap/chat_export"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/vw_empty"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/ll_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_content"
+        app:layout_constraintStart_toStartOf="@+id/ll_content"
+        app:layout_constraintEnd_toEndOf="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

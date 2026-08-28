@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 图片展示区域 -->
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 顶部返回按钮 -->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_32"
+        android:padding="@dimen/dp_12"
+        android:src="@drawable/ic_back"
+        android:tint="#FFFFFF"
+         />
+
+    <!-- 底部操作栏 -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_24"
+        android:visibility="visible">
+
+        <!-- 继续编辑按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_continue_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_button_stroke_white_rounded"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:clickable="true"
+            android:visibility="gone"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_edit_white"
+                android:layout_marginEnd="@dimen/dp_8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_continue_edit"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/font_16" />
+            
+        </LinearLayout>
+
+        <!-- 保存按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_button_white_rounded"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:clickable="true"
+            android:focusable="true">
+            
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_download_black"
+                android:layout_marginEnd="@dimen/dp_8" />
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_save"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_16" />
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

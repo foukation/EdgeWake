@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rv_head"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_ai_office"
+                android:textColor="@color/figma_text_primary"
+                android:textSize="@dimen/font_17"
+                style="@style/HomeFontStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:gravity="center"
+                android:text="@string/content_ai_generated_disclaimer"
+                android:textColor="@color/text_999"
+                android:textSize="@dimen/font_10"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:src="@drawable/icon_user_head"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/rv_head"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <GridLayout
+            android:id="@+id/ai_work_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:layout_marginStart="@dimen/dp_19"
+            android:layout_marginEnd="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingBottom="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_ai_meeting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_meeting"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="160:66"
+                    android:src="@drawable/ai_wort_meeting" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_meeting"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_ai_meeting"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_meeting"
+                    android:id="@+id/tv_subtitle_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/msg_av_transcription_summary"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_ai_ppt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_17"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_ppt"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="160:66"
+                    android:src="@drawable/ai_wort_ppt" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_ppt"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_ppt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_ai_ppt"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_ppt"
+                    android:id="@+id/tv_subtitle_ppt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/msg_auto_gen_rich_template"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_simul_translate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_translate"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="160:66"
+                    android:src="@drawable/ai_wort_translate" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_translate"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_translate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_simultaneous_interpretation"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_translate"
+                    android:id="@+id/tv_subtitle_translate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/msg_zero_lag_precise"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_research"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_research"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="160:66"
+                    android:src="@drawable/ai_work_deep" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_research"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_research"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_deep_research"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_research"
+                    android:id="@+id/tv_subtitle_research"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/content_domain_expert"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_ai_draw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17"
+                android:orientation="vertical"
+                android:background="@drawable/bg_ai_card"
+                android:paddingBottom="@dimen/dp_20"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="1">
+
+                <TextView
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_draw"
+                    android:id="@+id/tv_title_draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:text="@string/title_ai_drawing"
+                    android:textSize="@dimen/font_17"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+
+                <TextView
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_draw"
+
+                    android:id="@+id/tv_subtitle_draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/content_quick_create_images"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+
+                <ImageView
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/dp_19"
+                    android:id="@+id/iv_image_draw"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_19"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="299:117"
+                    android:src="@drawable/ai_work_drawing"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_ai_excel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_ai_excel"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginStart="@dimen/dp_19"
+                    android:layout_marginEnd="@dimen/dp_19"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="160:66"
+                    android:src="@drawable/ai_work_excel" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_ai_excel"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_ai_excel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_ai_table_2"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_ai_excel"
+                    android:id="@+id/tv_subtitle_ai_excel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/content_analyze_data_chart"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_ai_file"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_24"
+                android:background="@drawable/bg_ai_card"
+                android:visibility="gone">
+
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/iv_image_ai_file"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:layout_marginStart="@dimen/dp_19"
+                    android:layout_marginEnd="@dimen/dp_19"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintDimensionRatio="104:48"
+                    android:src="@drawable/ai_work_file" />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_image_ai_file"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:id="@+id/tv_title_ai_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_doc_conversion"
+                    android:textSize="@dimen/font_17"
+                    android:layout_gravity="center"
+                    android:textColor="@color/figma_text_primary"
+                    style="@style/HomeFontStyle"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_ai_file"
+                    android:id="@+id/tv_subtitle_ai_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:text="@string/msg_convert_quality_high"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/tab_text_unselected"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

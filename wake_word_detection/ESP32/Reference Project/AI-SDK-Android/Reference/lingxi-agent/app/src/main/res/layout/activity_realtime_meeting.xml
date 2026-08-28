@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layerType="hardware"
+    >
+
+    <!-- 顶部栏 -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_14"
+            android:src="@drawable/ic_back"
+             />
+
+        <TextView
+            android:id="@+id/tv_meeting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_ai_realtime_meeting"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal"
+            android:fontWeight="500" />
+
+        <LinearLayout
+            android:id="@+id/layout_new_meeting"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_14"
+            android:paddingEnd="@dimen/dp_14"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:src="@drawable/ic_add_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_new_meeting"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_13"
+                android:fontWeight="400" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Recording Indicator Group - Auto layout column -->
+    <RelativeLayout
+        android:id="@+id/layout_recording_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        android:gravity="center_horizontal">
+
+        <!-- Frame 47271 - Microphone Circle -->
+        <!-- Auto layout: flex-direction: row; align-items: center; padding: 36px 40px; width: 104px; height: 104px; background: #1E1E1E; border-radius: 52px; -->
+<!--        <FrameLayout-->
+<!--            android:id="@+id/layout_mic_circle"-->
+<!--            android:layout_width="104dp"-->
+<!--            android:layout_height="104dp"-->
+<!--            android:background="@drawable/bg_recording_circle"-->
+<!--            android:layout_marginBottom="@dimen/dp_20">-->
+
+<!--            &lt;!&ndash; Microphone Icon - using Figma design &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_microphone"-->
+<!--                android:layout_width="23dp"-->
+<!--                android:layout_height="@dimen/dp_33"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/voice_animation"-->
+<!--                android:contentDescription="录音麦克风" />-->
+
+<!--        </FrameLayout>-->
+
+<!--        &lt;!&ndash; Frame 1068 - Wave Animation Container &ndash;&gt;-->
+<!--        &lt;!&ndash; Auto layout: flex-direction: row; align-items: center; gap: 4px; width: 38px; height: 16px; &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/layout_wave_animation"-->
+<!--            android:layout_width="@dimen/dp_38"-->
+<!--            android:layout_height="@dimen/dp_16"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_marginBottom="@dimen/dp_20">-->
+
+<!--            &lt;!&ndash; Wave Bars with 4px gaps and animation &ndash;&gt;-->
+<!--            <View-->
+<!--                android:id="@+id/wave_bar_1"-->
+<!--                android:layout_width="@dimen/dp_10"-->
+<!--                android:layout_height="@dimen/dp_10"-->
+<!--                android:layout_marginEnd="@dimen/dp_4"-->
+<!--                android:background="@drawable/bg_wave_bar" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/wave_bar_2"-->
+<!--                android:layout_width="@dimen/dp_10"-->
+<!--                android:layout_height="@dimen/dp_16"-->
+<!--                android:layout_marginEnd="@dimen/dp_4"-->
+<!--                android:background="@drawable/bg_wave_bar" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/wave_bar_3"-->
+<!--                android:layout_width="@dimen/dp_10"-->
+<!--                android:layout_height="@dimen/dp_12"-->
+<!--                android:background="@drawable/bg_wave_bar" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        &lt;!&ndash; Recording Text &ndash;&gt;-->
+<!--        &lt;!&ndash; width: 120px; height: 24px; font-family: 'PingFang SC'; font-weight: 400; font-size: 16px; line-height: 24px; text-align: center; &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_status_text"-->
+<!--            android:layout_width="@dimen/dp_120"-->
+<!--            android:layout_height="@dimen/dp_24"-->
+<!--            android:text="@string/msg_recording"-->
+<!--            android:textColor="#1E1E1E"-->
+<!--            android:textSize="@dimen/font_16"-->
+<!--            android:fontWeight="400"-->
+<!--            android:lineHeight="@dimen/dp_24"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/myCardView"-->
+<!--            android:layout_width="320dp"-->
+<!--            android:layout_height="@dimen/dp_422"-->
+<!--            android:layout_marginLeft="@dimen/dp_28"-->
+<!--            android:layout_marginRight="@dimen/dp_28"-->
+<!--            app:cardCornerRadius="@dimen/dp_16"-->
+<!--            android:layout_marginTop="@dimen/dp_5"-->
+<!--            android:layout_marginBottom="@dimen/dp_5"-->
+<!--            android:layout_centerInParent="true"-->
+
+<!--            >-->
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/iv_bg"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@mipmap/login_bg2"-->
+<!--                android:scaleType="centerCrop"-->
+<!--&lt;!&ndash;                />&ndash;&gt;-->
+<!--&lt;!&ndash;            <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:visibility="gone"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:orientation="vertical">&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/tv_title"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="@string/label_date_meeting"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="@color/figma_text_primary"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="@dimen/font_16"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:fontWeight="500"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:fontFamily="sans-serif-medium"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:lineHeight="@dimen/dp_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginTop="@dimen/dp_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_gravity="center_horizontal" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="@dimen/dp_270"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="@dimen/dp_270"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_gravity="center_horizontal"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    android:layout_marginTop="@dimen/dp_30"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginBottom="90dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    >&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                    <com.fxzs.lingxiagent.view.widget.CustomCircleView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:id="@+id/circleView"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="@dimen/dp_270"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="@dimen/dp_270"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:visibility="invisible"&ndash;&gt;-->
+<!--&lt;!&ndash;                        />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:id="@+id/head"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="@dimen/dp_96"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="@dimen/dp_96"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:src="@mipmap/ic_app_logo"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_centerInParent="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:visibility="visible"&ndash;&gt;-->
+<!--&lt;!&ndash;                        />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_below="@id/head"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_marginTop="@dimen/dp_10"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_centerHorizontal="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:orientation="vertical">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/tv_status_text"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="@dimen/dp_120"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="@dimen/dp_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:text="@string/msg_lingxi_recording"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textColor="@color/text_999"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textSize="@dimen/font_14"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:fontWeight="400"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:fontFamily="sans-serif-medium"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:lineHeight="@dimen/dp_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_gravity="center_horizontal" />&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;                        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:id="@+id/tv_recording_time"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:text="@string/label_zero_time"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textColor="@color/figma_text_primary"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:textSize="@dimen/font_20"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:fontWeight="500"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:fontFamily="sans-serif-medium"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:lineHeight="@dimen/dp_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                            android:visibility="visible" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </LinearLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;                </RelativeLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;            </LinearLayout>&ndash;&gt;-->
+
+
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardView"
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_422"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24"
+            app:cardCornerRadius="@dimen/dp_16"
+            app:cardElevation="@dimen/dp_8"
+            app:cardUseCompatPadding="true"
+            android:layout_centerInParent="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/login_bg2"
+                android:scaleType="fitStart"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_date_meeting"
+                    android:textColor="@color/figma_text_primary"
+                    android:textSize="@dimen/font_16"
+                    android:fontWeight="500"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineHeight="@dimen/dp_24"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal" />
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_270"
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_marginBottom="@dimen/dp_90"
+                    >
+
+
+
+                <ImageView
+
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+
+<!--                    <com.fxzs.lingxiagent.view.widget.CustomCircleView-->
+<!--                        android:id="@+id/circleView"-->
+<!--                        android:layout_width="@dimen/dp_270"-->
+<!--                        android:layout_height="@dimen/dp_270"-->
+<!--                        android:visibility="visible"-->
+<!--                        />-->
+                    <com.fxzs.lingxiagent.view.widget.WaveView
+                        android:id="@+id/circleView"
+                        android:layout_width="@dimen/dp_270"
+                        android:layout_height="@dimen/dp_270"
+                        android:visibility="visible"
+                        />
+                    <ImageView
+                        android:id="@+id/head"
+                        android:layout_width="@dimen/dp_77"
+                        android:layout_height="@dimen/dp_77"
+                        android:src="@mipmap/ic_app_logo"
+                        android:layout_centerInParent="true"
+                        android:visibility="visible"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/head"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_status_text"
+                            android:layout_width="@dimen/dp_120"
+                            android:layout_height="@dimen/dp_24"
+                            android:text="@string/msg_lingxi_recording"
+                            android:textColor="@color/text_999"
+                            android:textSize="@dimen/font_14"
+                            android:fontWeight="400"
+                            android:fontFamily="sans-serif-medium"
+                            android:lineHeight="@dimen/dp_24"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal" />
+
+
+
+                        <TextView
+                            android:id="@+id/tv_recording_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_zero_time"
+                            android:textColor="@color/figma_text_primary"
+                            android:textSize="@dimen/font_20"
+                            android:fontWeight="500"
+                            android:fontFamily="sans-serif-medium"
+                            android:lineHeight="@dimen/dp_24"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp_44"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:baselineAligned="false">
+
+        <!-- Pause Button - Figma Design: Frame 858 -->
+        <!-- width: 163px; height: 48px; border: 1px #E0E0E0; border-radius: 12px; gap: 8px -->
+        <FrameLayout
+            android:id="@+id/btn_pause_meeting"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:background="@drawable/bg_stoke_e0_r16">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16">
+
+                <!-- Pause Icon 16x16px -->
+                <ImageView
+                    android:id="@+id/iv_button"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:src="@drawable/ic_pause_16"
+                    android:contentDescription="暂停图标" />
+
+                <!-- Text: PingFang SC 14sp 400weight #1E1E1E -->
+                <TextView
+                    android:id="@+id/tv_pause_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_pause_meeting"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_14"
+                    android:fontWeight="400"
+                    android:lineHeight="19.6sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- End Meeting Button - Figma Design: Frame 857 -->
+        <!-- width: 164px; height: 48px; background: #1C77FF; border-radius: 12px -->
+        <FrameLayout
+            android:id="@+id/btn_stop_recording"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@drawable/bg_button_primary">
+
+            <!-- Text: PingFang SC 14sp 500weight #FFFFFF -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontWeight="500"
+                android:lineHeight="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="@string/btn_end_meeting"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/font_14" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Recording Time Display (Hidden by default) -->
+
+</LinearLayout>

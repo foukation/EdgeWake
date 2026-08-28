@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/chat_tts_active01" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active02" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active03" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active04" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active05" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active06" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active07" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active08" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active09" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active10" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active11" android:duration="100"/>
+    <item android:drawable="@drawable/chat_tts_active12" android:duration="100"/>
+</animation-list>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 标题栏和内容区（原有内容） -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_14"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_about"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:fontWeight="500" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <!-- 整体包裹头像和栏目信息，marginTop=30px -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_30">
+                <!-- Logo部分 -->
+                <LinearLayout
+                    android:id="@+id/about_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <FrameLayout
+                        android:layout_width="@dimen/dp_96"
+                        android:layout_height="@dimen/dp_96"
+                        android:layout_marginBottom="@dimen/dp_16">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/icon_app" />
+                    </FrameLayout>
+                    <!-- 新增助手名称 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_lingxi"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/font_20"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp_26"/>
+                </LinearLayout>
+                <!-- 功能选项块紧随Logo部分，无需额外marginTop -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/about_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_block_rounded_16_gray"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:paddingLeft="@dimen/dp_16"
+                        android:paddingRight="@dimen/dp_16">
+                        <!-- 版本块 -->
+                        <LinearLayout
+                            android:id="@+id/rl_version"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_version"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/font_16"
+                                android:textStyle="normal"
+                                android:fontFamily="sans-serif"
+                                android:fontWeight="400" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_1"
+                                android:layout_weight="1" />
+                            <TextView
+                                android:id="@+id/tv_version"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_version_1_2_5"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/font_15" />
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="#EDEDED" />
+                        <!-- 了解更多块 -->
+                        <LinearLayout
+                            android:id="@+id/rl_learn_more"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/btn_learn_more"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/font_16"
+                                android:textStyle="normal"
+                                android:fontFamily="sans-serif"
+                                android:fontWeight="400" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_1"
+                                android:layout_weight="1" />
+                            <ImageView
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"
+                                android:src="@drawable/ic_arrow_right"
+                                android:tint="#CCCCCC" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="#EDEDED" />
+                        <!-- 版本更新块 -->
+                        <LinearLayout
+                            android:id="@+id/rl_version_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_check_update"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/font_16"
+                                android:textStyle="normal"
+                                android:fontFamily="sans-serif"
+                                android:fontWeight="400" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_1"
+                                android:layout_weight="1" />
+                            <!-- 新版本提示红点 -->
+                            <View
+                                android:id="@+id/view_update_dot"
+                                android:layout_width="@dimen/dp_8"
+                                android:layout_height="@dimen/dp_8"
+                                android:background="@drawable/shape_red_dot"
+                                android:layout_marginRight="@dimen/dp_4"
+                                android:visibility="gone" />
+                            <ImageView
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"
+                                android:src="@drawable/ic_arrow_right"
+                                android:tint="#CCCCCC" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="#EDEDED" />
+                        <LinearLayout
+                            android:id="@+id/rl_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_service_agreement"
+                                android:textColor="#1E1E1E"
+                                android:textSize="@dimen/font_16"
+                                android:textStyle="normal"
+                                android:fontFamily="sans-serif"
+                                android:fontWeight="400" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_6"
+                                android:layout_weight="1" />
+                            <ImageView
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"
+                                android:src="@drawable/ic_arrow_right"
+                                android:tint="#CCCCCC" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 绝对定位底部版权信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp_32">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_icp_filing"
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/font_10"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:fontWeight="400"
+            android:lineHeight="@dimen/dp_18"
+            android:letterSpacing="0"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_copyright"
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/font_10"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:fontWeight="400"
+            android:lineHeight="@dimen/dp_18"
+            android:letterSpacing="0"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_cm_copyright"
+            android:textColor="#B2B2B2"
+            android:textSize="@dimen/font_10"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:fontWeight="400"
+            android:lineHeight="@dimen/dp_18"
+            android:letterSpacing="0"
+            android:gravity="center"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- PPT模块基础尺寸 -->
+    <dimen name="ppt_spacing_tiny">4dp</dimen>
+    <dimen name="ppt_spacing_small">8dp</dimen>
+    <dimen name="ppt_spacing_medium">16dp</dimen>
+    <dimen name="ppt_spacing_large">24dp</dimen>
+    <dimen name="ppt_spacing_xlarge">32dp</dimen>
+    
+    <!-- PPT圆角尺寸 -->
+    <dimen name="ppt_corner_radius_small">8dp</dimen>
+    <dimen name="ppt_corner_radius_medium">12dp</dimen>
+    <dimen name="ppt_corner_radius_large">16dp</dimen>
+    <dimen name="ppt_corner_radius_xlarge">20dp</dimen>
+    
+    <!-- PPT文本尺寸 -->
+    <dimen name="ppt_text_size_tiny">10sp</dimen>
+    <dimen name="ppt_text_size_small">12sp</dimen>
+    <dimen name="ppt_text_size_medium">14sp</dimen>
+    <dimen name="ppt_text_size_large">16sp</dimen>
+    <dimen name="ppt_text_size_xlarge">18sp</dimen>
+    <dimen name="ppt_text_size_title">24sp</dimen>
+    <dimen name="ppt_text_size_display">28sp</dimen>
+    
+    <!-- PPT按钮尺寸 -->
+    <dimen name="ppt_button_height">48dp</dimen>
+    <dimen name="ppt_button_height_small">40dp</dimen>
+    <dimen name="ppt_button_height_large">56dp</dimen>
+    <dimen name="ppt_button_padding_horizontal">24dp</dimen>
+    <dimen name="ppt_button_padding_vertical">12dp</dimen>
+    <dimen name="ppt_button_min_width">88dp</dimen>
+    
+    <!-- PPT图标尺寸 -->
+    <dimen name="ppt_icon_size_small">16dp</dimen>
+    <dimen name="ppt_icon_size_medium">24dp</dimen>
+    <dimen name="ppt_icon_size_large">32dp</dimen>
+    <dimen name="ppt_icon_size_xlarge">48dp</dimen>
+    
+    <!-- PPT输入框尺寸 -->
+    <dimen name="ppt_input_height">48dp</dimen>
+    <dimen name="ppt_input_height_multiline">120dp</dimen>
+    <dimen name="ppt_input_padding_horizontal">16dp</dimen>
+    <dimen name="ppt_input_padding_vertical">12dp</dimen>
+    
+    <!-- PPT卡片尺寸 -->
+    <dimen name="ppt_card_elevation">2dp</dimen>
+    <dimen name="ppt_card_elevation_raised">4dp</dimen>
+    <dimen name="ppt_card_elevation_floating">8dp</dimen>
+    <dimen name="ppt_card_padding">16dp</dimen>
+    <dimen name="ppt_card_margin">8dp</dimen>
+    
+    <!-- PPT工具栏尺寸 -->
+    <dimen name="ppt_toolbar_height">56dp</dimen>
+    <dimen name="ppt_toolbar_padding_horizontal">16dp</dimen>
+    <dimen name="ppt_toolbar_elevation">4dp</dimen>
+    
+    <!-- PPT底部栏尺寸 -->
+    <dimen name="ppt_bottom_bar_height">72dp</dimen>
+    <dimen name="ppt_bottom_bar_padding">16dp</dimen>
+    <dimen name="ppt_bottom_bar_elevation">8dp</dimen>
+    
+    <!-- PPT浮动操作按钮尺寸 -->
+    <dimen name="ppt_fab_size">56dp</dimen>
+    <dimen name="ppt_fab_size_mini">40dp</dimen>
+    <dimen name="ppt_fab_margin">16dp</dimen>
+    <dimen name="ppt_fab_elevation">6dp</dimen>
+    
+    <!-- PPT列表项尺寸 -->
+    <dimen name="ppt_list_item_height">56dp</dimen>
+    <dimen name="ppt_list_item_height_two_line">72dp</dimen>
+    <dimen name="ppt_list_item_height_three_line">88dp</dimen>
+    <dimen name="ppt_list_item_padding_horizontal">16dp</dimen>
+    <dimen name="ppt_list_item_padding_vertical">12dp</dimen>
+    
+    <!-- PPT标签尺寸 -->
+    <dimen name="ppt_tag_height">32dp</dimen>
+    <dimen name="ppt_tag_padding_horizontal">16dp</dimen>
+    <dimen name="ppt_tag_padding_vertical">8dp</dimen>
+    <dimen name="ppt_tag_margin">4dp</dimen>
+    
+    <!-- PPT页面指示器尺寸 -->
+    <dimen name="ppt_page_indicator_size">8dp</dimen>
+    <dimen name="ppt_page_indicator_margin">4dp</dimen>
+    <dimen name="ppt_page_indicator_selected_size">12dp</dimen>
+    
+    <!-- PPT幻灯片尺寸 -->
+    <dimen name="ppt_slide_aspect_ratio">1.33</dimen>
+    <dimen name="ppt_slide_margin">16dp</dimen>
+    <dimen name="ppt_slide_corner_radius">8dp</dimen>
+    <dimen name="ppt_slide_elevation">2dp</dimen>
+    
+    <!-- PPT模板尺寸 -->
+    <dimen name="ppt_template_item_width">160dp</dimen>
+    <dimen name="ppt_template_item_height">120dp</dimen>
+    <dimen name="ppt_template_item_margin">8dp</dimen>
+    <dimen name="ppt_template_item_corner_radius">8dp</dimen>
+    
+    <!-- PPT大纲尺寸 -->
+    <dimen name="ppt_outline_item_padding">12dp</dimen>
+    <dimen name="ppt_outline_item_margin">4dp</dimen>
+    <dimen name="ppt_outline_indent">24dp</dimen>
+    <dimen name="ppt_outline_bullet_size">6dp</dimen>
+    
+    <!-- PPT思考过程尺寸 -->
+    <dimen name="ppt_thinking_padding">16dp</dimen>
+    <dimen name="ppt_thinking_margin">16dp</dimen>
+    <dimen name="ppt_thinking_max_height">200dp</dimen>
+    
+    <!-- PPT对话框尺寸 -->
+    <dimen name="ppt_dialog_padding">24dp</dimen>
+    <dimen name="ppt_dialog_margin">16dp</dimen>
+    <dimen name="ppt_dialog_corner_radius">16dp</dimen>
+    <dimen name="ppt_dialog_elevation">8dp</dimen>
+    
+    <!-- PPT进度条尺寸 -->
+    <dimen name="ppt_progress_height">4dp</dimen>
+    <dimen name="ppt_progress_height_thick">8dp</dimen>
+    <dimen name="ppt_progress_corner_radius">2dp</dimen>
+    
+    <!-- PPT分割线尺寸 -->
+    <dimen name="ppt_divider_height">1dp</dimen>
+    <dimen name="ppt_divider_margin">8dp</dimen>
+    
+    <!-- PPT触摸目标尺寸 -->
+    <dimen name="ppt_touch_target_size">48dp</dimen>
+    <dimen name="ppt_touch_target_size_small">40dp</dimen>
+    
+    <!-- PPT阴影尺寸 -->
+    <dimen name="ppt_shadow_elevation_low">2dp</dimen>
+    <dimen name="ppt_shadow_elevation_medium">4dp</dimen>
+    <dimen name="ppt_shadow_elevation_high">8dp</dimen>
+    <dimen name="ppt_shadow_elevation_floating">16dp</dimen>
+    
+</resources>

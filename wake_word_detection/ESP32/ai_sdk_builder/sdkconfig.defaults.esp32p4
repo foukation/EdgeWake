@@ -1,0 +1,22 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-P4 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-P4
+# Architecture: RISC-V dual-core
+# Max frequency: 400MHz (using 360MHz here)
+# Features: High performance, MIPI-CSI/DSI support, suitable for HMI apps
+#
+# Note: ESP32-P4 is a newer chip, requires experimental features enabled
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 360MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_360=y
+
+# Enable experimental features
+# ESP32-P4 is a newer chip, some features are marked as experimental
+CONFIG_IDF_EXPERIMENTAL_FEATURES=y

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/shape_white_r360"
+            android:drawableLeft="@mipmap/icon_star"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/guide_gui_query1"
+            android:textColor="@color/color_344386"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:src="@drawable/baseline_arrow_drop_down_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/shape_white_r360"
+            android:padding="@dimen/dp_10"
+            android:drawableLeft="@mipmap/icon_star"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/guide_gui_query2"
+            android:textColor="@color/color_344386"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_gravity="end"
+            android:src="@drawable/baseline_arrow_drop_down_24" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_guide_gui_little"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal|bottom">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_22"
+            android:textStyle="bold"
+            android:text="@string/guide_gui_title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_395A7C"
+            android:textSize="@dimen/font_15"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/guide_gui_content"/>
+    </LinearLayout>
+
+
+</FrameLayout>

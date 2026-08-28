@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_93"
+        app:cardCornerRadius="@dimen/dp_8"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#F5F5F5">
+
+        <ImageView
+            android:id="@+id/template_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="模板预览" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 选中状态的蓝色边框 -->
+    <View
+        android:id="@+id/selection_border"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_93"
+        android:background="@drawable/bg_template_selected"
+        android:visibility="gone" />
+
+    <!-- 选中状态的勾选标记 -->
+    <ImageView
+        android:id="@+id/check_mark"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp_8"
+        android:src="@drawable/ic_check_circle"
+        android:visibility="gone" />
+
+</RelativeLayout>

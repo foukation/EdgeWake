@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dp_10">
+
+    <!-- 话题1标签 (选中状态) -->
+    <TextView
+        android:id="@+id/tag_topic1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_topic_1"
+        android:textSize="@dimen/font_12"
+        android:textColor="#1C77FF"
+        android:background="@drawable/bg_tag_selected"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 话题2标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_topic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_topic_2"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 话题3标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_topic3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_topic_3"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 话题4标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_topic4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_topic_4"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 话题5标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_topic5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_topic_5"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

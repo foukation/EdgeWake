@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="343dp"
+    android:height="52dp"
+    android:viewportWidth="343"
+    android:viewportHeight="52">
+    
+    <!-- Direct copy of SVG shadow and rectangle -->
+    <!-- Shadow layer with offset -->
+    <path
+        android:fillColor="#34606F8B"
+        android:pathData="M16,4 L327,4 Q343,4 343,20 L343,36 Q343,52 327,52 L16,52 Q0,52 0,36 L0,20 Q0,4 16,4 Z" />
+    
+    <!-- White rectangle (exact from SVG) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,0 L327,0 Q343,0 343,16 L343,36 Q343,52 327,52 L16,52 Q0,52 0,36 L0,16 Q0,0 16,0 Z" />
+    
+</vector>

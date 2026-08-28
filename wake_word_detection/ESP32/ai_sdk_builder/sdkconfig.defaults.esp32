@@ -1,0 +1,15 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32 (original)
+# Architecture: Xtensa LX6 dual-core
+# Max frequency: 240MHz
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 240MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y

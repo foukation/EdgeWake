@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildSdkVersion
+
+    defaultConfig {
+        applicationId "com.cmdc.ai.assist.demo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    //签名使用的相关证书
+    signingConfigs {
+        release {
+            storeFile file('keystore.jks')
+            storePassword '123456'
+            keyAlias 'baidu'
+            keyPassword '123456'
+        }
+        debug {
+            storeFile file('keystore.jks')
+            storePassword '123456'
+            keyAlias 'baidu'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            // shrinkResources true
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+        unitTests.all {
+            useJUnit()  // 使用JUnit 4
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    /*implementation("com.xiaodu.magictool:magictool-core:${MAGIC_TOOL_VERSION}") {
+        changing = true
+    }*/
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "com.google.code.gson:gson:${GSON_VERSION}"
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation "com.squareup.okhttp3:okhttp:${OKHTTP_VERSION}"
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+    implementation "com.google.android.material:material:${GOOGLE_MATERIAL}"
+    implementation "androidx.cardview:cardview:${ANDROIDX_CARDVIEW}"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "org.greenrobot:eventbus:${EVENTBUS_VERSION}"
+    implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    implementation "com.github.bumptech.glide:okhttp3-integration:${GLIDE_VERSION}"
+    implementation "com.github.bumptech.glide:recyclerview-integration:${GLIDE_VERSION}"
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.alibaba:fastjson:1.2.73'
+    
+    // 测试相关依赖
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:4.0.0'
+    testImplementation 'org.mockito:mockito-inline:4.0.0'
+    testImplementation 'org.json:json:20210307'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+    testImplementation "com.squareup.okhttp3:mockwebserver:${OKHTTP_VERSION}"
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation("com.jakewharton.timber:timber:4.7.1")
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
+
+    implementation project(':FullyCompatibleSDK')
+    /*implementation project(':lightweightAdaptation')*/
+    /*implementation project(':customizeSdk')*/
+    /*implementation project(':ztePadSdk')*/
+    /*implementation project(':InspurPadSdk')*/
+    /*implementation project(':coolPadSdk')*/
+    /*implementation project(':lingXiAgent')*/
+    /*implementation project(':zuoYeBangLearningMachine')*/
+    /*implementation project(':littleElephantPADLearningMachine')*/
+
+    /*implementation(name: 'glasses-SDK0.9.4_', ext: 'aar')
+    implementation(name: 'SDK2.1.11-Java32_T1', ext: 'aar')
+    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.11'
+    implementation "com.huawei.hms:ads-identifier:3.4.62.300"
+    implementation 'com.hihonor.mcs:ads-identifier:1.0.2.301'
+    implementation("com.jakewharton.timber:timber:4.7.1")
+    implementation 'org.java-websocket:Java-WebSocket:1.5.1'
+    implementation("com.squareup.okhttp3:okhttp-sse:4.9.3")*/
+}
+
+configurations.all { // check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}

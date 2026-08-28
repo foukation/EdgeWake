@@ -1,0 +1,8 @@
+{
+    "env": {
+      "ANTHROPIC_BASE_URL": "https://api.moonshot.cn/anthropic",
+      "ANTHROPIC_AUTH_TOKEN": "sk-0knZa3beH7o6FyTpcCmyUNXIOoGvaWwpgvzi2bDX1oZsehl3",
+      "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+      "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+    }
+}

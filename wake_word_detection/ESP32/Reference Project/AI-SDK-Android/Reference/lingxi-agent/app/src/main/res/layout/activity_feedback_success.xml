@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context="com.fxzs.lingxiagent.view.user.FeedbackSuccessActivity">
+
+    <!-- 顶部导航栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="#FFFFFF"
+        android:elevation="@dimen/dp_1">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:src="@drawable/ic_close"
+            android:contentDescription="关闭" />
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_feedback"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <!-- 反馈历史 -->
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:text="@string/title_feedback_history"
+            android:textColor="#666666"
+            android:textSize="@dimen/font_14" />
+
+    </RelativeLayout>
+
+    <!-- 成功内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_24"
+        android:paddingEnd="@dimen/dp_24">
+
+        <!-- 成功图标 -->
+        <FrameLayout
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:layout_marginBottom="@dimen/dp_24">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_circle_success" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check_white"
+                android:contentDescription="成功" />
+
+        </FrameLayout>
+
+        <!-- 成功文字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_feedback_success"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/dp_16" />
+
+        <!-- 提示信息 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/label_reply_eta_1_2_days"
+            android:textColor="#666666"
+            android:textSize="@dimen/font_16"
+            android:lineSpacingExtra="@dimen/dp_4" />
+
+    </LinearLayout>
+
+</LinearLayout>

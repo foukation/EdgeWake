@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UserInputDisplayView">
+        <attr name="inputText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollToBottomButton">
+        <attr name="buttonIcon" format="reference" />
+        <attr name="showBadge" format="boolean" />
+        <attr name="buttonBackgroundColor" format="color" />
+    </declare-styleable>
+
+    <!-- AspectRatioImageView 自定义属性 -->
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspectRatio" format="float" />
+        <attr name="adjustViewBounds" format="boolean" />
+        <attr name="maxWidth" format="dimension" />
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Custom_Tab_Spinner">
+        <attr name="spinner_text" format="string"/>
+        <attr name="spinner_textcolor" format="color"/>
+        <attr name="spinner_img" format="reference|color"/>
+        <attr name="spinner_entries" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="DefaultCloseView">
+        <!--区域默认颜色-->
+        <attr name="normalColor" format="color" />
+        <!--区域选中颜色-->
+        <attr name="inRangeColor" format="color" />
+        <!--区域形状-->
+        <attr name="closeShapeType" format="enum">
+            <enum name="oval" value="0" />
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <!--选中切换时的缩放大小-->
+        <attr name="zoomSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- GradientTextView 自定义属性 -->
+    <declare-styleable name="GradientTextView">
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="gradientOrientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+    "code": 0,
+    "data": {
+        "list": [
+            {
+                "id": 756,
+                "title": "新人入职培训22",
+                "createTime": 1757484859000,
+                "updateTime": 1757484859000,
+                "userId": "65",
+                "pptCovers": [
+                    {
+                        "id": 163,
+                        "title": null,
+                        "requestId": null,
+                        "coverImage": "https://sgw-dx.xf-yun.com/api/v1/sparkdesk/_220e7b481e724f2db5bc9e922e21d28f_1756715535709-011848983221102016.jpeg?authorization=c2ltcGxlLWp3dCBhaz1zcGFya2Rlc2s4MDAwMDAwMDAwMDE7ZXhwPTMzMzM1MTU1NDc7YWxnbz1obWFjLXNoYTI1NjtzaWc9dTRLNFhwcUxuVzVDdCt5MURZNXNxcm1EcjltTmdQNWRnbno2TExWU2xvMD0=&x_location=7YfmxI7B7uKO7jlRxIftd6UZg5D=&bg=",
+                        "coverId": "202407179097C2D",
+                        "createTime": 1757484904000,
+                        "updateTime": 1757484904000,
+                        "userId": 65,
+                        "sessionId": 756
+                    }
+                ],
+                "pptCatalogs": [],
+                "pptTasks": [
+                    {
+                        "id": 170,
+                        "title": "新人入职培训22",
+                        "requestId": "",
+                        "coverId": "202407179097C2D",
+                        "customData": "{\"author\":\"\",\"catalogs\":[{\"catalog\":\"欢迎与公司概况\",\"sub_catalog\":[\"欢迎与公司概况\"]},{\"catalog\":\"企业文化解读\",\"sub_catalog\":[\"企业文化解读\"]},{\"catalog\":\"制度规范培训\",\"sub_catalog\":[\"制度规范培训\"]},{\"catalog\":\"岗位职责明确\",\"sub_catalog\":[\"岗位职责明确\"]},{\"catalog\":\"核心技能培养\",\"sub_catalog\":[\"核心技能培养\"]},{\"catalog\":\"团队融入策略\",\"sub_catalog\":[\"团队融入策略\"]},{\"catalog\":\"成长支持体系\",\"sub_catalog\":[\"成长支持体系\"]}],\"subTitle\":\"\",\"title\":\"新人入职培训\"}",
+                        "taskId": "e2ae4c1c85304490ae474cfc1faa49ec",
+                        "pptUrl": "https://ppt-1320245968.cos.ap-guangzhou.myqcloud.com/6d78578e718bb23617f4b48c23600ac89fe6b52673cda4ea0cadc015e806c596.pptx",
+                        "pptTitle": "新人入职培训22",
+                        "pageCount": 17,
+                        "createTime": 1757484904000,
+                        "updateTime": 1757484926000,
+                        "userId": "65",
+                        "sessionId": 756,
+                        "type": null
+                    }
+                ]
+            }
+        ],
+        "total": 1
+    },
+    "msg": ""
+}

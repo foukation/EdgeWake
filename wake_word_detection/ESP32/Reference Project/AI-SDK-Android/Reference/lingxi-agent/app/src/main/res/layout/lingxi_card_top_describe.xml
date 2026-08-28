@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcome_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_249"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_34">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_215"
+        android:background="@drawable/des_bg"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <!-- 顶部蓝色问候区域 -->
+        <LinearLayout
+            android:id="@+id/header_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Suspicious0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/text_hi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:lineHeight="@dimen/dp_17"
+                    android:text="@string/label_hello_i_am_ai"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:id="@+id/text_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:lineHeight="@dimen/dp_22"
+                    android:text="@string/msg_lingxi_tagline"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- AI 助手形象 -->
+            <ImageView
+                android:id="@+id/avatar_ai"
+                android:layout_width="@dimen/dp_173"
+                android:layout_height="@dimen/dp_168"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:src="@drawable/des_people"
+                android:translationX="@dimen/dp_neg_20"
+
+                android:translationY="@dimen/dp_neg_75" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_100"
+            android:background="@drawable/des_bot_bg"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_8"
+            android:translationY="@dimen/dp_neg_100">
+
+            <LinearLayout
+                android:id="@+id/options_box1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_recharge"
+                    android:layout_width="@dimen/dp_84"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/des_btn1"
+                    android:text="@string/sample_recharge_phone"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_12" />
+
+                <Button
+                    android:id="@+id/btn_generate_image"
+                    android:layout_width="@dimen/dp_180"
+                    android:layout_height="@dimen/dp_35"
+                    android:background="@drawable/des_btn2"
+                    android:text="@string/sample_spring_sunshine"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/options_box2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_health"
+                    android:layout_width="@dimen/dp_156dp"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/des_btn3"
+                    android:text="@string/sample_seasonal_health"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_12" />
+
+                <Button
+                    android:id="@+id/btn_spring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:background="@drawable/des_btn4"
+                    android:text="@string/sample_spring_sunshine_2"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/font_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

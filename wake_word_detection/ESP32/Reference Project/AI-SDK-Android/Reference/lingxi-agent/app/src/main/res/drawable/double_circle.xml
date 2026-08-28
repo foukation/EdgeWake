@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 外层圆：灰色（先定义底层，会被上层覆盖中间区域） -->
+    <item
+        android:width="40dp"
+        android:height="40dp"
+        android:gravity="center"
+        >
+        <shape android:shape="oval">
+            <!-- 外层圆颜色：灰色（可自定义 RGB 值，如 #FF9E9E9E） -->
+            <solid android:color="@color/gray" />
+            <!-- 外层圆大小：通过 View 的宽高控制，这里无需额外设置尺寸 -->
+        </shape>
+    </item>
+
+    <!-- 内层圆：白色（后定义上层，通过 padding 控制与外层的间距） -->
+    <item
+        android:width="20dp"
+        android:height="20dp"
+        android:gravity="center"
+        >
+
+    <shape android:shape="oval">
+        <!-- 内层圆颜色：白色 -->
+        <solid android:color="#FFFFFFFF" />
+    </shape>
+</item>
+
+    </layer-list>

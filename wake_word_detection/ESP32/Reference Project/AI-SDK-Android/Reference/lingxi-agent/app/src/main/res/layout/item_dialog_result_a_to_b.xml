@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginVertical="@dimen/dp_8">
+
+    <!-- A语言内容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_result_a"
+        android:padding="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_48">
+
+        <TextView
+            android:id="@+id/tv_original_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_hello_world"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="@dimen/dp_4" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_time_14_30"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- 翻译结果 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_result_b"
+        android:padding="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/tv_translated_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_hello_world_cn"
+            android:textSize="@dimen/font_16"
+            android:textColor="#4285F4" />
+
+    </LinearLayout>
+
+</LinearLayout>

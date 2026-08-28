@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- User Input Display - 靠右显示 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+        
+        <com.fxzs.lingxiagent.view.common.UserInputDisplayView
+            android:id="@+id/user_input_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end" />
+            
+    </FrameLayout>
+
+    <!-- AI Response Display - 靠左显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+        
+        <com.fxzs.lingxiagent.view.common.AIResponseView
+            android:id="@+id/ai_response_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            
+    </LinearLayout>
+
+</LinearLayout>

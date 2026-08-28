@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Top Navigation Bar - 参考会议tab样式 -->
+    <LinearLayout
+        android:id="@+id/top_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <!-- Top Row: Back Button, Title, Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginStart="@dimen/dp_16"
+                android:src="@drawable/ic_back"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+
+            <!-- Close Button -->
+            <ImageView
+                android:id="@+id/close_button"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_52"
+                android:layout_marginTop="@dimen/dp_13"
+
+                android:src="@drawable/ic_close"
+                android:tint="@color/black"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+            <!-- PPT Title -->
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/label_ppt_preview"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center" />
+
+            <!-- Top Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <!-- Download Button -->
+                <ImageView
+                    android:id="@+id/download_button"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/draw_download"
+                    android:tint="@color/black"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- WebView for PPT preview -->
+    <com.fxzs.lingxiagent.view.FixTouchWebView
+        android:id="@+id/ppt_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+</LinearLayout>

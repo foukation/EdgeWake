@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dp_10">
+
+    <!-- 按章节标签 (选中状态) -->
+    <TextView
+        android:id="@+id/tag_by_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_by_chapter"
+        android:textSize="@dimen/font_12"
+        android:textColor="#1C77FF"
+        android:background="@drawable/bg_tag_selected"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 按主题标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_by_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_by_topic"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 详细标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_detailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_detail"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

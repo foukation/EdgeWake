@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16">
+
+    <!-- Demo Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <Button
+            android:id="@+id/btn_markdown_demo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_markdown_demo"
+            android:textSize="@dimen/font_12"/>
+
+        <Button
+            android:id="@+id/btn_stream_demo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_8"
+            android:text="@string/label_stream_output"
+            android:textSize="@dimen/font_12"/>
+
+        <Button
+            android:id="@+id/btn_complex_demo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_8"
+            android:text="@string/title_complex_example"
+            android:textSize="@dimen/font_12"/>
+
+    </LinearLayout>
+
+    <!-- AI Response View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.fxzs.lingxiagent.view.common.AIResponseView
+            android:id="@+id/ai_response_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+</LinearLayout>

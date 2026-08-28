@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:id="@+id/ll_bottom_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/dp_52"
+                android:maxHeight="@dimen/dp_192"
+                android:background="@drawable/bg_gui_blue"
+                android:paddingEnd="@dimen/dp_4">
+
+                <!-- 编辑输入区域 -->
+                <LinearLayout
+                    android:id="@+id/ll_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/iv_voice"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <EditText
+                        android:id="@+id/ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/hint_send_message"
+                        android:imeOptions="actionSend"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minHeight="@dimen/dp_52"
+                        android:paddingStart="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_14"
+                        android:paddingBottom="@dimen/dp_14"
+                        android:visibility="invisible"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/text_hint_color"
+                        android:textSize="@dimen/font_16" />
+                </LinearLayout>
+
+                <!-- Logo -->
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:src="@drawable/ic_app_logo"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 按住说话区域（原 RelativeLayout） -->
+                <TextView
+                    android:id="@+id/tv_press"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_52"
+                    android:gravity="center"
+                    android:text="@string/btn_hold_to_speak"
+                    android:textColor="@color/text_black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/font_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_keyboard"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:background="@drawable/home_keyboard"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 假输入框 -->
+                <TextView
+                    android:id="@+id/tv_ed_fake"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp_52"
+                    android:maxHeight="@dimen/dp_192"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_14"
+                    android:paddingBottom="@dimen/dp_14"
+                    android:text="@string/hint_send_message_ellipsis"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/font_16"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/iv_voice"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 语音按钮 -->
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:src="@drawable/home_voice"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <!-- 右侧展开区 -->
+                <LinearLayout
+                    android:id="@+id/ll_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:minHeight="@dimen/dp_52"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_edit_open"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@drawable/chat_edit_open"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_send"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@drawable/home_send"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_bottom_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_voice_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:text="@string/btn_release_send_swipe_cancel"
+            android:textColor="#7F7F7F"
+            android:textFontWeight="600"
+            android:textSize="@dimen/font_12" />
+
+        <RelativeLayout
+            android:id="@+id/rl_voice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@drawable/bg_voice_blue_r20">
+
+            <ImageView
+                android:id="@+id/iv_bottom_voice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:background="@mipmap/voice_wave"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.fxzs.lingxiagent.view.common.AutoRecordView
+        android:id="@+id/voiceRecordView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义透明全屏主题，继承系统主题 -->
+    <style name="Theme.CustomTranslucentFullscreen" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <!-- 配置退出动画为原地消失 -->
+        <item name="android:windowExitAnimation">@anim/fade_out_instantly</item>
+        <!-- 可选：配置无进入动画实现立即显示 -->
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+    </style>
+    <style name="Custom_NoActionBar" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar">
+        <!-- 这里可以添加自定义属性 -->
+        <!-- 例如：<item name="android:windowBackground">@color/transparent</item> -->
+    </style>
+
+    <!-- 自定义 DialogActivity 样式 -->
+    <style name="CustomDialogActivityTheme" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar">
+        <!-- 1. 背景：透明+圆角（核心） -->
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <!-- 2. 宽高：自适应/固定 -->
+        <item name="android:windowMinWidthMajor">80%</item> <!-- 大屏最小宽度 -->
+        <item name="android:windowMinWidthMinor">90%</item> <!-- 小屏最小宽度 -->
+        <!-- 3. 无标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 4. 背景模糊/透明度 -->
+        <item name="android:backgroundDimAmount">0.5</item> <!-- 背景变暗程度（0-1） -->
+        <!-- 5. 动画：自定义进出动画 -->
+        <item name="android:windowAnimationStyle">@style/DialogActivityAnimation</item>
+        <!-- 6. 位置：居中（默认）/顶部/底部 -->
+        <item name="android:gravity">bottom</item>
+        <!-- 7. 禁止外部点击关闭 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!-- 8. 无状态栏/导航栏覆盖 -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item> <!-- 状态栏透明 -->
+    </style>
+
+    <!-- 自定义进出动画 -->
+    <style name="DialogActivityAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+</resources>

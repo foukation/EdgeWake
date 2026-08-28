@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Shadow layer with exact SVG parameters -->
+    <!-- Note: Android doesn't support complex SVG filters directly, 
+         so we approximate with multiple layers -->
+    
+    <!-- Outer shadow (approximates Gaussian blur) -->
+    <item
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#08606F8B" />
+            <corners android:radius="18dp" />
+        </shape>
+    </item>
+    
+    <!-- Middle shadow -->
+    <item
+        android:left="4dp"
+        android:right="4dp"
+        android:top="6dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#15606F8B" />
+            <corners android:radius="17dp" />
+        </shape>
+    </item>
+    
+    <!-- Inner shadow (main shadow) -->
+    <item
+        android:left="0dp"
+        android:right="0dp"
+        android:top="4dp"
+        android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#34606F8B" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    
+    <!-- Main white rectangle -->
+    <item
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:bottom="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    
+</layer-list>

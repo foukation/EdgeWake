@@ -1,0 +1,40 @@
+# ===========================================================================
+# Wake Word SDK Builder Default Configuration
+# ===========================================================================
+#
+# This file contains default configuration for building wake_word_sdk.
+#
+
+# ---------------------------------------------------------------------------
+# ESP-SR Speech Recognition Configuration
+# ---------------------------------------------------------------------------
+
+# Enable Wakenet (wake word detection)
+CONFIG_SR_WN_WN9_HIESP=y
+
+# Enable AFE (Audio Front-End)
+CONFIG_SR_AFE_ENABLE=y
+
+# ---------------------------------------------------------------------------
+# Memory Configuration
+# ---------------------------------------------------------------------------
+
+# Use PSRAM (external RAM)
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# ---------------------------------------------------------------------------
+# FreeRTOS Configuration
+# ---------------------------------------------------------------------------
+
+# Enable FreeRTOS statistics
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
+
+# ---------------------------------------------------------------------------
+# Log Configuration
+# ---------------------------------------------------------------------------
+
+# Default log level
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y

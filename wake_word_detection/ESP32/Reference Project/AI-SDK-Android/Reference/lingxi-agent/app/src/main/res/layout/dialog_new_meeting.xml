@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <!-- Dialog Container -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_ai_meeting_fragment" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_328"
+        android:layout_height="@dimen/dp_156dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white_rounded_16dp"
+        android:padding="@dimen/dp_24">
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_32">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_meeting_not_ended_new"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_18"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingMultiplier="1.4"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dp_8" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tv_dialog_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_new_meeting_auto_record"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="sans-serif"
+                android:lineSpacingMultiplier="1.4"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="#E5E5E5"
+            android:layout_marginBottom="@dimen/dp_32" />
+
+        <!-- Button Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Buttons Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- New Meeting Button -->
+                <LinearLayout
+                    android:id="@+id/btn_new_meeting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_button_gray_rounded_8dp"
+                    android:padding="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_6"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_new_meeting"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/font_16"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingMultiplier="1.4" />
+
+                </LinearLayout>
+
+                <!-- Continue Meeting Button -->
+                <LinearLayout
+                    android:id="@+id/btn_continue_meeting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_button_red_rounded_8dp"
+                    android:padding="@dimen/dp_8"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_continue_meeting"
+                        android:textColor="#1C77FF"
+                        android:textSize="@dimen/font_16"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingMultiplier="1.4" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Vertical Separator -->
+            <View
+                android:layout_width="@dimen/dp_0.5"
+                android:layout_height="@dimen/dp_36"
+                android:background="#E5E5E5"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 圆角 -->
+    <corners   android:topLeftRadius="25dp"
+        android:topRightRadius="25dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+    <!-- 渐变背景（从左蓝到右紫，和你图片一致） -->
+    <gradient
+        android:startColor="#4A90E2"
+        android:endColor="#9388EB"
+        android:angle="0" />  <!-- 0=水平渐变 -->
+</shape>

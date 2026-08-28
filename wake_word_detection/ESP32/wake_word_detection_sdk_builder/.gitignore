@@ -1,0 +1,37 @@
+# Build output
+build/
+output/
+*.o
+*.a
+*.elf
+*.bin
+*.map
+
+# ESP-IDF generated config
+sdkconfig.old
+
+# Editor / IDE
+.vscode/
+.idea/
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+.eggs/
+venv/
+.env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug / logs
+*.log
+*.dmp
+
+# Dependencies (可注释掉以提交 managed_components 便于复现)
+# managed_components/

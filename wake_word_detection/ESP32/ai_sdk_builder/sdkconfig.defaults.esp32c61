@@ -1,0 +1,16 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-C61 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-C61
+# Architecture: RISC-V single-core
+# Max frequency: 160MHz
+# Features: Cost-optimized version of ESP32-C6
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 160MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_160=y

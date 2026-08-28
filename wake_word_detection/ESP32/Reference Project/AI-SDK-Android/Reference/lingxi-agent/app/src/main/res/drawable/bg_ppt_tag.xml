@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tag_background_pressed" />
+            <corners android:radius="@dimen/ppt_corner_radius_xlarge" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/tag_background" />
+            <corners android:radius="@dimen/ppt_corner_radius_xlarge" />
+        </shape>
+    </item>
+</selector>

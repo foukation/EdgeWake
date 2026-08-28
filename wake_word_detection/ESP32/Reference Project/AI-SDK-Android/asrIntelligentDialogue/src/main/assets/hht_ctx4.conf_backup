@@ -1,0 +1,58 @@
+{
+    "appid": "gNCcuuUkSB63XXEK8Q1ljjPSBrxAqyPY",
+    "appkey": "GDZlYoLrLZ1jQCBq8W7jKS6aD0rxdB74",
+    "pid": "ne9U0",
+    "cuid": "23a700000005cb_monitor",
+    "format": "pcm",
+    "sample": 16000,
+    "support_dcs": 2,
+    "chunk_size": 10240,
+    "support_tts": true,
+    "support_text2dcs": true,
+    "client_id": "gNCcuuUkSB63XXEK8Q1ljjPSBrxAqyPY",
+    "access_token": "",
+    "user_agent": "didp/ version/",
+    "dialog_request_id": "23a700000005cb05b6365c0004795400000001",
+    "device_bduss": "",
+    "client_ip": "112.224.190.141",
+    "access_rc": true,
+    "support_part_tts": true,
+    "need_stoplisten": true,
+    "need_dialogue_finish": true,
+    "result_trans2directive": false,
+    "rc_version": "1",
+    "client_context": [
+        {
+            "payload": {
+                "playerActivity": "FINISHED",
+                "offsetInMilliseconds": 0,
+                "token": ""
+            },
+            "header": {
+                "namespace": "ai.dueros.device_interface.voice_output",
+                "name": "SpeechState"
+            }
+        },
+        {
+            "payload": {
+                "volume": 25,
+                "muted": false
+            },
+            "header": {
+                "namespace": "ai.dueros.device_interface.speaker_controller",
+                "name": "Volume"
+            }
+        },
+        {
+            "payload": {
+                "playerActivity": "FINISHED",
+                "offsetInMilliseconds": 0,
+                "token": ""
+            },
+            "header": {
+                "namespace": "ai.dueros.device_interface.audio_player",
+                "name": "PlaybackState"
+            }
+        }
+    ]
+}

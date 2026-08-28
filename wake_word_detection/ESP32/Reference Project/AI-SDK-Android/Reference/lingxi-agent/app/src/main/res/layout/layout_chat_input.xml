@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottomView">
+
+        <LinearLayout
+            android:id="@+id/ll_chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <RelativeLayout
+                android:id="@+id/fy_select"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_98"
+                android:gravity="center"
+                android:clickable="true"
+                app:layout_constraintBottom_toTopOf="@+id/ll_edit">
+                <ImageView
+                    android:id="@+id/spinner_fy"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_alignTop="@+id/tv_title"
+                    android:src="@mipmap/pop_translate"
+                    android:layout_marginStart="@dimen/dp_16" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_toEndOf="@id/spinner_fy"
+                    android:fontWeight="500"
+                    android:text="@string/tag_spinner_fy"
+                    android:textColor="@color/color_1E1E1E"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:id="@+id/spinner_close"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:padding="@dimen/dp_3"
+                    android:src="@mipmap/pop_close"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_11"
+                    android:layout_marginTop="@dimen/dp_8"/>
+
+                <com.fxzs.smartassist.view.common.CustomSpinner
+                    android:id="@+id/fy_target_spinner"
+                    android:layout_width="@dimen/dp_96"
+                    android:layout_height="@dimen/dp_33"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_18"
+                    app:spinner_entries="@array/fy_select"
+                    app:spinner_img="@drawable/img_spinner_open" />
+
+                <ImageView
+                    android:id="@+id/fy_convert_button"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_toEndOf="@+id/fy_target_spinner"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_22"
+                    android:scaleType="centerInside"
+                    android:layout_below="@+id/tv_title"
+                    android:src="@drawable/img_spinner_change" />
+
+                <com.fxzs.smartassist.view.common.CustomSpinner
+                    android:id="@+id/fy_result_spinner"
+                    android:layout_width="@dimen/dp_96"
+                    android:layout_height="@dimen/dp_33"
+                    android:layout_below="@+id/tv_title"
+
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_toEndOf="@+id/fy_convert_button"
+                    android:layout_marginTop="@dimen/dp_18"
+                    app:spinner_entries="@array/fy_select"
+                    app:spinner_img="@drawable/img_spinner_open" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_alignParentBottom="true"
+                    android:src="@color/color_EEEEEE" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/bt_icon"
+                    android:layout_width="@dimen/dp_46"
+                    android:layout_height="@dimen/dp_46"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_app_logo" />
+
+                <com.fxzs.smartassist.view.common.EditOperateView
+                    android:id="@+id/et_user_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center"
+                    android:hint="@string/text_input_hint"
+                    android:imeOptions="actionSend"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:maxLines="7"
+                    android:minHeight="@dimen/dp_52"
+                    android:overScrollMode="ifContentScrolls"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/font_16"
+                    android:verticalScrollbarPosition="right" />
+
+
+
+                <com.fxzs.smartassist.util.CustomImageButton
+                    android:id="@+id/bt_send"
+                    android:background="@color/transparent"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/home_voice"
+                    />
+                <ImageView
+                    android:id="@+id/bt_image"
+                    android:padding="@dimen/dp_8"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home_add"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_enlarge"
+            android:padding="@dimen/dp_8"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:contentDescription="展开"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/chat_edit_open"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_chat_input" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:src="@drawable/ic_back"
+             />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_test_interface"
+            android:textSize="@dimen/font_16"
+            android:textColor="#1E1E1E"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"/>
+    </RelativeLayout>
+
+
+    <!-- 预设服务器列表 -->
+    <TextView
+        android:id="@+id/tv_service_title"
+        app:layout_constraintTop_toBottomOf="@+id/rl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/label_select_server"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_service_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinnerServerList"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:id="@+id/btnSaveServer"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_10"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:text="@string/btn_save_switch_server"
+            android:textSize="@dimen/font_14"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_btn_logout_blue"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        app:layout_constraintTop_toBottomOf="@+id/ll_service"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_f7f7f7"/>
+
+    <TextView
+        android:id="@+id/tv_honor_service_title"
+        app:layout_constraintTop_toBottomOf="@+id/line_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/label_select_honor_server"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_honor_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_honor_service_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinnerHonorServerList"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:id="@+id/btnSaveHonorServer"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_10"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:text="@string/btn_save_travel_server"
+            android:textSize="@dimen/font_14"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_btn_logout_blue"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line_view3"
+        app:layout_constraintTop_toBottomOf="@+id/ll_honor_service"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_f7f7f7"/>
+
+    <TextView
+        android:id="@+id/tv_gui_title"
+        app:layout_constraintTop_toBottomOf="@+id/line_view3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/label_select_gui_server"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_gui_service"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gui_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinnerGuiServerList"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:id="@+id/btnSaveGuiServer"
+            android:layout_width="wrap_content"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_10"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:text="@string/btn_save_gui_server"
+            android:textSize="@dimen/font_14"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_btn_logout_blue"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view4"
+        app:layout_constraintTop_toBottomOf="@+id/ll_gui_service"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_f7f7f7"/>
+
+    <TextView
+        android:id="@+id/tv_log_title"
+        app:layout_constraintTop_toBottomOf="@+id/line_view4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/label_log_output"
+        android:textSize="14sp"
+        android:textColor="@color/color_1E1E1E"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toTopOf="@+id/tv_log_title"
+        android:id="@+id/tv_log"
+        android:layout_width="wrap_content"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:text="@string/label_input_log_off"
+        android:textSize="@dimen/font_14"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/bg_btn_logout_blue"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+    <View
+        android:id="@+id/line_view2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_log"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_f7f7f7"/>
+
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:id="@+id/btnReset"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="@string/btn_reset_default"
+        android:textSize="@dimen/font_16"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif"
+        android:fontWeight="400"
+        android:background="@drawable/bg_ai_response_card"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

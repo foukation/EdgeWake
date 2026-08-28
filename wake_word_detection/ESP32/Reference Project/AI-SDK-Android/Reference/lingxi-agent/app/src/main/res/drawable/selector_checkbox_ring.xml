@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/ic_check_circle" />
+    <item>
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="16dp"
+            android:height="16dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="#B2B2B2"
+                android:fillType="evenOdd"
+                android:pathData="M12 22.2857C17.6806 22.2857 22.2857 17.6806 22.2857 12C22.2857 6.3194 17.6806 1.71429 12 1.71429C6.3194 1.71429 1.71429 6.3194 1.71429 12C1.71429 17.6806 6.3194 22.2857 12 22.2857ZM12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" />
+        </vector>
+    </item>
+</selector>

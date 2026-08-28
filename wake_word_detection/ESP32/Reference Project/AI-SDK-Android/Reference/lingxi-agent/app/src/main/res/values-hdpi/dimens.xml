@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 240dpi 设备：默认10dp=15px，如需微调可改为11dp（=16.5px） -->
+    <dimen name="dp_10">10dp</dimen>
+</resources>
+    

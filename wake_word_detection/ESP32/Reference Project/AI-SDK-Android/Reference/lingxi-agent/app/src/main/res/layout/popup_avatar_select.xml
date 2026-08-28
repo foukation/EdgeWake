@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_136"
+    android:layout_height="@dimen/dp_144"
+    card_view:cardCornerRadius="@dimen/dp_16"
+    card_view:cardElevation="@dimen/dp_16"
+    card_view:cardBackgroundColor="#FFFFFF"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12">
+
+        <LinearLayout
+            android:id="@+id/item_camera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="@dimen/dp_8">
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@mipmap/option_photo"
+                android:tint="#222222" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_take_photo"
+                android:textColor="#222222"
+                android:textSize="@dimen/font_16"
+                android:layout_marginStart="@dimen/dp_12"
+                android:maxWidth="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="@dimen/dp_8">
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@mipmap/option_picture"
+                android:tint="#222222" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_image"
+                android:textColor="#222222"
+                android:textSize="@dimen/font_16"
+                android:layout_marginStart="@dimen/dp_12"
+                android:maxWidth="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_file"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@mipmap/option_local_file"
+                android:tint="#222222" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_local_file"
+                android:textColor="#222222"
+                android:textSize="@dimen/font_16"
+                android:layout_marginStart="@dimen/dp_12"
+                android:maxWidth="200dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView> 

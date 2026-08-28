@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_319"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_update_dialog"
+    android:orientation="vertical">
+
+    <!-- 顶部蓝色背景区域 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="@drawable/bg_update_dialog_top">
+
+        <!-- 警告图标 -->
+        <ImageView
+            android:id="@+id/iv_warning"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_24"
+            android:src="@drawable/ic_warning" />
+
+        <!-- 版本升级标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_toEndOf="@id/iv_warning"
+            android:text="@string/title_version_upgrade"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold" />
+
+        <!-- 新版本图标 -->
+        <ImageView
+            android:id="@+id/iv_new_version"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@drawable/ic_new_version_vector" />
+    </RelativeLayout>
+
+    <!-- 版本信息文本 -->
+    <TextView
+        android:id="@+id/tv_version_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/btn_new_version_notice"
+        android:textColor="#1E88E5"
+        android:textSize="@dimen/font_16"
+        android:lineHeight="@dimen/dp_24" />
+
+    <!-- 按钮容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 下次再说按钮 -->
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@drawable/bg_button_cancel"
+            android:gravity="center"
+            android:text="@string/btn_later"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:textFontWeight="400"
+            android:lineHeight="@dimen/dp_24" />
+
+        <!-- 立即更新按钮 -->
+        <TextView
+            android:id="@+id/btn_update"
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_12"
+            android:background="@drawable/bg_button_update"
+            android:gravity="center"
+            android:text="@string/btn_update_now"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:textFontWeight="400"
+            android:lineHeight="@dimen/dp_24" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/ppt_primary" />
+            <size 
+                android:width="@dimen/ppt_page_indicator_selected_size" 
+                android:height="@dimen/ppt_page_indicator_size" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/ppt_divider" />
+            <size 
+                android:width="@dimen/ppt_page_indicator_size" 
+                android:height="@dimen/ppt_page_indicator_size" />
+        </shape>
+    </item>
+</selector>

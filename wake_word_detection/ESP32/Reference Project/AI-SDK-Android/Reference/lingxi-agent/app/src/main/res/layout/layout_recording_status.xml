@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <!-- 中心内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_40">
+
+        <!-- 麦克风图标和动画 -->
+        <FrameLayout
+            android:layout_width="@dimen/dp_160"
+            android:layout_height="@dimen/dp_160"
+            android:layout_marginBottom="@dimen/dp_32">
+
+            <!-- 动画波纹背景 -->
+            <View
+                android:id="@+id/view_ripple_1"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_160"
+                android:background="@drawable/circle_ripple"
+                android:alpha="0.2" />
+
+            <View
+                android:id="@+id/view_ripple_2"
+                android:layout_width="@dimen/dp_130"
+                android:layout_height="@dimen/dp_130"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_ripple"
+                android:alpha="0.4" />
+
+            <View
+                android:id="@+id/view_ripple_3"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_ripple"
+                android:alpha="0.6" />
+
+            <!-- 麦克风图标 -->
+            <ImageView
+                android:id="@+id/iv_microphone"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_72"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_microphone" />
+
+        </FrameLayout>
+
+        <!-- 录音状态文字 -->
+        <TextView
+            android:id="@+id/tv_recording_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_recording"
+            android:textColor="#1F2937"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/dp_16" />
+
+        <!-- 录音时长 -->
+        <TextView
+            android:id="@+id/tv_recording_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_zero_time"
+            android:textColor="#6B7280"
+            android:textSize="@dimen/font_16"
+            android:layout_marginBottom="@dimen/dp_24" />
+
+        <!-- 实时转写文本预览 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="@dimen/dp_20"
+            android:elevation="@dimen/dp_2"
+            android:layout_marginBottom="@dimen/dp_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_realtime_transcription"
+                android:textColor="#1F2937"
+                android:textSize="@dimen/font_14"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/dp_8" />
+
+            <TextView
+                android:id="@+id/tv_realtime_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_waiting_voice_input"
+                android:textColor="#6B7280"
+                android:textSize="@dimen/font_14"
+                android:minHeight="@dimen/dp_60"
+                android:gravity="top"
+                android:maxLines="4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 底部按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_20"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_4">
+
+        <!-- 暂停会议按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_pause_meeting"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_56"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="#F3F4F6"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:elevation="@dimen/dp_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_pause_meeting"
+                android:textColor="#374151"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- 结束会议按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_end_meeting"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_56"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_12"
+            android:background="#EF4444"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:elevation="@dimen/dp_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_end_meeting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Dialog icon with speech bubble and three dots -->
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M12,4C17.5,4 22,7.5 22,12C22,16.5 17.5,20 12,20H4C3.45,20 3,19.55 3,19V12C3,7.5 7.5,4 12,4Z"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M7,12C7,11.45 7.45,11 8,11C8.55,11 9,11.45 9,12V13.5C9,14.05 8.55,14.5 8,14.5C7.45,14.5 7,14.05 7,13.5V12Z"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M11,12C11,11.45 11.45,11 12,11C12.55,11 13,11.45 13,12V13.5C13,14.05 12.55,14.5 12,14.5C11.45,14.5 11,14.05 11,13.5V12Z"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M15,12C15,11.45 15.45,11 16,11C16.55,11 17,11.45 17,12V13.5C17,14.05 16.55,14.5 16,14.5C15.45,14.5 15,14.05 15,13.5V12Z"/>
+</vector>

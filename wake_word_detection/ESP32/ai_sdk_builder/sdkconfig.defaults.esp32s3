@@ -1,0 +1,18 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-S3 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-S3
+# Architecture: Xtensa LX7 dual-core
+# Max frequency: 240MHz
+# Features: AI accelerator, USB OTG support
+#
+# Note: This is the official test chip for AI SDK
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 240MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y

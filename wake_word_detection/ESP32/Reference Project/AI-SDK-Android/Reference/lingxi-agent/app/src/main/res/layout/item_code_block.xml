@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8"
+    app:cardCornerRadius="@dimen/dp_12"
+    app:cardElevation="@dimen/dp_1"
+    app:cardBackgroundColor="@color/code_background"
+    app:strokeWidth="@dimen/dp_1"
+    app:strokeColor="@color/code_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 代码块头部 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_code_header"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:gravity="center_vertical">
+
+            <!-- 语言图标 -->
+            <View
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="@dimen/dp_8"
+                android:background="@drawable/code_language_indicator"
+                android:layout_marginEnd="@dimen/dp_8" />
+
+            <!-- 语言标签 -->
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_python_lower"
+                android:textSize="@dimen/font_13"
+                android:textColor="@color/code_language_text"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textAllCaps="true" />
+
+            <!-- 复制按钮 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_copy"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/code_button_background"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_copy"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_copy_modern"
+                    android:contentDescription="复制代码" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 全屏按钮 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_fullscreen"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/code_button_background"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_fullscreen"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fullscreen_modern"
+                    android:contentDescription="全屏查看" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/code_border" />
+
+        <!-- 代码内容容器 -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:fadeScrollbars="false">
+
+            <TextView
+                android:id="@+id/tv_code_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_12"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/code_text"
+                android:fontFamily="monospace"
+                android:lineSpacingMultiplier="1.4"
+                android:textIsSelectable="true"
+                android:background="@color/code_background" />
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

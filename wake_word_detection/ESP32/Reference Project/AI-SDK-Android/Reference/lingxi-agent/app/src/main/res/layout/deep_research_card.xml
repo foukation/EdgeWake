@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <ImageView
+                android:id="@+id/iv_item_title"
+
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toRightOf="@+id/iv_item_title"
+                android:id="@+id/tv_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_1E1E1E"
+                android:textSize="@dimen/font_12"
+                android:textStyle="bold"
+                tools:text="您希望从哪些角度推荐车型："
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_websearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            android:background="@drawable/bg_white_r8_nopadding"
+            android:layout_marginLeft="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/rl_item_title"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_6"
+                android:id="@+id/tv_websearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/web_search"
+                android:textColor="@color/color_1E1E1E"
+                android:textSize="@dimen/font_12"
+                android:drawablePadding="@dimen/dp_2"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:id="@+id/rl_websearch_think"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_r8_nopadding"
+            android:layout_marginLeft="@dimen/dp_28"
+            android:layout_below="@+id/rl_websearch"
+            android:layout_marginTop="@dimen/dp_10"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:id="@+id/tv_websearch_think"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_r8"
+                android:textColor="@color/color_1E1E1E"
+                android:textSize="@dimen/font_12"
+                tools:text="用户请求我推荐20-30岁年轻人购买的，外观时尚，内饰豪华的车型。"
+                />
+
+            <TextView
+                android:layout_below="@+id/tv_websearch_think"
+                android:id="@+id/tv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/more"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_expand"
+                android:drawablePadding="@dimen/dp_4"
+                android:visibility="gone"
+                />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line_bot"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@+id/rl_websearch_think"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:background="@color/color_E0E0E0"
+            android:visibility="invisible"
+            />
+        <View
+            android:layout_below="@id/rl_item_title"
+            android:id="@+id/view_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_height="0dp"
+            android:background="@color/color_E0E0E0"
+            android:layout_above="@id/view_line_bot"
+            android:layout_alignBaseline="@+id/view_line_bot"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 大平板设备（宽度 >= 720dp）的尺寸调整 -->
+    
+    <!-- 进一步增大间距 -->
+    <dimen name="ppt_spacing_medium">24dp</dimen>
+    <dimen name="ppt_spacing_large">40dp</dimen>
+    <dimen name="ppt_spacing_xlarge">48dp</dimen>
+    
+    <!-- 进一步增大文本尺寸 -->
+    <dimen name="ppt_text_size_medium">18sp</dimen>
+    <dimen name="ppt_text_size_large">20sp</dimen>
+    <dimen name="ppt_text_size_xlarge">22sp</dimen>
+    <dimen name="ppt_text_size_title">32sp</dimen>
+    <dimen name="ppt_text_size_display">36sp</dimen>
+    
+    <!-- 进一步增大按钮尺寸 -->
+    <dimen name="ppt_button_height">64dp</dimen>
+    <dimen name="ppt_button_height_large">72dp</dimen>
+    <dimen name="ppt_button_padding_horizontal">40dp</dimen>
+    <dimen name="ppt_button_padding_vertical">20dp</dimen>
+    
+    <!-- 进一步增大卡片间距 -->
+    <dimen name="ppt_card_padding">32dp</dimen>
+    <dimen name="ppt_card_margin">16dp</dimen>
+    
+    <!-- 进一步增大工具栏高度 -->
+    <dimen name="ppt_toolbar_height">72dp</dimen>
+    <dimen name="ppt_toolbar_padding_horizontal">32dp</dimen>
+    
+    <!-- 进一步增大底部栏高度 -->
+    <dimen name="ppt_bottom_bar_height">88dp</dimen>
+    <dimen name="ppt_bottom_bar_padding">32dp</dimen>
+    
+    <!-- 进一步增大模板项尺寸 -->
+    <dimen name="ppt_template_item_width">240dp</dimen>
+    <dimen name="ppt_template_item_height">180dp</dimen>
+    <dimen name="ppt_template_item_margin">16dp</dimen>
+    
+    <!-- 进一步增大对话框尺寸 -->
+    <dimen name="ppt_dialog_padding">40dp</dimen>
+    <dimen name="ppt_dialog_margin">32dp</dimen>
+    
+</resources>

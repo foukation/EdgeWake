@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="#FFFFFF"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/dp_12"
+            android:src="@drawable/ic_back"
+            android:tint="#333333"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_ai_drawing"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_16"/>
+    </RelativeLayout>
+
+    <!-- 风格选择 -->
+    <LinearLayout
+        android:id="@+id/ll_styles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top_bar"
+        android:background="#FAFAFA"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_styles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+    <!-- 比例选择标题 -->
+    <TextView
+        android:id="@+id/tv_ratio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_styles"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/btn_select_ratio"
+        android:textColor="#333333"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold" />
+
+    <!-- 比例选项网格 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ratios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ratio_title"
+        android:layout_marginTop="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:clipToPadding="false" />
+
+    <!-- 底部输入区域 -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_top_shadow"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16">
+
+        <!-- 输入框容器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_field"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <EditText
+                android:id="@+id/et_prompt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_input_image_description"
+                android:maxLines="3"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="@dimen/font_14" />
+
+            <ImageView
+                android:id="@+id/iv_voice"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginStart="@dimen/dp_8"
+                android:src="@drawable/ic_voice"
+                android:clickable="true"
+                android:focusable="true" app:tint="#666666"/>
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@drawable/bg_send_button"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_send"
+                android:clickable="true"
+                android:focusable="true" app:tint="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

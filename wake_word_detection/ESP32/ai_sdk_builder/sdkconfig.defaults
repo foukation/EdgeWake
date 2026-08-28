@@ -1,0 +1,82 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - Common Default Configuration
+# ===========================================================================
+#
+# This file defines common sdkconfig defaults for all chips.
+# Chip-specific configs are defined in sdkconfig.defaults.xxx files.
+#
+# Config loading order:
+# 1. sdkconfig.defaults (this file)
+# 2. sdkconfig.defaults.${IDF_TARGET} (chip-specific)
+# Later loaded configs override earlier ones.
+#
+# ===========================================================================
+
+# ===========================================================================
+# C++ Configuration (Required by AI SDK)
+# ===========================================================================
+
+# C++ exception support
+# AI SDK uses C++ exceptions for error handling
+CONFIG_COMPILER_CXX_EXCEPTIONS=y
+
+# C++ exception emergency memory pool size
+# Used to throw exceptions even when memory is low
+CONFIG_COMPILER_CXX_EXCEPTIONS_EMG_POOL_SIZE=1024
+
+# C++ RTTI (Runtime Type Information) support
+# AI SDK uses dynamic_cast and typeid
+CONFIG_COMPILER_CXX_RTTI=y
+
+# ===========================================================================
+# Compiler Optimization
+# ===========================================================================
+
+# Optimization strategy: size-first
+# Reduce final firmware size
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+# ===========================================================================
+# TLS Configuration
+# ===========================================================================
+
+# Disable DS (Digital Signature) peripheral for TLS.
+# esp_websocket_client_config_t has a conditional field (#if CONFIG_ESP_TLS_USE_DS_PERIPHERAL)
+# that changes the struct layout. If this differs between libai_sdk.a and the
+# consuming project, it causes an ABI mismatch and a LoadProhibited crash in
+# esp_websocket_client_init. Always keep this disabled to match sdkconfig.defaults
+# in ai_sdk_builder_demo.
+CONFIG_ESP_TLS_USE_DS_PERIPHERAL=n
+
+# ===========================================================================
+# Network Configuration (Required by AI SDK)
+# ===========================================================================
+
+# WebSocket transport support
+# esp_websocket_client component depends on this config
+# If not enabled, WebSocket component will not compile
+CONFIG_WS_TRANSPORT=y
+
+# SNTP time sync server count
+# AI SDK uses timestamps for signing, requires accurate system time
+CONFIG_LWIP_SNTP_MAX_SERVERS=3
+
+# ===========================================================================
+# Partition Table Configuration
+# ===========================================================================
+
+# Use single app partition table
+# This is the simplest partition config, suitable for build projects
+CONFIG_PARTITION_TABLE_SINGLE_APP=y
+
+# ===========================================================================
+# Log Configuration
+# ===========================================================================
+
+# Bootloader log level: none
+# Reduce log output during boot
+CONFIG_BOOTLOADER_LOG_LEVEL_NONE=y
+
+# Default log level: debug
+# Show all logs including debug information
+CONFIG_LOG_DEFAULT_LEVEL_DEBUG=y

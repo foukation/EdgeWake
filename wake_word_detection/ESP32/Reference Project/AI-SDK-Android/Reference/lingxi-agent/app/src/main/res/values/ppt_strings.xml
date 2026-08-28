@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- PPT模块通用字符串 -->
+    <string name="ppt_module_name">AI生成PPT</string>
+    <string name="ppt_loading">加载中…</string>
+    <string name="ppt_generating">生成中…</string>
+    <string name="ppt_completed">完成</string>
+    <string name="ppt_failed">失败</string>
+    <string name="ppt_retry">重试</string>
+    <string name="ppt_cancel">取消</string>
+    <string name="ppt_confirm">确认</string>
+    <string name="ppt_save">保存</string>
+    <string name="ppt_delete">删除</string>
+    <string name="ppt_edit">编辑</string>
+    <string name="ppt_preview">预览</string>
+    <string name="ppt_download">下载</string>
+    <string name="ppt_share">分享</string>
+    
+    <!-- 主题输入页面 -->
+    <string name="ppt_topic_input_title">输入PPT主题</string>
+    <string name="ppt_topic_input_hint">请输入PPT主题，不超过40字</string>
+    <string name="ppt_topic_input_char_limit">字符限制：%1$d/40</string>
+    <string name="ppt_topic_input_error_empty">请输入PPT主题</string>
+    <string name="ppt_topic_input_error_too_long">主题长度不能超过40个字符</string>
+    <string name="ppt_topic_suggestions_title">推荐主题</string>
+    <string name="ppt_topic_recent_title">最近使用</string>
+    
+    <!-- 大纲编辑页面 -->
+    <string name="ppt_outline_edit_title">编辑PPT大纲</string>
+    <string name="ppt_outline_generating">正在生成大纲…</string>
+    <string name="ppt_outline_thinking">DeepSeek 正在思考中…</string>
+    <string name="ppt_outline_thinking_completed">已深度思考（用时%1$d秒）</string>
+    <string name="ppt_outline_regenerate">重新生成大纲</string>
+    <string name="ppt_outline_regenerate_confirm">重新生成将覆盖当前大纲内容，是否继续？</string>
+    <string name="ppt_outline_add_item">添加大纲项</string>
+    <string name="ppt_outline_delete_item">删除大纲项</string>
+    <string name="ppt_outline_delete_confirm">确定要删除这个大纲项吗？</string>
+    <string name="ppt_outline_select_template">选择模板</string>
+    <string name="ppt_outline_stop_generating">停止生成</string>
+    
+    <!-- 模板选择页面 -->
+    <string name="ppt_template_selection_title">选择PPT模板</string>
+    <string name="ppt_template_category_all">全部</string>
+    <string name="ppt_template_category_business">商务</string>
+    <string name="ppt_template_category_education">教育</string>
+    <string name="ppt_template_category_creative">创意</string>
+    <string name="ppt_template_generate">生成PPT</string>
+    <string name="ppt_template_generating">正在生成PPT…</string>
+    <string name="ppt_template_progress">生成进度：%1$d%%</string>
+    
+    <!-- 预览页面 -->
+    <string name="ppt_preview_title">PPT预览</string>
+    <string name="ppt_preview_page_indicator">第%1$d页，共%2$d页</string>
+    <string name="ppt_preview_download_progress">下载进度：%1$d%%</string>
+    <string name="ppt_preview_download_completed">下载完成</string>
+    <string name="ppt_preview_download_failed">下载失败</string>
+    <string name="ppt_preview_share_title">分享PPT</string>
+    <string name="ppt_preview_fullscreen">全屏预览</string>
+    <string name="ppt_preview_exit_fullscreen">退出全屏</string>
+    
+    <!-- 错误消息 -->
+    <string name="ppt_error_network">网络连接失败，请检查网络设置</string>
+    <string name="ppt_error_server">服务器错误，请稍后重试</string>
+    <string name="ppt_error_timeout">请求超时，请重试</string>
+    <string name="ppt_error_unknown">未知错误，请重试</string>
+    <string name="ppt_error_generation_failed">PPT生成失败</string>
+    <string name="ppt_error_template_load_failed">模板加载失败</string>
+    <string name="ppt_error_outline_generation_failed">大纲生成失败</string>
+    
+    <!-- 成功消息 -->
+    <string name="ppt_success_generated">PPT生成成功</string>
+    <string name="ppt_success_downloaded">PPT下载成功</string>
+    <string name="ppt_success_shared">PPT分享成功</string>
+    <string name="ppt_success_saved">保存成功</string>
+    
+    <!-- 无障碍功能描述 -->
+    <string name="ppt_accessibility_back_button">返回上一页</string>
+    <string name="ppt_accessibility_history_button">查看历史记录</string>
+    <string name="ppt_accessibility_voice_input_button">语音输入</string>
+    <string name="ppt_accessibility_send_button">发送主题</string>
+    <string name="ppt_accessibility_topic_tag">主题标签：%1$s</string>
+    <string name="ppt_accessibility_outline_item">大纲项：%1$s</string>
+    <string name="ppt_accessibility_outline_expand">展开大纲项</string>
+    <string name="ppt_accessibility_outline_collapse">收起大纲项</string>
+    <string name="ppt_accessibility_template_item">模板：%1$s</string>
+    <string name="ppt_accessibility_template_selected">已选择模板：%1$s</string>
+    <string name="ppt_accessibility_slide_item">幻灯片：第%1$d页</string>
+    <string name="ppt_accessibility_page_indicator">页面指示器：第%1$d页，共%2$d页</string>
+    <string name="ppt_accessibility_progress_bar">进度：%1$d%%</string>
+    <string name="ppt_accessibility_thinking_process">AI思考过程</string>
+    <string name="ppt_accessibility_thinking_expand">展开思考过程</string>
+    <string name="ppt_accessibility_thinking_collapse">收起思考过程</string>
+    <string name="ppt_accessibility_fab_stop">停止生成</string>
+    <string name="ppt_accessibility_fab_add">添加内容</string>
+    <string name="ppt_accessibility_download_button">下载PPT</string>
+    <string name="ppt_accessibility_share_button">分享PPT</string>
+    <string name="ppt_accessibility_edit_button">编辑PPT</string>
+    <string name="ppt_accessibility_fullscreen_button">全屏预览</string>
+    <string name="ppt_accessibility_zoom_in">放大</string>
+    <string name="ppt_accessibility_zoom_out">缩小</string>
+    
+    <!-- 状态描述 -->
+    <string name="ppt_status_idle">空闲</string>
+    <string name="ppt_status_generating_outline">正在生成大纲</string>
+    <string name="ppt_status_outline_ready">大纲已准备</string>
+    <string name="ppt_status_generating_ppt">正在生成PPT</string>
+    <string name="ppt_status_ppt_ready">PPT已准备</string>
+    <string name="ppt_status_failed">生成失败</string>
+    
+    <!-- 网络状态 -->
+    <string name="ppt_network_connected">网络已连接</string>
+    <string name="ppt_network_disconnected">网络连接不可用</string>
+    <string name="ppt_network_wifi">WiFi</string>
+    <string name="ppt_network_mobile">移动网络</string>
+    <string name="ppt_network_ethernet">以太网</string>
+    
+    <!-- 对话框 -->
+    <string name="ppt_dialog_title_confirm">确认</string>
+    <string name="ppt_dialog_title_error">错误</string>
+    <string name="ppt_dialog_title_success">成功</string>
+    <string name="ppt_dialog_title_warning">警告</string>
+    <string name="ppt_dialog_button_ok">确定</string>
+    <string name="ppt_dialog_button_cancel">取消</string>
+    <string name="ppt_dialog_button_retry">重试</string>
+    <string name="ppt_dialog_button_close">关闭</string>
+    
+    <!-- 提示信息 -->
+    <string name="ppt_tip_topic_input">输入内容 自动生成演示文稿 不再烦恼排版</string>
+    <string name="ppt_tip_outline_edit">您可以编辑大纲内容，调整结构和重点</string>
+    <string name="ppt_tip_template_selection">选择合适的模板风格，让您的PPT更加专业</string>
+    <string name="ppt_tip_preview">预览生成的PPT，确认内容无误后可下载或分享</string>
+    
+    <!-- 占位符文本 -->
+    <string name="ppt_placeholder_no_content">暂无内容</string>
+    <string name="ppt_placeholder_no_templates">暂无模板</string>
+    <string name="ppt_placeholder_no_history">暂无历史记录</string>
+    <string name="ppt_placeholder_loading">正在加载…</string>
+    
+</resources>

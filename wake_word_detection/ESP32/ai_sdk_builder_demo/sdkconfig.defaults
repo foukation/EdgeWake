@@ -1,0 +1,112 @@
+# ===========================================================================
+# AI SDK Demo - sdkconfig.defaults
+# ===========================================================================
+# Target: ESP32-S3, ESP-IDF v5.4.3
+#
+# [IMPORTANT] Options marked "ABI Compatibility" MUST match the AI SDK
+#             prebuilt library, otherwise esp_http_client_config_t struct
+#             layout mismatch will cause "Failed to convert addr type"
+#             or Guru Meditation crash.
+
+# ============================================================================
+# C++ support (required by AI SDK)
+# ============================================================================
+CONFIG_COMPILER_CXX_EXCEPTIONS=y
+CONFIG_COMPILER_CXX_EXCEPTIONS_EMG_POOL_SIZE=1024
+CONFIG_COMPILER_CXX_RTTI=y
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+# ============================================================================
+# Bootloader
+# ============================================================================
+CONFIG_BOOTLOADER_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_BOOTLOADER_LOG_LEVEL_NONE=y
+
+# ============================================================================
+# Log level: default INFO, compile-time max DEBUG
+# ============================================================================
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+CONFIG_LOG_DEFAULT_LEVEL=3
+CONFIG_LOG_MAXIMUM_LEVEL=4
+
+# ============================================================================
+# System
+# ============================================================================
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=12288
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=30
+CONFIG_LWIP_SNTP_MAX_SERVERS=3
+
+# ============================================================================
+# Custom partition table (16MB Flash)
+# ============================================================================
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# ============================================================================
+# TLS / mbedTLS
+# ============================================================================
+CONFIG_MBEDTLS_DYNAMIC_BUFFER=y
+CONFIG_MBEDTLS_SSL_KEEP_PEER_CERTIFICATE=n
+CONFIG_MBEDTLS_SSL_RENEGOTIATION=n
+
+# TLS output record size: 6144 allows a full audio frame (5120B + WS header)
+# to fit in a single TLS record, halving TCP write calls vs. default 4096.
+# Extra RAM cost: ~2KB per TLS connection.
+CONFIG_MBEDTLS_SSL_OUT_CONTENT_LEN=6144
+
+# TLS strict verification
+CONFIG_ESP_TLS_INSECURE=n
+CONFIG_ESP_TLS_SKIP_SERVER_CERT_VERIFY=n
+
+# ============================================================================
+# [ABI Compatibility] HTTPS support (MUST be enabled, AI SDK was built with it)
+# ============================================================================
+CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS=y
+
+# ============================================================================
+# [ABI Compatibility] The following options MUST remain DISABLED.
+# AI SDK prebuilt library was compiled without them.
+# Enabling ANY of these will shift addr_type offset in
+# esp_http_client_config_t and cause runtime crash!
+# ============================================================================
+# CONFIG_MBEDTLS_HARDWARE_ECDSA_SIGN is not set
+# CONFIG_ESP_TLS_USE_SECURE_ELEMENT is not set
+# CONFIG_ESP_TLS_USE_DS_PERIPHERAL is not set
+# CONFIG_ESP_TLS_CLIENT_SESSION_TICKETS is not set
+# CONFIG_ESP_HTTP_CLIENT_ENABLE_CUSTOM_TRANSPORT is not set
+
+# ============================================================================
+# WiFi memory optimization
+# ============================================================================
+CONFIG_ESP_WIFI_IRAM_OPT=n
+CONFIG_ESP_WIFI_RX_IRAM_OPT=n
+CONFIG_ESP_WIFI_DYNAMIC_RX_MGMT_BUFFER=y
+# P0 stability tuning:
+# Increase RX buffer headroom to absorb bursty traffic during frequent
+# WebSocket/TLS reconnect cycles.
+CONFIG_ESP_WIFI_STATIC_RX_BUFFER_NUM=10
+CONFIG_ESP_WIFI_DYNAMIC_RX_BUFFER_NUM=24
+# Disable disconnected power-save mode to reduce reconnect jitter.
+CONFIG_ESP_WIFI_STA_DISCONNECTED_PM_ENABLE=n
+CONFIG_ESP_WIFI_ENTERPRISE_SUPPORT=n
+
+# ============================================================================
+# LWIP TCP buffer optimization
+# ============================================================================
+# Default TCP_SND_BUF=5760 (4xMSS) is insufficient for ASR WebSocket
+# audio streaming:
+#   - Each audio frame 5120 bytes + WS/TLS overhead ~= 5200 bytes,
+#     nearly fills the entire send buffer
+#   - If TCP ACK is delayed >160ms (one frame interval), buffer is full
+#     and write fails with "Error transport_poll_write"
+# Increase TCP send/window buffers for better tolerance to ACK jitter.
+# Larger buffers reduce transient backpressure on WebSocket writes.
+CONFIG_LWIP_TCP_SND_BUF_DEFAULT=24576
+CONFIG_LWIP_TCP_WND_DEFAULT=24576
+# Increase TCP/IP mailbox depth to reduce packet processing bursts overflow.
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE=32
+
+# ============================================================================
+# Misc
+# ============================================================================
+CONFIG_NEWLIB_NANO_FORMAT=y

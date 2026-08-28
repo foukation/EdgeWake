@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 标题 -->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/title_my_language"-->
+<!--        android:textSize="@dimen/font_16"-->
+<!--        android:textColor="@color/text_primary"-->
+<!--        android:textStyle="bold"-->
+<!--        android:padding="@dimen/dp_20"-->
+<!--        android:paddingBottom="@dimen/dp_10" />-->
+
+<!--    &lt;!&ndash; 分割线 &ndash;&gt;-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_1"-->
+<!--        android:background="#F0F0F0"-->
+<!--        android:layout_marginHorizontal="@dimen/dp_20" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white_rounded_12dp"
+        android:layout_margin="@dimen/dp_32"
+        android:layout_centerInParent="true"
+        >
+
+        <!-- 语言列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/dp_300"
+            android:paddingVertical="@dimen/dp_10"
+            android:paddingHorizontal="@dimen/dp_16"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="oval"-->
+<!--    >-->
+<!--    -->
+<!--    <solid-->
+<!--        android:color="@color/white"/>-->
+<!--        -->
+<!--</shape>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影层 -->
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/dp_15"
+                android:height="@dimen/dp_15" />
+            <solid
+
+                android:color="#33000000" /> <!-- 阴影颜色，半透明黑色 -->
+            <padding
+                android:left="1dp"
+                android:top="1dp"
+                android:right="1dp"
+                android:bottom="1dp" />
+        </shape>
+    </item>
+    <!-- 主体 thumb -->
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/dp_15"
+                android:height="@dimen/dp_15" />
+            <solid android:color="@color/white" /> <!-- thumb 颜色，示例为紫色 -->
+        </shape>
+    </item>
+</layer-list>

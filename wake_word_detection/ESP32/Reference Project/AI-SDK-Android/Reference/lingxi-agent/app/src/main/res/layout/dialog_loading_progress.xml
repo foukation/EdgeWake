@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+     android:paddingLeft="@dimen/dp_32"
+    android:paddingRight="@dimen/dp_32"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingBottom="@dimen/dp_24"
+    android:gravity="center"
+    android:elevation="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_159"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_160"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white_rounded_16dp"
+
+        android:gravity="center"
+        android:elevation="@dimen/dp_2">
+
+        <!-- Loading animation container -->
+        <FrameLayout
+            android:id="@+id/loading_container"
+            android:layout_width="@dimen/dp_52"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginBottom="@dimen/dp_13">
+
+            <!-- Multiple dots for loading animation -->
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="@dimen/dp_6"
+                android:layout_height="@dimen/dp_6"
+                android:layout_marginLeft="@dimen/dp_39"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.3" />
+
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_7"
+                android:layout_marginLeft="@dimen/dp_44"
+                android:layout_marginTop="@dimen/dp_23"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.4" />
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_37"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.5" />
+
+            <View
+                android:id="@+id/dot4"
+                android:layout_width="@dimen/dp_9"
+                android:layout_height="@dimen/dp_9"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_42"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.6" />
+
+            <View
+                android:id="@+id/dot5"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_36"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.7" />
+
+            <View
+                android:id="@+id/dot6"
+                android:layout_width="@dimen/dp_11"
+                android:layout_height="@dimen/dp_11"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.8" />
+
+            <View
+                android:id="@+id/dot7"
+                android:layout_width="@dimen/dp_11"
+                android:layout_height="@dimen/dp_11"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="0.9" />
+
+            <View
+                android:id="@+id/dot8"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_21"
+                android:background="@drawable/bg_loading_dot"
+                android:alpha="1.0" />
+
+        </FrameLayout>
+
+        <!-- Progress text -->
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="@dimen/dp_93"
+            android:layout_height="@dimen/dp_22"
+            android:text="@string/msg_meeting_generating"
+            android:textColor="#999999"
+            android:textSize="@dimen/dp_16"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:lineHeight="@dimen/dp_22" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@drawable/bg_light_grey_70_r16"
+                />
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_cancel"
+                android:textColor="#999999"
+                android:textSize="@dimen/dp_16"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:lineHeight="@dimen/dp_22" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

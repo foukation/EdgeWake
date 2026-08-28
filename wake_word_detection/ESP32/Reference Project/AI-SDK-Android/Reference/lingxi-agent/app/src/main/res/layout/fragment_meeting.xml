@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- 顶部栏 -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_14"
+            android:src="@drawable/ic_back"
+
+            android:contentDescription="@string/back"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_meeting"
+            android:textColor="@color/figma_text_primary"
+            android:textSize="@dimen/font_17"
+            style="@style/HomeFontStyle" />
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:visibility="invisible"
+            android:src="@drawable/ic_history"
+            android:contentDescription="@string/history" />
+
+    </RelativeLayout>
+
+    <!-- Tab Background Container with Figma Gradient -->
+<!--    <FrameLayout-->
+<!--        android:id="@+id/tab_background_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="25dp">-->
+
+<!--  -->
+
+<!--    </FrameLayout>-->
+    <!-- Main Title Group Container -->
+    <LinearLayout
+        android:id="@+id/title_group_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_37"
+        android:layout_marginStart="@dimen/dp_34"
+        android:layout_marginTop="@dimen/dp_16"
+        android:orientation="horizontal">
+
+        <!-- AI实时会议 Title -->
+        <LinearLayout
+            android:id="@+id/tab_realtime_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_37"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tab_realtime"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_28"
+                android:text="@string/title_ai_realtime_meeting"
+                android:textColor="@color/figma_text_primary"
+                android:textSize="@dimen/font_20"
+                android:textStyle="bold"
+                android:gravity="start" />
+
+            <!-- Tab Indicator -->
+            <View
+                android:id="@+id/tab_indicator"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_3"
+                android:layout_marginStart="@dimen/dp_27"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="@color/figma_text_primary"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- Audio Transcription Title -->
+        <LinearLayout
+            android:id="@+id/tab_transcription_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_37"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tab_audio_file"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_28"
+                android:text="@string/title_av_transcription"
+                android:textColor="@color/figma_text_secondary"
+                android:textSize="@dimen/font_20"
+                android:textStyle="normal"
+                android:gravity="start" />
+
+            <!-- Second Tab Indicator -->
+            <View
+                android:id="@+id/tab_indicator_second"
+                android:layout_width="@dimen/dp_38"
+                android:layout_height="@dimen/dp_3"
+                android:layout_marginStart="@dimen/dp_27"
+                android:layout_marginTop="@dimen/dp_6"
+                android:background="@color/figma_text_primary"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Fragment Container for Tab Content -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dp_10">
+
+    <!-- 智能优化版标签 (默认状态) -->
+    <TextView
+        android:id="@+id/tag_optimized"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_smart_optimized"
+        android:textSize="@dimen/font_12"
+        android:textColor="#999999"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/bg_tag_default"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 原文版标签 (选中状态) -->
+    <TextView
+        android:id="@+id/tag_original"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_original_version"
+        android:textSize="@dimen/font_12"
+        android:textColor="#1C77FF"
+        android:fontFamily="sans-serif"
+        android:background="@drawable/bg_tag_selected"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

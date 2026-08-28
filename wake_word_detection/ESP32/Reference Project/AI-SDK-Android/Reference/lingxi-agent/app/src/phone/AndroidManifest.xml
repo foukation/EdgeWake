@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <application
+        android:screenOrientation="portrait"
+        tools:replace="android:screenOrientation">
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation">
+        </activity>
+
+        <activity
+            android:name=".view.auth.OneClickLoginActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".view.auth.RegisterActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".view.auth.RegisterNewActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".view.auth.ForgotPasswordActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.auth.PasswordResetSuccessActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+                        android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <!-- 用户中心模块 -->
+        <activity
+            android:name=".view.user.UserProfileActivity"
+            
+                        android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.UserSettingsActivity"
+            
+                        android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.AccountSafetyActivity"
+           android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.FeedbackActivity"
+            
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.HelpWebViewActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.HistoryActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.AboutAppActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.HelpCenterActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.AccountInfoActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.EditNameActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.ChangePasswordActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.ChangeMobileActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.AccountCancellationActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.LanguageSettingsActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.ModelSelectionActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.FeedbackHistoryActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.FeedbackSuccessActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.common.WebViewActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.FeedbackDetailActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity android:name=".view.user.FeedbackWebViewActivity" />
+
+
+        <!-- 代码查看模块 -->
+        <activity
+            android:name=".view.code.CodeFullscreenActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <!-- 表格查看模块 -->
+        <activity
+            android:name=".view.table.TableFullscreenActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <!-- AI绘画模块 -->
+        <activity
+            android:name=".view.drawing.DrawingActivity"
+            
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+
+        <activity
+            android:name=".view.drawing.DrawingHistoryActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.DrawingImageViewerActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view.drawing.DrawingDetailActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.DrawingGalleryActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.AspectRatioSelectionActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.DrawingSamplesActivity"
+            
+                        android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.DrawingSuccessActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+
+
+        <!-- Meeting Activities -->
+        <activity
+            android:name=".view.meeting.MeetingActivity"
+            
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.meeting.RealtimeMeetingActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".view.meeting.MeetingViewActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.meeting.MeetingUploadWaitingActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.meeting.StreamActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:windowSoftInputMode="adjustResize" />
+            
+        <!-- Chat Activities -->
+        <activity
+            android:name=".view.chat.SuperChatActivity"
+            android:launchMode="singleTop"
+            
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.chat.SuperChatContainActivity"
+            android:launchMode="singleTop"
+            
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <activity
+            android:name=".view.agent.AgentContainActivity"
+            android:launchMode="singleTop"
+            
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation,android:launchMode" />
+
+        <activity
+            android:name=".view.media.ImagePreviewActivity"
+            android:theme="@style/ImagePreviewTheme"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+
+        <activity
+            android:name=".view.chat.ImageGroupPreviewActivity"
+            android:theme="@style/ImagePreviewTheme"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+
+        <activity
+            android:name=".view.meeting.MeetingContainActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.drawing.DrawingContainActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.UserActivity"
+            android:launchMode="singleTop"
+            
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.user.UserContainActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+
+
+        <!-- PPT模块 -->
+        <activity
+            android:name=".view.ppt.PptTopicInputActivity"
+            
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.ppt.PptOutlineEditActivity"
+
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            tools:replace="android:windowSoftInputMode" />
+        <activity
+            android:name=".view.ppt.PptTemplateSelectionActivity"
+            
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.ppt.PptPreviewActivity"
+            
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".view.ppt.PptFullscreenActivity"
+            
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <!-- 同声传译模块 -->
+        <activity
+            android:name=".lingxi.translate.SimultaneousTranslateActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".lingxi.translate.ListenModeActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name=".lingxi.translate.DialogModeActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <activity android:name=".view.common.HtmlPreviewActivity"
+            
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            />
+
+
+
+        <activity
+            android:name=".lingxi.help.FunctionHelpActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".view.user.AgreementActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".view.user.VoiceSettingsActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+
+        <meta-data
+            android:name="com.fxzs.lingxiagent.util.SVGModule"
+            android:value="SVGModule" />
+        <activity
+            android:name=".lingxi.translate.TranslateDetailActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity android:name=".view.chat.HistoryContainActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity android:name=".WakeVoiceActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"/>
+        <activity
+            android:name=".lingxi.gui_agent.GuiFunctionHelpActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation" />
+
+        <activity
+            android:name=".view.guide.GuideActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_48"
+    android:minWidth="@dimen/dp_96">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_user_input_bg" />
+
+    <TextView
+        android:id="@+id/tv_user_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="@string/sample_today_weather"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/font_16"
+        android:gravity="center" />
+
+</FrameLayout>

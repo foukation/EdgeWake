@@ -1,0 +1,16 @@
+# ===========================================================================
+# wake_word_detection_sdk_demo - sdkconfig.defaults (基准默认配置)
+# Target: ESP32-S3, ESP-IDF v5.4.3
+# ---------------------------------------------------------------------------
+# 【必须存在】IDF 只有读到"基准 sdkconfig.defaults"时，才会顺带读取同名的
+# sdkconfig.defaults.<target>（如 sdkconfig.defaults.esp32s3）。缺少本文件时
+# 默认列表为空，target 版本永远不会被读取，PSRAM/看门狗等配置全部失效。
+# ===========================================================================
+
+# 离线推理单次 Invoke 可达数秒，延长任务看门狗超时，避免 IDLE task_wdt 触发
+# 注意：IDF 该配置合法范围 1~60 秒（esp_system/Kconfig range 1 60），60 为上限
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=60
+
+# app 分区用 single app large（factory=1.5MB），否则默认 1MB 装不下 ~1.1MB 固件
+# 与历史提交 9a0dbd5 一致（partitions_singleapp_large.csv）
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y

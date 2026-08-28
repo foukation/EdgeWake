@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <!-- 50%透明黑色背景 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_gravity="bottom|center_horizontal"
+        android:minHeight="@dimen/dp_230"
+        android:background="@drawable/bg_dialog_white_rounded_12dp_gui"
+        android:padding="@dimen/dp_16"
+        >
+
+    <!-- 右上角关闭按钮 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:src="@mipmap/icon_close_gui"
+        android:contentDescription="@string/close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/text_secondary" />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:src="@mipmap/icon_gui_logo_top"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/avatar_description" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="@string/msg_waiting_reply"
+            android:textColor="@color/text_999999"
+            android:textSize="@dimen/font_16"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center"
+            android:padding="@dimen/dp_8"
+            android:background="@drawable/bg_button_green_gui"
+            android:text="@string/msg_task_completed"
+            android:drawableLeft="@mipmap/icon_done"
+            android:textColor="@color/color_0BBF6E"
+            android:textSize="@dimen/font_14"
+
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center"
+            android:padding="@dimen/dp_8"
+            android:background="@drawable/bg_button_red_gui"
+            android:text="@string/title_task_error"
+            android:drawableLeft="@mipmap/icon_error_done"
+            android:textColor="@color/color_EE3636"
+            android:textSize="@dimen/font_14"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <!-- 内容提示信息 -->
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColor="@color/text_1E1E1E"
+        android:textSize="@dimen/font_16"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/rl_item_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 输入框容器 -->
+    <LinearLayout
+        android:id="@+id/ll_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_content">
+
+        <com.fxzs.lingxiagent.util.NexusVoice
+            android:id="@+id/nexus_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_complete"
+            android:layout_width="@dimen/dp_160"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@drawable/bg_button_primary_gui"
+            android:visibility="gone"
+            >
+            <!-- 操作完成按钮 -->
+            <TextView
+                android:id="@+id/btn_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_operation_completed"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_5956E9"
+                android:textSize="@dimen/font_16"
+
+                 />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 底部停止按钮 -->
+    <TextView
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_16"
+        android:minWidth="@dimen/dp_62"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:background="@drawable/bg_button_cancel_figma_gui"
+        android:gravity="center"
+        android:text="@string/btn_stop"
+        android:drawableLeft="@mipmap/ic_stop_gui"
+        android:drawablePadding="@dimen/dp_6"
+        android:textColor="@color/text_1E1E1E"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintTop_toBottomOf="@id/ll_input_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_16"
+        android:minWidth="@dimen/dp_90"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:background="@drawable/bg_button_cancel_figma_gui"
+        android:gravity="center"
+        android:text="@string/btn_back_to_app"
+        android:drawableLeft="@mipmap/icon_back"
+        android:drawablePadding="@dimen/dp_6"
+        android:textColor="@color/text_1E1E1E"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

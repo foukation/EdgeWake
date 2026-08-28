@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+    <!-- Step Indicator -->
+    <LinearLayout
+        android:id="@+id/step_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_40"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Step 1 -->
+        <LinearLayout
+            android:id="@+id/step1_container"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/step1_circle"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:background="@drawable/bg_step_circle_active">
+
+                <TextView
+                    android:id="@+id/step1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/label_one"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold"
+     />
+
+                <ImageView
+                    android:id="@+id/step1_check"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check_step"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/step1_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/btn_select_language"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_12"
+                android:textStyle="bold"
+ />
+        </LinearLayout>
+
+        <!-- Connector 1 -->
+        <View
+            android:id="@+id/connector1"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_neg_10"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:background="@drawable/step_connector_line" />
+
+        <!-- Step 2 -->
+        <LinearLayout
+            android:id="@+id/step2_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/step2_circle"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:background="@drawable/bg_step_circle_inactive">
+
+                <TextView
+                    android:id="@+id/step2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/label_two"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold"
+     />
+
+                <ImageView
+                    android:id="@+id/step2_check"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check_step"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/step2_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/btn_upload_audio_video"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_12"
+ />
+        </LinearLayout>
+
+        <!-- Connector 2 -->
+        <View
+            android:id="@+id/connector2"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="-10dp"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:background="@drawable/step_connector_line" />
+
+        <!-- Step 3 -->
+        <LinearLayout
+            android:id="@+id/step3_container"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/step3_circle"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:background="@drawable/bg_step_circle_inactive">
+
+                <TextView
+                    android:id="@+id/step3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/label_three"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/step3_check"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_8"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check_step"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/step3_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/btn_submit_transcription"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_12"
+ />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Content Container -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/step_indicator"
+        android:layout_marginTop="@dimen/dp_48">
+
+        <!-- Step 1: Language Selection -->
+        <LinearLayout
+            android:id="@+id/step1_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/hint_select_audio_lang_required"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:orientation="vertical">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/card_chinese_mandarin"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_selected">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_mandarin"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/iv_mandarin_check"
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="visible"
+                            android:tint="#1C77FF" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/card_mainland_dialects"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_normal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_mainland_dialect"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/card_english"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_normal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_english_caps"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/card_cantonese"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_normal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_cantonese_simplified"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/card_japanese"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_normal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_japanese"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/card_mixed_engine"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:background="@drawable/bg_language_card_normal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dp_24"
+                            android:text="@string/label_mixed_cn_en_canto"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_16"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="@dimen/dp_24"
+                            android:src="@drawable/ic_check_white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_next_to_upload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginBottom="@dimen/dp_24"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="@dimen/dp_24"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/btn_next"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Step 2: Upload Audio/Video -->
+        <LinearLayout
+            android:id="@+id/step2_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_upload_av_file"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_upload_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginTop="@dimen/dp_24"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_dashed_border"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_upload_icon"
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:src="@drawable/ic_upload" />
+
+                    <TextView
+                        android:id="@+id/tv_upload_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:text="@string/content_click_upload_av"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:id="@+id/tv_upload_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="@string/label_supported_formats_mp3_wav"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/font_14" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_file_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/ic_audio_file" />
+
+                        <TextView
+                            android:id="@+id/tv_file_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_weight="1"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:textColor="#1E1E1E"
+                            android:textSize="@dimen/font_14" />
+
+                        <ImageView
+                            android:id="@+id/iv_remove_file"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:padding="@dimen/dp_4"
+                            android:src="@drawable/ic_close" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_back_to_language"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="@dimen/dp_24"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/btn_previous"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/font_16" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_start_transcription"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#1E1E1E"
+                    app:cardCornerRadius="@dimen/dp_24"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/btn_start_transcription"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_16"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

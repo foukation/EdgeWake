@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- 半透明遮罩层 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Dialog Container -->
+    <LinearLayout
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white_rounded_12dp"
+        android:elevation="@dimen/dp_8">
+
+        <!-- Content Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_24"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title_security_notice"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_16"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:lineSpacingMultiplier="1.0"
+                android:layout_marginBottom="@dimen/dp_16" />
+
+            <!-- Message -->
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_delete_account_warning"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:lineSpacingMultiplier="1.0"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="#F0F0F0" />
+
+        <!-- Button Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:orientation="horizontal">
+
+            <!-- Cancel Button -->
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="135dp"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/btn_cancel"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:lineSpacingMultiplier="1.0"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- 竖线分割 -->
+            <View
+                android:layout_width="@dimen/dp_0.5"
+                android:layout_height="match_parent"
+                android:background="#F0F0F0" />
+
+            <!-- Confirm Button -->
+            <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="@dimen/dp_135"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/btn_confirm_delete_account"
+                android:textColor="#FF4444"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="sans-serif"
+                android:textStyle="normal"
+                android:lineSpacingMultiplier="1.0"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

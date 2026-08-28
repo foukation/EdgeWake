@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#E6F2FA"
+                android:endColor="#FFFFFF" />
+        </shape>
+    </item>
+    
+    <!-- Ellipse overlay 1 with blur effect simulation -->
+    <item
+        android:left="70dp"
+        android:top="-32dp">
+        <shape android:shape="oval">
+            <size
+                android:width="304dp"
+                android:height="142dp" />
+            <gradient
+                android:type="radial"
+                android:gradientRadius="152dp"
+                android:centerColor="#CCA1BAFF"
+                android:endColor="#33B0F2FF" />
+        </shape>
+    </item>
+    
+    <!-- Ellipse overlay 2 with blur effect simulation -->
+    <item
+        android:left="-76dp"
+        android:top="-122dp">
+        <shape android:shape="oval">
+            <size
+                android:width="213dp"
+                android:height="248dp" />
+            <solid android:color="#4DBFB0FF" />
+        </shape>
+    </item>
+</layer-list>

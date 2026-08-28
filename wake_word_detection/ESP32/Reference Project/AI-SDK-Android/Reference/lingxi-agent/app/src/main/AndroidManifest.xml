@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fxzs.lingxiagent">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- 统一认证权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--修改系统权限-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <permission
+        android:name="com.fxzs.lingxiagent.SYSTEM_PERM"
+        android:protectionLevel="normal" />
+    <!--    &lt;!&ndash; 极光一键登录权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+<!--    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+<!--    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />-->
+<!--    <uses-permission android:name="android.permission.GET_TASKS" />-->
+<!--    <uses-permission android:name="android.permission.VIBRATE" />-->
+    <!-- 中国电信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+
+    <!-- 极光推送权限 -->
+<!--    <permission-->
+<!--        android:name="com.fxzs.lingxiagent.permission.JPUSH_MESSAGE"-->
+<!--        android:protectionLevel="signature" />-->
+<!--    <uses-permission android:name="com.fxzs.lingxiagent.permission.JPUSH_MESSAGE" />-->
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <!-- Optional -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在 6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+
+    <application
+        android:name=".IYAApplication"
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@drawable/app_logo"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:screenOrientation="portrait"
+        tools:replace="android:screenOrientation">
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="com.fxzs.lingxiagent"
+                    android:scheme="lingxiagent" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="true"
+            android:launchMode="singleTask"
+            >
+        </activity>
+
+        <activity
+            android:name=".view.auth.OneClickLoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.RegisterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.RegisterNewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.ForgotPasswordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.PasswordResetSuccessActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <!-- 用户中心模块 -->
+        <activity
+            android:name=".view.user.UserProfileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.UserSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="true" >
+            <!-- 系统设置扩展 Intent：允许应用在系统设置中显示 -->
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 高优先级系统设置 Intent：确保在设置菜单中优先显示 -->
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- 设置菜单元数据：定义在系统设置中的显示信息 -->
+            <meta-data android:name="com.android.settings.category" android:value="com.android.settings.category.ia.homepage" />
+            <meta-data android:name="com.android.settings.title" android:resource="@string/setting_app_name" />
+            <meta-data android:name="com.android.settings.summary" android:value="@string/setting_app_name" />
+            <meta-data android:name="com.android.settings.icon" android:resource="@mipmap/app_logo" />
+        </activity>
+
+        <activity
+            android:name=".view.user.UserAppSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".view.user.AccountSafetyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.FeedbackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.HelpWebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.HistoryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.AboutAppActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.HelpCenterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.AccountInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.EditNameActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.ChangePasswordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.ChangeMobileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.AccountCancellationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.LanguageSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.ModelSelectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.FeedbackHistoryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.FeedbackSuccessActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.common.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.FeedbackDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity android:name=".view.user.FeedbackWebViewActivity" />
+<!--        <activity-->
+<!--            android:name="com.fxzs.lingxiagent.view.user.VersionUpdateActivity"-->
+<!--            -->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+<!--            android:exported="false" />-->
+
+        <!-- 代码查看模块 -->
+        <activity
+            android:name=".view.code.CodeFullscreenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <!-- 表格查看模块 -->
+        <activity
+            android:name=".view.table.TableFullscreenActivity"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+
+        <!-- AI绘画模块 -->
+        <activity
+            android:name=".view.drawing.DrawingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".view.drawing.DrawingHistoryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingImageViewerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".view.drawing.DrawingDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingGalleryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.AspectRatioSelectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingSamplesActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingStyleSelectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingImageGenerateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingTransformActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingSuccessActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+
+
+        <!-- Meeting Activities -->
+        <activity
+            android:name=".view.meeting.MeetingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.meeting.RealtimeMeetingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".view.meeting.MeetingViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.meeting.MeetingUploadWaitingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.meeting.StreamActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Chat Activities -->
+        <activity
+            android:name=".view.chat.SuperChatActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.chat.SuperChatContainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.agent.AgentContainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboard|keyboardHidden|screenSize|orientation|smallestScreenSize|uiMode"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false"
+       />
+
+        <activity
+            android:name=".view.media.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:theme="@style/ImagePreviewTheme"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".view.chat.ImageGroupPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:theme="@style/ImagePreviewTheme"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".view.meeting.MeetingContainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.drawing.DrawingContainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.UserActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.UserContainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+
+
+
+
+        <!-- 同声传译模块 -->
+        <activity
+            android:name=".lingxi.translate.SimultaneousTranslateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".lingxi.translate.ListenModeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".lingxi.translate.DialogModeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity android:name=".view.common.HtmlPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"
+            />
+
+        <!-- PPT模块 -->
+        <activity
+            android:name=".view.ppt.PptTopicInputActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:exported="false" />
+        <activity
+            android:name=".view.ppt.PptOutlineEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".view.ppt.PptTemplateSelectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:exported="false" />
+        <activity
+            android:name=".view.ppt.PptPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.ppt.PptFullscreenActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false" />
+
+        <!-- FileProvider for image capture -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+<!--        <provider-->
+<!--            android:exported="false"-->
+<!--            android:authorities="${applicationId}.jiguang.InitProvider"-->
+<!--            android:name="cn.jpush.android.service.InitProvider"></provider>-->
+
+        <!-- 高德地图配置 -->
+<!--        <meta-data-->
+<!--            android:name="com.amap.api.v2.apikey"-->
+<!--            android:value="3ce8e0e1265c65c636789804c3571b2c" />-->
+        <service android:name="com.amap.api.location.APSService"/>
+
+        <!-- 极光一键登录配置 -->
+<!--        <meta-data-->
+<!--            android:name="JPUSH_CHANNEL"-->
+<!--            android:value="developer-default"-->
+<!--            tools:replace="android:value" />-->
+
+        <!-- 极光推送核心功能 -->
+        <!-- PushService -->
+<!--        <service-->
+<!--            android:name="cn.jpush.android.service.PushService"-->
+<!--            android:exported="false"-->
+<!--            android:process=":pushcore">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="cn.jpush.android.intent.REGISTER" />-->
+<!--                <action android:name="cn.jpush.android.intent.REPORT" />-->
+<!--                <action android:name="cn.jpush.android.intent.PushService" />-->
+<!--                <action android:name="cn.jpush.android.intent.PUSH_TIME" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <!-- 极光SDK核心组件 -->
+<!--        <receiver-->
+<!--            android:name="cn.jpush.android.service.PushReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter android:priority="1000">-->
+<!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />-->
+<!--                <category android:name="com.fxzs.lingxiagent" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.USER_PRESENT" />-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.PACKAGE_ADDED" />-->
+<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+<!--                <data android:scheme="package" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <!-- Required -->
+<!--        <receiver-->
+<!--            android:name="cn.jpush.android.service.AlarmReceiver"-->
+<!--            android:exported="false" />-->
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+<!--        <receiver-->
+<!--            android:name=".receiver.JiGuangPushReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="cn.jpush.android.intent.REGISTRATION" />-->
+<!--                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />-->
+<!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />-->
+<!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />-->
+<!--                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />-->
+<!--                <action android:name="cn.jpush.android.intent.CONNECTION" />-->
+<!--                <category android:name="com.fxzs.lingxiagent" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        -->
+        <!-- Required JCommonService -->
+<!--        <service-->
+<!--            android:name="cn jpush android service JCommonService"-->
+<!--            android:exported="false"-->
+<!--            android:process=":pushcore" />-->
+
+        <!-- User defined. 用户自定义Push接收器 -->
+<!--        <receiver-->
+<!--            android:name=".service.JiGuangPushService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />-->
+<!--                <category android:name="${applicationId}" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <!-- FileProvider for sharing exported files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <service android:name=".service.FloatWindowService" />
+        <service android:name=".lingxi.main.service.FloatViewModelService" />
+        <service android:name=".service.MenuActionFloatService" />
+        <service
+            android:name=".lingxi.main.service.KeyService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <provider
+            android:name="com.fxzs.lingxiagent.lingxi.easyfloat.EasyFloatInitializer"
+            android:authorities="${applicationId}.EasyFloatInitializer"
+            android:exported="false"
+            android:multiprocess="true" />
+        <activity
+            android:name=".lingxi.help.FunctionHelpActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+        <activity
+            android:name=".view.user.AgreementActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+        <activity
+            android:name=".view.user.VoiceSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+
+        <meta-data
+            android:name="com.fxzs.lingxiagent.util.SVGModule"
+            android:value="SVGModule" />
+        <activity
+            android:name=".lingxi.translate.TranslateDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+        <activity
+            android:name=".view.excel.AiExcelContainActivity"
+
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false"
+
+            />
+        <activity android:name=".view.chat.HistoryContainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+
+        <activity
+            android:name=".view.aifile.AiFileToolActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.aifile.AiFileIntroFileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.aifile.AiFileIntroImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.aifile.AiFilePickFileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.aifile.AiFilePickImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.aifile.AiFileImageCropActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".view.aifile.AiFileResultActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+
+        <service
+            android:name=".service.MyForegroundService"
+            android:foregroundServiceType="mediaPlayback"
+            android:exported="false"/>
+        <service
+            android:name=".service.MyMeetingRecordService"
+            android:foregroundServiceType="microphone"
+            android:exported="false"/>
+        <service
+            android:name=".service.WakeUpService"
+            android:foregroundServiceType="microphone"
+            android:exported="false"
+            />
+
+        <service
+            android:name=".service.BaseAccessibilityService"
+            android:description="@string/desc_accessibility"
+            android:exported="false"
+            android:label="@string/desc_accessibility"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/base_accessibility_config" />
+        </service>
+        <activity
+            android:name=".view.ServerSwitchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+        <activity
+            android:name=".view.drawing.DrawingSelectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+        <!-- 等待答复弹窗Activity -->
+        <activity
+            android:name=".lingxi.gui_agent.view.WaitingReplyDialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:theme="@style/Theme.CustomTranslucentFullscreen"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:taskAffinity=""
+            android:launchMode="singleInstance"/>
+
+        <activity android:name=".WakeVoiceActivity"
+            android:theme="@style/Theme.TransparentActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
+
+
+        <service
+            android:name="com.fxzs.lingxiagent.lingxi.marquee.MarqueeService"
+            android:enabled="true"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
+
+       <receiver
+            android:name=".receiver.LingxiAppWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_name_ai">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.fxzs.lingxiagent.ACTION_REFRESH_WIDGET"/>
+            </intent-filter>
+           <meta-data
+               android:name="android.appwidget.provider"
+               android:resource="@xml/lingxi_app_widget" />
+        </receiver>
+
+        <receiver
+            android:name=".receiver.LingxiGUIWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_name_gui"
+            android:enabled="${WIDGET_ENABLED}">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lingxi_guiwidget" />
+        </receiver>
+
+        <receiver
+            android:name=".receiver.LingxiAskWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_name_wake">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lingxi_ask_widget" />
+        </receiver>
+
+        <activity
+            android:name=".WakeUpTriggerActivity"
+            android:theme="@style/Theme.Transparent"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="com.fxzs.lingxiagent"
+                    android:scheme="lingxiawakeup" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".lingxi.gui_agent.GuiFunctionHelpActivity"
+            android:screenOrientation="unspecified"
+            android:configChanges="orientation|screenSize|keyboard"
+            tools:replace="android:screenOrientation"/>
+
+        <activity
+            android:name=".view.guide.GuideActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            tools:replace="android:screenOrientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="com.fxzs.lingxiagent"
+                    android:scheme="lingxiguide" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.bill.BillingWebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false" />
+
+        <provider
+            android:name=".util.GlobalProvider"
+            android:authorities="com.fxzs.lingxiagent.globalprovider"
+            android:exported="true"
+            android:multiprocess="true"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:readPermission="com.fxzs.lingxiagent.SYSTEM_PERM"
+            android:writePermission="com.fxzs.lingxiagent.SYSTEM_PERM" />
+    </application>
+
+</manifest>

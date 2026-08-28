@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginBottom="@dimen/dp_8"
+    app:cardCornerRadius="@dimen/dp_12"
+    app:cardElevation="@dimen/dp_1"
+    app:cardBackgroundColor="@color/code_background"
+    app:strokeWidth="@dimen/dp_1"
+    app:strokeColor="@color/code_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 表格头部 -->
+        <LinearLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_code_header"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_12"
+            android:gravity="center_vertical">
+
+            <!-- 表格图标 -->
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_table_chart"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:contentDescription="表格图标" />
+
+            <!-- 表格标题 -->
+            <TextView
+                android:id="@+id/tv_table_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title_table"
+                android:textSize="@dimen/font_13"
+                android:textColor="@color/code_language_text"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold" />
+
+            <!-- 复制按钮 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_copy"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/code_button_background"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_copy"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_copy_modern"
+                    android:contentDescription="复制表格" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 全屏按钮 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_fullscreen"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/code_button_background"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/iv_fullscreen"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fullscreen_modern"
+                    android:contentDescription="全屏查看" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/code_border" />
+
+        <!-- 表格内容容器 -->
+        <FrameLayout
+            android:id="@+id/table_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/code_background" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

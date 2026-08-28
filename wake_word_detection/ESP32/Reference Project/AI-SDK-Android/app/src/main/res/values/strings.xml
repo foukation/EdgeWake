@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">aiAssistAsrDemo</string>
+
+    <string name="audio_paused">暂停中&#8230;</string>
+    <string name="audio_playing">播放中&#8230;</string>
+    <string name="audio_default">等待音乐</string>
+    <string name="stop_record">点击说话</string>
+    <string name="long_touch">长按说话</string>
+    <string name="start_record">录音中&#8230;</string>
+    <string name="speaking">播报中&#8230;</string>
+    <string name="think">思考中&#8230;</string>
+
+    <string name="previous_audio">上一首</string>
+    <string name="next_audio">下一首</string>
+    <string name="wakeup_word">您可以说【小度小度】进行唤醒</string>
+    <string name="inputed_text_cannot_be_empty">输入的内容不能为空</string>
+    <string name="err_net_msg">当前网络连接失败,请稍后重试</string>
+    <string name="voice_err_msg">识别失败，请稍后再试</string>
+    <string name="deviceNoType">DeviceNoType :</string>
+    <string name="deviceNo">DeviceNo：</string>
+    <string name="productId">ProductId：</string>
+    <string name="productKey">productKey：</string>
+    <string name="deviceInfo">DeviceInfo：</string>
+
+</resources>

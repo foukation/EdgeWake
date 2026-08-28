@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 外层阴影 (4%透明度) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0A606F8B" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    
+    <!-- 中层阴影 (3%透明度, 偏移) -->
+    <item 
+        android:top="1dp"
+        android:bottom="3dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#08606F8B" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    
+    <!-- 主体背景 (白色) -->
+    <item 
+        android:top="2dp"
+        android:bottom="4dp"
+        android:left="2dp"
+        android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 主背景 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    
+    <!-- 底部分隔线 -->
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="0.5dp" />
+            <solid android:color="#E5E7EB" />
+        </shape>
+    </item>
+    
+</layer-list>

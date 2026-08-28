@@ -1,0 +1,490 @@
+[
+  {
+    "id": 9,
+    "name": "百度地图",
+    "enName": "BaiduMap",
+    "packageName": "com.baidu.BaiduMap",
+    "homeActivity": "com.baidu.baidumaps.MapsActivity",
+    "status": 1
+  },
+  {
+    "id": 16,
+    "name": "微信",
+    "enName": "WeChat",
+    "packageName": "com.tencent.mm",
+    "homeActivity": "com.tencent.mm.ui.LauncherUI",
+    "status": 1
+  },
+  {
+    "id": 18,
+    "name": "京东",
+    "enName": "JD",
+    "packageName": "com.jingdong.app.mall",
+    "homeActivity": "com.jingdong.app.mall.main.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 19,
+    "name": "滴滴",
+    "enName": "DiDi",
+    "packageName": "com.sdu.didi.psnger",
+    "homeActivity": "com.didi.sdk.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 21,
+    "name": "携程",
+    "enName": "Ctrip",
+    "packageName": "ctrip.android.view",
+    "homeActivity": "ctrip.business.splash.CtripSplashActivity",
+    "status": 1
+  },
+  {
+    "id": 22,
+    "name": "美团",
+    "enName": "Meituan",
+    "packageName": "com.sankuai.meituan",
+    "homeActivity": "com.meituan.android.pt.homepage.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 10,
+    "name": "移动高清",
+    "enName": "OTTTV",
+    "packageName": "tv.icntv.ott",
+    "homeActivity": "com.istv.ui.app.login.LoginActivityJS",
+    "status": 1
+  },
+  {
+    "id": 11,
+    "name": "云电脑",
+    "enName": "CloudComputer",
+    "packageName": "cm.komect.aqb.android.cloudcomputerpad",
+    "homeActivity": "",
+    "status": 1
+  },
+  {
+    "id": 12,
+    "name": "电脑办公",
+    "enName": "CloudComputer",
+    "packageName": "cm.komect.aqb.android.cloudcomputerpad",
+    "homeActivity": "",
+    "status": 1
+  },
+  {
+    "id": 13,
+    "name": "Windows",
+    "enName": "CloudComputer",
+    "packageName": "cm.komect.aqb.android.cloudcomputerpad",
+    "homeActivity": "",
+    "status": 1
+  },
+  {
+    "id": 23,
+    "name": "淘宝",
+    "enName": "Taobao",
+    "packageName": "com.taobao.taobao",
+    "homeActivity": "com.taobao.tao.welcome.Welcome",
+    "status": 1
+  },
+  {
+    "id": 24,
+    "name": "拼多多",
+    "enName": "Pinduoduo",
+    "packageName": "com.xunmeng.pinduoduo",
+    "homeActivity": "com.xunmeng.pinduoduo.ui.activity.MainFrameActivity",
+    "status": 1
+  },
+  {
+    "id": 25,
+    "name": "豆包",
+    "enName": "Doubao",
+    "packageName": "com.larus.nova",
+    "homeActivity": "com.larus.nova.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 26,
+    "name": "腾讯视频",
+    "enName": "TencentVideo",
+    "packageName": "com.tencent.qqlive",
+    "homeActivity": "com.tencent.qqlive.ui.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 27,
+    "name": "高德地图",
+    "enName": "AMap",
+    "packageName": "com.autonavi.minimap",
+    "homeActivity": "com.autonavi.map.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 28,
+    "name": "大众点评",
+    "enName": "Dianping",
+    "packageName": "com.dianping.v1",
+    "homeActivity": "com.dianping.main.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 29,
+    "name": "淘宝闪购",
+    "enName": "TaobaoFlash",
+    "packageName": "me.ele",
+    "homeActivity": "me.ele.android.eleme.app.ActivitySplash",
+    "status": 1
+  },
+  {
+    "id": 30,
+    "name": "优酷视频",
+    "enName": "Youku",
+    "packageName": "com.youku.phone",
+    "homeActivity": "com.youku.phone.HomeActivity",
+    "status": 1
+  },
+  {
+    "id": 31,
+    "name": "携程旅行",
+    "enName": "CtripTravel",
+    "packageName": "ctrip.android.view",
+    "homeActivity": "ctrip.business.splash.CtripSplashActivity",
+    "status": 1
+  },
+  {
+    "id": 32,
+    "name": "小红书",
+    "enName": "Xiaohongshu",
+    "packageName": "com.xingin.xhs",
+    "homeActivity": "com.xingin.xhs.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 33,
+    "name": "Deepseek",
+    "enName": "DeepSeek",
+    "packageName": "com.deepseek.chat",
+    "homeActivity": "com.deepseek.chat.main.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 69,
+    "name": "深搜",
+    "enName": "DeepSeek",
+    "packageName": "com.deepseek.chat",
+    "homeActivity": "com.deepseek.chat.main.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 34,
+    "name": "元宝",
+    "enName": "Yuanbao",
+    "packageName": "com.tencent.hunyuan.app.chat",
+    "homeActivity": "com.tencent.hunyuan.app.chat.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 35,
+    "name": "酷狗音乐",
+    "enName": "KuGou",
+    "packageName": "com.kugou.android",
+    "homeActivity": "com.kugou.android.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 36,
+    "name": "喜马拉雅",
+    "enName": "Ximalaya",
+    "packageName": "com.ximalaya.ting.android",
+    "homeActivity": "com.ximalaya.ting.android.host.activity.WelcomeActivity",
+    "status": 1
+  },
+  {
+    "id": 37,
+    "name": "哔哩哔哩",
+    "enName": "Bilibili",
+    "packageName": "tv.danmaku.bili",
+    "homeActivity": "tv.danmaku.bili.MainActivityV2",
+    "status": 1
+  },
+  {
+    "id": 38,
+    "name": "墨迹天气",
+    "enName": "MojiWeather",
+    "packageName": "com.moji.mjweather",
+    "homeActivity": "com.moji.mjweather.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 39,
+    "name": "抖音",
+    "enName": "Douyin",
+    "packageName": "com.ss.android.ugc.aweme",
+    "homeActivity": "com.ss.android.ugc.aweme.main.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 40,
+    "name": "微博",
+    "enName": "Weibo",
+    "packageName": "com.sina.weibo",
+    "homeActivity": "com.sina.weibo.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 41,
+    "name": "知乎",
+    "enName": "Zhihu",
+    "packageName": "com.zhihu.android",
+    "homeActivity": "com.zhihu.android.app.ui.activity.MainTabActivity",
+    "status": 1
+  },
+  {
+    "id": 42,
+    "name": "58同城",
+    "enName": "58Tongcheng",
+    "packageName": "com.wuba",
+    "homeActivity": "com.wuba.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 43,
+    "name": "汽车之家",
+    "enName": "AutoHome",
+    "packageName": "com.cubic.autohome",
+    "homeActivity": "com.cubic.autohome.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 44,
+    "name": "QQ音乐",
+    "enName": "QQMusic",
+    "packageName": "com.tencent.qqmusic",
+    "homeActivity": "com.tencent.qqmusic.activity.AppStarterActivity",
+    "status": 1
+  },
+  {
+    "id": 45,
+    "name": "爱奇艺",
+    "enName": "iQIYI",
+    "packageName": "com.qiyi.video",
+    "homeActivity": "org.qiyi.android.video.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 46,
+    "name": "12306",
+    "enName": "12306",
+    "packageName": "com.MobileTicket",
+    "homeActivity": "com.MobileTicket.StartActivity",
+    "status": 1
+  },
+  {
+    "id": 47,
+    "name": "去哪旅行",
+    "enName": "Qunar",
+    "packageName": "com.Qunar",
+    "homeActivity": "qunar.android.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 69,
+    "name": "去哪儿网",
+    "enName": "Qunar",
+    "packageName": "com.Qunar",
+    "homeActivity": "qunar.android.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 69,
+    "name": "去哪网",
+    "enName": "Qunar",
+    "packageName": "com.Qunar",
+    "homeActivity": "qunar.android.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 70,
+    "name": "去哪儿旅行",
+    "enName": "Qunar",
+    "packageName": "com.Qunar",
+    "homeActivity": "qunar.android.app.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 48,
+    "name": "QQ邮箱",
+    "enName": "QQMail",
+    "packageName": "com.tencent.androidqqmail",
+    "homeActivity": "com.tencent.qqmail.WelcomePagesActivity",
+    "status": 1
+  },
+  {
+    "id": 49,
+    "name": "百度",
+    "enName": "Baidu",
+    "packageName": "com.baidu.searchbox",
+    "homeActivity": "com.baidu.searchbox.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 50,
+    "name": "闲鱼",
+    "enName": "Xianyu",
+    "packageName": "com.taobao.idlefish",
+    "homeActivity": "com.taobao.fleamarket.home.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 68,
+    "name": "咸鱼",
+    "enName": "Xianyu",
+    "packageName": "com.taobao.idlefish",
+    "homeActivity": "com.taobao.fleamarket.home.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 51,
+    "name": "交管12123",
+    "enName": "Traffic12123",
+    "packageName": "com.tmri.app.main",
+    "homeActivity": "com.tmri.app.main.activity.WelcomeActivity",
+    "status": 1
+  },
+  {
+    "id": 52,
+    "name": "网易云音乐",
+    "enName": "NetEaseMusic",
+    "packageName": "com.netease.cloudmusic",
+    "homeActivity": "com.netease.cloudmusic.activity.LoadingActivity",
+    "status": 1
+  },
+  {
+    "id": 53,
+    "name": "快手",
+    "enName": "Kuaishou",
+    "packageName": "com.smile.gifmaker",
+    "homeActivity": "com.yxcorp.gifshow.HomeActivity",
+    "status": 1
+  },
+  {
+    "id": 54,
+    "name": "QQ浏览器",
+    "enName": "QQBrowser",
+    "packageName": "com.tencent.mtt",
+    "homeActivity": "com.tencent.mtt.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 55,
+    "name": "WPS Office",
+    "enName": "WPS",
+    "packageName": "cn.wps.moffice_eng",
+    "homeActivity": "cn.wps.moffice.documentmanager.PreStartActivity2",
+    "status": 1
+  },
+  {
+    "id": 56,
+    "name": "夸克",
+    "enName": "Quark",
+    "packageName": "com.quark.browser",
+    "homeActivity": "com.ucpro.BrowserActivity",
+    "status": 1
+  },
+  {
+    "id": 57,
+    "name": "饿了么",
+    "enName": "Eleme",
+    "packageName": "me.ele",
+    "homeActivity": "me.ele.android.eleme.app.ActivitySplash",
+    "status": 1
+  },
+  {
+    "id": 58,
+    "name": "王者荣耀",
+    "enName": "HonorOfKings",
+    "packageName": "com.tencent.tmgp.sgame",
+    "homeActivity": "com.tencent.tmgp.sgame.SGameActivity",
+    "status": 1
+  },
+  {
+    "id": 59,
+    "name": "得物",
+    "enName": "Dewu",
+    "packageName": "com.shizhuang.duapp",
+    "homeActivity": "com.shizhuang.duapp.modules.main.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 60,
+    "name": "钉钉",
+    "enName": "DingTalk",
+    "packageName": "com.alibaba.android.rimet",
+    "homeActivity": "com.alibaba.android.rimet.biz.home.activity.HomeActivity",
+    "status": 1
+  },
+  {
+    "id": 61,
+    "name": "UC浏览器",
+    "enName": "UCBrowser",
+    "packageName": "com.UCMobile",
+    "homeActivity": "com.UCMobile.main.UCMobile",
+    "status": 1
+  },
+  {
+    "id": 62,
+    "name": "今日头条",
+    "enName": "Toutiao",
+    "packageName": "com.ss.android.article.news",
+    "homeActivity": "com.ss.android.article.news.activity.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 63,
+    "name": "中国移动",
+    "enName": "ChinaMobile",
+    "packageName": "com.greenpoint.android.mc10086.activity",
+    "homeActivity": "com.greenpoint.android.mc10086.activity.index.IndexActivity",
+    "status": 1
+  },
+  {
+    "id": 64,
+    "name": "QQ",
+    "enName": "QQ",
+    "packageName": "com.tencent.mobileqq",
+    "homeActivity": "com.tencent.mobileqq.activity.HomeActivity",
+    "status": 1
+  },
+  {
+    "id": 65,
+    "name": "剪映",
+    "enName": "CapCut",
+    "packageName": "com.lemon.lv",
+    "homeActivity": "com.lemon.lvoideo.MainActivity",
+    "status": 1
+  },
+  {
+    "id": 66,
+    "name": "番茄免费小说",
+    "enName": "FanqieNovel",
+    "packageName": "com.dragon.read",
+    "homeActivity": "com.dragon.read.activity.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 67,
+    "name": "懂车帝",
+    "enName": "Dongchedi",
+    "packageName": "com.ss.android.auto",
+    "homeActivity": "com.ss.android.auto.splash.SplashActivity",
+    "status": 1
+  },
+  {
+    "id": 68,
+    "name": "支付宝",
+    "enName": "Alipay",
+    "packageName": "com.eg.android.AlipayGphone",
+    "homeActivity": "com.eg.android.AlipayGphone.FastStartActivity",
+    "status": 1
+  }
+]

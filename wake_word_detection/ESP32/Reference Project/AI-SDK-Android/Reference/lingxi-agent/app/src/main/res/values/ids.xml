@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ensure these IDs are generated in R so Java references compile -->
+    <item type="id" name="iv_flip"/>
+    <item type="id" name="top_card_container"/>
+    <item type="id" name="tag_last_len"/>
+</resources>
+

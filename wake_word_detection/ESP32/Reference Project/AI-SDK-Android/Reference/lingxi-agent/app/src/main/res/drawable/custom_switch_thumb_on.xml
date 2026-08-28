@@ -1,0 +1,6 @@
+<!-- res/drawable/custom_switch_thumb_on.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#FFFFFF"/>
+    <stroke android:width="@dimen/dp_2" android:color="#1587FF"/>
+    <size android:width="@dimen/dp_26" android:height="@dimen/dp_26"/>
+</shape>

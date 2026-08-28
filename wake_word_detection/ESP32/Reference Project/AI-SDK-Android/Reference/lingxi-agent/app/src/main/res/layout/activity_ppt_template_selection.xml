@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- 顶部导航栏 -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+
+            android:contentDescription="返回" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_40"
+            android:src="@drawable/ic_close"
+
+            android:contentDescription="关闭"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/btn_select_template"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_17"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 筛选栏 -->
+    <LinearLayout
+        android:id="@+id/filter_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_12"
+        android:background="#FFFFFF">
+
+        <!-- 颜色筛选 -->
+        <LinearLayout
+            android:id="@+id/color_filter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_filter_option"
+            android:paddingHorizontal="@dimen/dp_12"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/color_filter_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_color_colon"
+                        android:textColor="#1E1E1E"
+                        android:textSize="@dimen/font_14"
+                        android:layout_marginEnd="@dimen/dp_8"/>
+
+                <View
+                    android:id="@+id/color_indicator_random"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:background="@drawable/bg_color_indicator"
+                    android:layout_marginEnd="@dimen/dp_8" />
+                <View
+                    android:id="@+id/color_indicator"
+                    android:layout_width="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_16"
+                    android:background="@drawable/bg_color_indicator"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:tint="#666666" />
+
+        </LinearLayout>
+
+        <!-- 风格筛选 -->
+        <LinearLayout
+            android:id="@+id/style_filter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_32"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_filter_option"
+            android:paddingHorizontal="@dimen/dp_12"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_style_colon"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_14"
+                android:layout_marginEnd="@dimen/dp_8" />
+
+            <TextView
+                android:id="@+id/style_filter_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title_recommended"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_14"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:tint="#666666" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 风格选择下拉菜单 -->
+    <LinearLayout
+        android:id="@+id/style_dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        android:elevation="@dimen/dp_4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#E0E0E0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/style_recommended"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/title_recommended"
+                android:textSize="@dimen/font_15"
+                android:textColor="#1E1E1E"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/style_business"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/title_simple_business"
+                android:textSize="@dimen/font_15"
+                android:textColor="#1E1E1E"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/style_cartoon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/title_cartoon_illustration"
+                android:textSize="@dimen/font_15"
+                android:textColor="#1E1E1E"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/style_tech"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dp_44"-->
+<!--                android:text="@string/title_cool_tech"-->
+<!--                android:textSize="@dimen/font_15"-->
+<!--                android:textColor="#1E1E1E"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true" />-->
+
+            <TextView
+                android:id="@+id/style_chinese"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/title_chinese_style"
+                android:textSize="@dimen/font_15"
+                android:textColor="#1E1E1E"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/style_fresh"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:text="@string/title_watercolor_fresh"
+                android:textSize="@dimen/font_15"
+                android:textColor="#1E1E1E"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/style_government"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dp_44"-->
+<!--                android:text="@string/title_party_government"-->
+<!--                android:textSize="@dimen/font_15"-->
+<!--                android:textColor="#1E1E1E"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/style_other"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dp_44"-->
+<!--                android:text="@string/label_other"-->
+<!--                android:textSize="@dimen/font_15"-->
+<!--                android:textColor="#1E1E1E"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/template_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/dp_16"
+        android:clipToPadding="false" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="@dimen/dp_200"
+            android:background="@mipmap/icon_empty"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_no_matching_style"
+            android:textSize="@dimen/font_14"
+            android:fontFamily="sans-serif-medium"
+            android:textFontWeight="400"
+            android:textColor="@color/figma_text_hint"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/progress_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="@dimen/dp_16"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:elevation="@dimen/dp_4"-->
+<!--        android:visibility="gone">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/progress_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/label_generating_ppt"-->
+<!--            android:textSize="@dimen/font_16"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginBottom="@dimen/dp_12" />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progress_bar"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_8"-->
+<!--            android:layout_marginBottom="@dimen/dp_12"-->
+<!--            android:max="100"-->
+<!--            android:progress="0" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/stop_generation_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/dp_36"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="@string/btn_stop_generate"-->
+<!--            android:textSize="@dimen/font_14"-->
+<!--            android:textColor="#FF5722"-->
+<!--            android:background="@drawable/bg_button_text"-->
+<!--            android:foreground="?attr/selectableItemBackground" />-->
+
+<!--    </LinearLayout>-->
+
+    <!-- 底部操作栏 -->
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="@dimen/dp_16"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/refresh_templates_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:gravity="center"
+            android:background="@drawable/bg_button_outline_rounded" >
+
+            <ImageView
+                android:id="@+id/iv_sub_add"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:scaleType="fitXY"
+                android:background="@drawable/ppt_refresh"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_switch_template"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/figma_text_primary"
+                android:layout_marginLeft="@dimen/dp_8"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/generate_ppt_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp_40"
+            android:text="@string/btn_generate_ppt"
+            android:textSize="@dimen/font_16"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button_blue_new"
+            android:enabled="false"
+            android:alpha="0.5" />
+
+    </LinearLayout>
+
+</LinearLayout>

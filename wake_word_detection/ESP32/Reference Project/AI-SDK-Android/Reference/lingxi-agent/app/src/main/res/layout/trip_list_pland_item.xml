@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:background="@drawable/shape_r10_cf5f5f7">
+
+    <RelativeLayout
+        android:id="@+id/traffic_data_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/dp_4"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_pland_empty_toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_no_flights_found"
+                android:textColor="@color/color_99000000"
+                android:textSize="@dimen/font_13" />
+
+            <TextView
+                android:id="@+id/id_tv_pland_empty_toast2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="@string/label_click_more_for_times"
+                android:textColor="@color/color_61000000"
+                android:textSize="@dimen/font_11" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/traffic_data_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/dp_4">
+        <!-- 顶部标题 -->
+        <LinearLayout
+            android:id="@+id/id_ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_r10_c1587ff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_2">
+
+            <ImageView
+                android:id="@+id/id_iv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/start_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:gravity="center"
+                android:text="@string/label_earliest_departure"
+                android:textColor="@color/color_1587ff"
+                android:textSize="@dimen/font_11" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/traffic_airplane_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_ll_title"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <!-- 左侧出发信息 -->
+            <LinearLayout
+                android:id="@+id/traffic_airplane_start_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/traffic_airplane_starttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    tools:text="06:55"
+                    android:textColor="#ff1e1e1e"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/traffic_airplane_startcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="浦东T2"
+                    android:textColor="#ff1e1e1e"
+                    android:textSize="@dimen/font_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/traffic_airplane_start_layout"
+                android:layout_alignLeft="@+id/traffic_airplane_start_layout"
+                android:layout_marginTop="@dimen/dp_3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pland_airplane_icon"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="@dimen/dp_14"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_4" />
+
+                <TextView
+                    android:id="@+id/id_tv_pland_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="南航CA132 | 空客333（中）"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/font_11" />
+            </LinearLayout>
+
+            <!-- 中间飞行信息 -->
+            <LinearLayout
+                android:id="@+id/traffic_airplane_time_layout"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_toEndOf="@+id/traffic_airplane_start_layout"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/traffic_airplane_alltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    tools:text="5时59分"
+                    android:textColor="#ff999999"
+                    android:textSize="@dimen/font_9" />
+
+                <ImageView
+                    android:id="@+id/trip_airplane_go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_traffic_go" />
+            </LinearLayout>
+
+            <!-- 右侧到达信息 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_toEndOf="@+id/traffic_airplane_time_layout"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/traffic_airplane_endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    tools:text="09:30"
+                    android:textColor="#ff1e1e1e"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/traffic_airplane_endcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="大兴"
+                    android:textColor="#ff1e1e1e"
+                    android:textSize="@dimen/font_11" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignBottom="@+id/traffic_money"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/traffic_money"
+            android:gravity="bottom"
+            android:text="@string/label_yuan_sign"
+            android:textColor="#ff1c77ff"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/traffic_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="end"
+            tools:text="670"
+            android:textColor="#ff1c77ff"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/traffic_book"
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_24"
+            android:layout_below="@+id/traffic_money"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/item_traffic_book_bg"
+            android:gravity="center"
+            android:text="@string/btn_reserve"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/font_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/traffic_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_72"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/traffic_empty_img"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_train_empty" />
+
+        <TextView
+            android:id="@+id/traffic_empty_txt"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_105"
+            android:gravity="start"
+            android:text="@string/label_no_trains_after_18"
+            android:textColor="#ffa0a0a0"
+            android:textSize="@dimen/font_10" />
+    </RelativeLayout>
+</RelativeLayout>

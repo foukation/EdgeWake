@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_8">
+
+    <TextView
+        android:id="@+id/tv_speaker_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_i_said"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_message_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:textSize="@dimen/font_24"
+        android:lineSpacingMultiplier="1"
+        android:text="@string/label_message_content"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="@dimen/dp_8" />
+
+    <!-- 识别中的三个蓝点动效（默认隐藏，由Adapter控制显示/动画） -->
+    <LinearLayout
+        android:id="@+id/layout_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_8">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_6"
+            android:background="@drawable/bg_blue_dot" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

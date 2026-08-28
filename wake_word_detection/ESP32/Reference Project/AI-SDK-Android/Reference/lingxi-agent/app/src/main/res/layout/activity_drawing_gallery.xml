@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.fxzs.lingxiagent.view.drawing.DrawingGalleryActivity">
+
+    <!-- 主内容区域 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_input_container"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_4"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2" />
+
+    <!-- 底部输入提示区域 -->
+    <RelativeLayout
+        android:id="@+id/rl_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom_nav"
+        android:background="#FFFFFF"
+        android:padding="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_prompt_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/iv_voice_input"
+            android:text="@string/hint_describe_create"
+            android:textColor="#999999"
+            android:textSize="@dimen/font_16"
+            android:paddingEnd="@dimen/dp_16" />
+
+        <ImageView
+            android:id="@+id/iv_voice_input"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_voice_input"
+            android:background="@drawable/bg_circle_button" />
+
+    </RelativeLayout>
+
+    <!-- 底部导航栏 -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="@dimen/dp_8">
+
+        <LinearLayout
+            android:id="@+id/nav_dialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_nav_dialog"
+                android:tint="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_conversation"
+                android:textSize="@dimen/font_10"
+                android:textColor="#666666"
+                android:layout_marginTop="@dimen/dp_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_agent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_nav_agent"
+                android:tint="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_agent"
+                android:textSize="@dimen/font_10"
+                android:textColor="#666666"
+                android:layout_marginTop="@dimen/dp_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_drawing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_nav_drawing"
+                android:tint="#2196F3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_drawing"
+                android:textSize="@dimen/font_10"
+                android:textColor="#2196F3"
+                android:layout_marginTop="@dimen/dp_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_meeting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_nav_meeting"
+                android:tint="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_meeting"
+                android:textSize="@dimen/font_10"
+                android:textColor="#666666"
+                android:layout_marginTop="@dimen/dp_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_nav_profile"
+                android:tint="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_mine"
+                android:textSize="@dimen/font_10"
+                android:textColor="#666666"
+                android:layout_marginTop="@dimen/dp_2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

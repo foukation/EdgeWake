@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 可选：圆角（根据需求调整，不需要可删除） -->
+    <corners android:radius="0dp"/>
+
+    <!-- 核心：从上到下的线性渐变（angle=90） -->
+    <gradient
+        android:type="linear"
+        android:angle="45"
+        android:startColor="#FFFFFF"
+        android:endColor="#BFB0FF"
+        android:centerColor="#E6F2FA"/>
+</shape>

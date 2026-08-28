@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 浅灰色背景，符合手机版样式 -->
+    <solid android:color="#F5F5F5"/>
+
+    <!-- 恢复外边框 - 整个表格的边框 -->
+<!--    <stroke-->
+<!--        android:width="1dp"-->
+<!--        android:color="#D0D0D0"/>-->
+
+    <!-- 12dp圆角，符合手机版设计 -->
+    <corners android:radius="12dp"/>
+
+</shape>

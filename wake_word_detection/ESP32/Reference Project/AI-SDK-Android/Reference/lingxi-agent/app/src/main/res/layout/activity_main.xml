@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:transitionName="voice_transition"
+    app:layoutDescription="@xml/voice_scene">
+    <View
+        android:id="@+id/white_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/root_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Fragment容器 -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@id/bottom_navigation"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true">
+
+
+        </FrameLayout>
+
+        <!-- 底部导航栏容器 -->
+        <FrameLayout
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_71"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <!-- 导航栏内容 -->
+            <LinearLayout
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_7">
+
+                <!-- gui -->
+                <LinearLayout
+                    android:id="@+id/nav_tab_gui"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_nav_tab_gui"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:src="@drawable/selector_tab_gui" />
+
+                    <TextView
+                        android:id="@+id/tv_nav_tab_gui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@string/label_gui"
+                        android:textColor="@color/nav_text_color"
+                        android:textSize="@dimen/font_10" />
+                </LinearLayout>
+
+                <!-- AI通话 -->
+                <LinearLayout
+                    android:id="@+id/nav_tab_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_nav_tab_phone"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:src="@drawable/selector_tab_phone" />
+
+                    <TextView
+                        android:id="@+id/tv_nav_tab_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@string/title_ai_call"
+                        android:textColor="@color/nav_text_color"
+                        android:textSize="@dimen/font_10" />
+
+                </LinearLayout>
+                <!-- AI办公 -->
+                <LinearLayout
+                    android:id="@+id/nav_tab_job"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_nav_tab_job"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:src="@drawable/selector_tab_job" />
+
+                    <TextView
+                        android:id="@+id/tv_nav_tab_job"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@string/title_ai_office"
+                        android:textColor="@color/nav_text_color"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+                <!-- linxgxi -->
+                <LinearLayout
+                    android:id="@+id/nav_tab_lingxi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_nav_lingxi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_tab_chat_selected" />
+
+                </LinearLayout>
+
+                <!-- 智能体 -->
+                <LinearLayout
+                    android:id="@+id/nav_tab_agent"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_nav_tab_agent"
+                        android:layout_width="@dimen/dp_26"
+                        android:layout_height="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:src="@drawable/selector_tab_agent" />
+
+                    <TextView
+                        android:id="@+id/tv_nav_tab_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:text="@string/title_agent"
+                        android:textColor="@color/nav_text_color"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

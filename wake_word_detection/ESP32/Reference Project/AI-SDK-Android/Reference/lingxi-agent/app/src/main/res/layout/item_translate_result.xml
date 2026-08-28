@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingBottom="@dimen/dp_12">
+
+    <!-- 原文（灰色小号） -->
+    <TextView
+        android:id="@+id/tv_original_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_sample_original"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/text_hint"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_12" />
+
+    <!-- 译文和播放按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        
+        <TextView
+            android:id="@+id/tv_translated_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_example_translation"
+            android:textSize="@dimen/font_22"
+            android:textColor="@color/primary_blue"
+            android:lineSpacingExtra="@dimen/dp_4" />
+        
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginStart="@dimen/dp_8"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="@color/primary_blue"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/dp_4"
+            android:contentDescription="播放译文" />
+    </LinearLayout>
+    <!-- 时间（保留逻辑所需，默认隐藏） -->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_time_range_sample"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/text_secondary"
+        android:visibility="gone"/>
+
+
+
+
+</LinearLayout>

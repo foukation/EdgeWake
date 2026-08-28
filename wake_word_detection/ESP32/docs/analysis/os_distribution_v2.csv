@@ -1,0 +1,14 @@
+﻿系统类型,设备数量,占比
+Android,45,25.0%
+其他 RTOS,42,23.3%
+FreeRTOS,18,10.0%
+无/裸机,16,8.9%
+Linux,14,7.8%
+Windows/Mac,14,7.8%
+ThreadX,11,6.1%
+其他,7,3.9%
+未知/其他,5,2.8%
+LiteOS/OpenHarmony,3,1.7%
+Zephyr,3,1.7%
+Linux + FreeRTOS 双系统,1,0.6%
+RT-Thread,1,0.6%

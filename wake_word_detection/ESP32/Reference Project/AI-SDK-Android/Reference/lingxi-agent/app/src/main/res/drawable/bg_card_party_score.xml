@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 移除固定宽高，依赖父容器决定尺寸 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1C77FF" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+</layer-list>

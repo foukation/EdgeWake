@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 32dp 状态栏 + 56dp 导航栏，实际可用 statusBarHeight+56dp 动态设置 -->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/top_bar_bg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_88"-->
+<!--        android:background="#FFFFFF"-->
+<!--        android:orientation="vertical"/>-->
+
+    <!-- 渐变背景下移到内容区 -->
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/top_bar_bg"-->
+<!--        android:background="@drawable/login_bg"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/root_view"
+        android:orientation="vertical"
+        >
+
+        <!-- 选择标题栏 -->
+        <include
+            android:id="@+id/ll_select_title_layout"
+            layout="@layout/select_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:visibility="gone"/>
+
+<!--        <include layout="@layout/header_back"/>-->
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_8"
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            >
+
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/icon_user_head"
+                android:scaleType="centerCrop"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:layout_marginStart="@dimen/dp_16"
+                />
+            <LinearLayout
+                android:id="@+id/layout_gui_guide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_24"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_40"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_toLeftOf="@id/ll_select">
+                <ImageView
+                    android:id="@+id/iv_gui_guide"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gui_guide"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:minHeight="@dimen/dp_22"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:id="@+id/ll_select_agent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_lingxi"
+                        android:textSize="@dimen/font_17"
+                        android:textColor="@color/color_1E1E1E"
+                        android:gravity="bottom"
+                        style="@style/HomeFontStyle"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_header_select_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="@string/title_lingxi"
+                        android:visibility="gone"
+                        android:minWidth="@dimen/dp_40"
+                        android:textColor="@color/color_1E1E1E"
+                        android:textSize="@dimen/font_17"
+                        style="@style/HomeFontStyle" />
+                    <ImageView
+                        android:id="@+id/iv_header_select_agent"
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_15"
+                        android:paddingTop="@dimen/dp_4"
+                        android:paddingBottom="@dimen/dp_4"
+                        android:scaleType="centerCrop"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:src="@drawable/lingxi_arrow_down"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/content_ai_generated_disclaimer"
+                    android:textColor="@color/text_999"
+                    android:textSize="@dimen/font_10"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:id="@+id/iv_top_play"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/chat_top_play" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_create_chat"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_24"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_new_chat" />
+
+                <ImageView
+                    android:id="@+id/iv_history"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:background="@drawable/ic_history"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/aiResponse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:visibility="gone"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <!-- 加载更多提示 -->
+                <TextView
+                    android:id="@+id/tv_load_more_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/content_pull_for_more_history"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="@color/color_738FB4"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:visibility="gone" />
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <androidx.core.widget.NestedScrollView
+                            android:id="@+id/sv_chat_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none"
+                            tools:ignore="MissingPrefix">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible" />
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg_answer_stopped"
+                        android:textSize="@dimen/font_14"
+                        android:textColor="#1E1E1E"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_modify_resend"
+                        android:textSize="@dimen/font_14"
+                        android:textColor="#1C77FF"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!--                <ImageView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="@dimen/dp_40"-->
+                <!--                    android:src="@mipmap/chat_empty_title"-->
+                <!--                    />-->
+                <com.fxzs.lingxiagent.view.common.ScanShadowTextView
+                    android:id="@+id/tv_empty_hi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_hello_formal"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font_28"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/figma_text_primary"
+                    android:textSize="16sp"
+                    android:text="@string/msg_lingxi_intro_short"
+                    android:layout_marginTop="9dp"
+                    />
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ll_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                app:cardCornerRadius="@dimen/dp_16"
+                app:cardElevation="@dimen/dp_6"
+                android:forceDarkAllowed="false"
+                app:cardBackgroundColor="@color/white"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:background="@mipmap/chat_stop"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_stop_reply"
+                        android:textSize="@dimen/font_14"
+                        android:textColor="@color/text_black"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/iv_scroll_down"
+                android:layout_width="@dimen/dp_37"
+                android:layout_height="@dimen/dp_37"
+                android:background="@mipmap/chat_scroll_down"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_24"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 分享时，底部占位元素 -->
+            <Space
+                android:id="@+id/ll_placeholder"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="40dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"/>
+
+
+            <include
+                android:id="@+id/ll_edit_main"
+                layout="@layout/layout_super_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <include
+                android:id="@+id/ll_edit_agent"
+                layout="@layout/layout_super_agent_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                />
+
+        </LinearLayout>
+
+
+
+<!--        <include-->
+<!--            android:id="@+id/ll_edit_writing"-->
+<!--            layout="@layout/layout_edit_writing"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginTop="@dimen/dp_8"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:visibility="gone"-->
+
+<!--            />-->
+
+
+        <include
+            android:id="@+id/ll_edit_translate"
+            layout="@layout/layout_edit_tranlate"
+
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
+    <!-- 底部分享栏 -->
+    <LinearLayout
+        android:id="@+id/ll_share_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#E0E0E0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/share_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_6" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/ll_edit_writing"
+            layout="@layout/layout_edit_writing"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+    <com.fxzs.lingxiagent.view.common.AutoRecordView
+        android:id="@+id/voiceRecordView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <!-- 分享长图 -->
+    <include
+        android:id="@+id/ll_longpic_layout"
+        layout="@layout/longpic_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.lingxi.cardhelper.CardView
+        android:id="@+id/id_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:padding="@dimen/dp_10"/>
+
+</RelativeLayout>

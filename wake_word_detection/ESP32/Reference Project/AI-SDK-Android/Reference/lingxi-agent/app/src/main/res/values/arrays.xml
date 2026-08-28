@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_options">
+        <item>重新生成</item>
+        <item>更加简洁</item>
+        <item>更加详细</item>
+        <item>更口语化</item>
+    </string-array>
+</resources>

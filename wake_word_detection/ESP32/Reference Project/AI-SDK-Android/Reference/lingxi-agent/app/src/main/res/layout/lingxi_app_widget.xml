@@ -1,0 +1,204 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top|center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_2">
+
+        <!-- 卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/widget_app_bg_card"
+            android:padding="@dimen/dp_10">
+
+            <!-- 左侧 -->
+            <LinearLayout
+                android:id="@+id/left_block"
+                android:layout_width="@dimen/dp_60"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/widget_app_bg_item"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:padding="@dimen/dp_10">
+
+
+                <!-- 输入框 -->
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:adjustViewBounds="true"
+                    android:minWidth="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/widget_app_logo" />
+
+                <LinearLayout
+                    android:id="@+id/layout_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_8"
+                    android:background="@drawable/widget_app_bg_input"
+                    android:layout_marginTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btn_ask_lingxi"
+                        android:textColor="#9AA0A6"
+                        android:textSize="14sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/widget_app_send"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 右侧 -->
+            <LinearLayout
+                android:id="@+id/right_panel"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 第一行 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/dp_8">
+
+                    <!-- AI会议 -->
+                    <LinearLayout
+                        android:id="@+id/item_meeting"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/widget_app_bg_item"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:padding="@dimen/dp_6">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/widget_app_meet"/>
+
+                        <TextView
+                            android:text="@string/title_ai_meeting"
+                            android:textSize="12sp"
+                            android:textColor="#333"
+                            android:gravity="center"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_20"/>
+                    </LinearLayout>
+
+                    <!-- AI PPT -->
+                    <LinearLayout
+                        android:id="@+id/item_ppt"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/widget_app_bg_item"
+                        android:padding="@dimen/dp_6">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/widget_app_ppt"/>
+
+                        <TextView
+                            android:text="@string/title_ai_ppt"
+                            android:textSize="12sp"
+                            android:textColor="#333"
+                            android:gravity="center"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_20"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第二行 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <!-- 深度研究 -->
+                    <LinearLayout
+                        android:id="@+id/item_deep"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/widget_app_bg_item"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:padding="@dimen/dp_6">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/widget_app_deep"/>
+
+                        <TextView
+                            android:text="@string/title_deep_research"
+                            android:textSize="12sp"
+                            android:textColor="#333"
+                            android:gravity="center"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_20"/>
+                    </LinearLayout>
+
+                    <!-- 同声传译 -->
+                    <LinearLayout
+                        android:id="@+id/item_translate"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/widget_app_bg_item"
+                        android:padding="@dimen/dp_6">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/widget_app_translate"/>
+
+                        <TextView
+                            android:text="@string/title_simultaneous_interpretation"
+                            android:textSize="12sp"
+                            android:textColor="#333"
+                            android:gravity="center"
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_20"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

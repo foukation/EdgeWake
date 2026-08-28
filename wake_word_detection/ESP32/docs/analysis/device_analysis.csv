@@ -1,0 +1,189 @@
+﻿序号,产品品牌,产品名称（包含厂商、型号）,操作系统,芯片型号,编译系统,编译工具链
+,,,,,,
+1.0,李未可,LWK City,RTX,bes2500yp,make,gcc-arm-none-eabi-9 
+2.0,聆葵,聆葵LM20,无,Telink 8258,windows,
+3.0,影目,INMO GO2,Android,unisoc  6151E,android studio,gradle
+4.0,云诀,沸蛇AI语音鼠标,无,Telink 825X,windows,tc32-elf-gcc
+5.0,快上云小水,快上云A6,Android,ASR8601,不涉及,不涉及
+6.0,来酷,Lecoo P116G,Android,,,
+7.0,升腾,5G云电脑EC-NB02,Android,RK3568,Ubuntu20.04,链接: https://pan.baidu.com/s/1iMuBgY_Y-3NxCicqrZqYzw 提取码: um7v
+8.0,颖联,香柚智能学习台灯,Linux,GK7201V300, ubuntu 20:04 ,"https://caiyun.139.com/m/i?1A5ChOyc1dWlF 
+           提取码:5tud"
+9.0,KUMI库觅,4G通话AI智能手表,LiteOS-M,YH601S,Clang,链接:https://pan.baidu.com/s/18XkXOCKiqzZssDDPDnY3Nw?pwd=wr66 提取码:wr66 
+10.0,深圳市五兴科技有限公司,4G版AI智能语音鼠标,threadX,1803sc,"LINUX,WINDOWS","gnumake-3.81,RVCT 3.1,armv7-marvell-eabi"
+11.0,华为手环,华为手环10,,,,
+12.0,魅族,魅族StarV Air2,,,,
+13.0,中国移动算力主机,算力主机,,,,
+14.0,中兴,PAD,Android,,,
+15.0,中国移动,学生证, UNC RTOS,展锐w217, windown, https://pan.baidu.com/s/112_CEbpJxEcNw6cc6-YdbQ?pwd=aetk 提取码: aetk
+16.0,希沃,学习机,Android,展锐T765,,请提供工具链下载链接
+17.0,云之尚,星辰机器人,FreeRTOS,MCU:XR872,linux,"https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q2-update/+download/gcc-arm-none-eabi-4_9-2015q2-20150609-linux.tar.bz2 
+tar -xf gcc-arm-none-eabi-4_9-2015q2-20150609-linux.tar.bz2"
+18.0,Newsmy纽曼,AI耳机,/,5656C3,/,/
+19.0,润小明,润小明ZD16 PRO/ZD15,RTOS,Ac7911,MQTT v3.1.1,/
+20.0,YOXON,成都金麦客科技有限公司 AI智能鼠标 M95 Pro,,RK3528,ubuntu,Android Stdio
+21.0,咪鼠,咪鼠M4AI智能鼠标,windows / macos,B11，B12,windows7及以上、macos10.15及以上,webpack、electron-builder
+22.0,艾守佳,艾守佳X3,mcu,iTingM5,嵌入式,keil
+23.0,FoloToy,magicbox,FreeRTOS,ESP32-S3-WROOM-1-N16R8,windows11,ESP-IDF V5.4.0(https://www.espressif.com.cn/zh-hans/products/sdks/esp-idf)
+24.0,电萝卜,电萝卜AI鼠标D3/D6/D8（麦吉工场）,无,TLSR8251,gcc,Telink IDE
+25.0,Leion Hey,Leion Hey 2（亮亮视野听语者2）,Freertos,BES2800,GCC,arm-none-eabi-gcc
+26.0,炯为Jowave,炯为AI智能语音终端（具有4G功能）,RTOS,ASR1606S,GCC,移远AI SDK
+27.0,喜马拉雅,喜马拉雅 Ai耳机XMLY Clip5,RTOS,JL7016G6,CodeBlocks,不支持
+28.0,思特,思特电子学生证-C96,RTOS,UWS6121E,WINDOW,GCC
+29.0,大华,大华 智慧一体机 DH-LM27-U200PM,安卓,mt8786,ubuntu,gcc
+30.0,中国移动,云电脑一体机,Android,RK3568,Ubuntu20.04,链接: https://pan.baidu.com/s/1iMuBgY_Y-3NxCicqrZqYzw 提取码: um7v
+31.0,中国移动,中国移动5G云Pad EC-PAD01,Android,T760(UMS9260),,
+32.0,中兴,中兴云电脑W205DS,Android,T760(UMS9260),,
+33.0,China Mobile,EC-PAD01 SE,Andriod,Unisoc T765,Ubuntu 14.04.2 LTS,https://source.android.com/setup/build/initializing
+34.0,挚听,挚听ITE 1.0 Pro,RTOS,BES 2700YP,基于 RTOS 的嵌入式系统,GNU/GCC
+35.0,玑米,AI智能语音鼠标,OSAL,FR8016,Keil uVision5 ,ARM Compiler 5 (ARMCC)
+36.0,中国移动,中国移动5G云Pad EC-PAD01,Android,T760(UMS9260),,
+37.0,中兴,中兴云电脑W205DS,Android,T760(UMS9260),,
+38.0,弘山鸣,弘山鸣 HM-001,Windows、Mac OS,TLSR8250F512ET48 ,Windows,https://www.telink-semi.cn/development-tools
+39.0,喜马拉雅,喜马拉雅 Ai耳机XMLY Clip5,RTOS,JL7016G6,CodeBlocks,不支持
+40.0,思特,思特电子学生证-C96,RTOS,UWS6121E,WINDOW,GCC
+41.0,Rokid,乐奇智能眼镜,Rokid Yodaos-Sprite操作系统,高通骁龙AR1,/,/
+42.0,阿尔法蛋,智能故事机Z1,freertos,ESP32,ubuntu,https://github.com/espressif/esp-idf.git
+43.0,智驿未来,AI智能语音鼠标,OSAL,FR8016,Keil uVision5 ,ARM Compiler 5 (ARMCC)
+44.0,Haivivi,Haivivi BubblePal AI互动玩具H-100,freertos,AC7912BB,windows,"codeblocks: http://pkgman.jieliapp.com/s/codeblocks
+杰里工具链: https://jl-update.oss-cn-shenzhen.aliyuncs.com/2.5.1.exe"
+45.0,浪潮通信技术有限公司,浪潮-云平板,Android,UMS9621S,Ubuntu 20.04.6 LTS,AOSP自带clang-r450784d
+46.0,麦吉工场（北京）信息技术有限公司,苏晓伴AI鼠标,无,TLSR8251,gcc,Telink IDE
+47.0,深圳创维数字技术有限公司,创维-AI眼镜SK1,FreeRTOS+Linux,全志V821,Linux, nds32le‑linux‑musl‑v5d/bin
+48.0,KUMI库觅,KUMI Watch3S 5G AI学习手表,ThreadX,ASR3901,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+49.0,JXD,深圳金星睿视科技有限公司,Android,ASR8601,Soong,arm-eabi-gcc
+50.0,小寻,小寻儿童电话手表M6,RTOS,ASR3603S,"编译环境系统Windows系统msys2，推荐Windows 7，支持Windows10、Windows11。 
+ msys2-x86_64-20190524 (64-bit)官网：http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20190524.exe","编译链 ARM DS-5 V5.26.2 (64-bit) 
+ 官网：https://developer.arm.com/tools-and-software/embedded/legacy-tools/ds-5-development-studio/downloads "
+51.0,上学啦（深圳）科技有限公司,贴近-儿童手表,RTOS,JL7013A7S+GX308X,Code::Blocks,下载链接：https://jl-update.oss-cn-shenzhen.aliyuncs.com/2.5.2.exe
+52.0,杭州光粒科技有限公司,Holoswim2s，Holoswim2pro，Holoswim2se，Holoswim2Young，Holoswim2GO,泰凌微实时内核 (裸机)（也可移植运行FreeRTOS）,TLSR9218B,Makefile,RISC-V GCC Toolchain
+53.0,莲偶科技,莲偶科技,Android,RK3588S,linux 编译,
+54.0,移柯通信,移柯通信,ThreadX,asr1607,windows,https://caiyun.139.com/w/i/2pbtTvkcgEPs2 提取码:uvh9
+55.0,朝歌科技,4G智能手表,系统Openharmony，内核liteos,HiDiTing,Linux,https://pan2.sunniwell.net:3008/sharing/xfBfvJTMN
+56.0,世汉科技（深圳）有限公司,世汉科技,"Windows7,10,11/Mac10.15+",iTingM7,"MSVC2019,NodeJs",Visual Studio 202，Nodejs
+57.0,上海喵帮科技有限公司,作业帮学习机,Android,MT8786,ubuntu,Android编译工具链
+58.0,繁星智算科技（北京）有限公司,中国移动云电脑智慧小盒,Android , RK3528,,
+59.0,深圳熠邦实业有限公司,中献,FreeRTOS,EC801ECNCG,gcc,arm-none-eabi
+60.0,乐鑫,一芽 AI 舞台,FreeRTOS（ESP-IDF 内置，默认 RTOS）,ESP32S3,CMake + Ninja（ESP-IDF 默认使用）,xtensa-esp32s3-elf-gcc（乐鑫提供的交叉编译工具链）
+61.0,快上云(上海)网络科技有限公司,小水智能-AI智能语音鼠标,Windows、Mac OS,AB bluetrum 2021A3,Windows,https://www.bluetrum.com/wiki/help/guide/first/start
+62.0,快上云(上海)网络科技有限公司,小水智能-AI智能语音鼠标,Windows、Mac OS,TLSR8250F512ET32,Windows,https://www.telink-semi.cn/development-tools
+63.0,蔚玛（东莞）科技有限公司,漫玺-Ai拍学机,freertos,AC7923AF,GNU Make,https://pkgman.jieliapp.com/s/win-toolchain
+64.0,北京乐开问语科技有限责任公司,AI智伴小熊,FreeRTOS,ESP32S3-R2,Linux,idf
+65.0,乐鑫,一芽 AI 花生,模组内置固件,ML307H,模组端固件由厂商提供，用户通过C二次开发,无
+66.0,山东微赞信息技术有限公司,语航员,FreeRTOS,杰理科技AC7916,linux,​Code::Blocks
+67.0,Luka卢卡,Luka卢卡AI学伴,Android,MT6737V/TM,Ubuntu14.04,GCC
+68.0,北京爱德发科技有限公司,EDIFIER 漫步者,FreeRTOS,JL7096D6,杰理自带编译工具code block,https://doc.zh-jieli.com/vue/#/docs/tools
+69.0,深圳只点智能电子技术有限公司,梧桐细雨,alios,txw818-c0L,CDK编译软件,csky-elfabiv2-tools-i386-minilibc-20230301 https://www.xrvm.cn/community/download?id=4224178809689149440
+70.0,深圳市华盛昌科技实业股份有限公司,CEM华盛昌,自研RTOS,F28P550SJ,CCS,www.ti.com
+71.0,纽曼,纽曼,ThreadX,ASR3603C,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+72.0,湖南纽曼爱家科技有限公司,纽曼,OSAL,FR8016,Keil uVision5 ,ARM Compiler 5 (ARMCC)
+73.0,智驿未来,AI录音卡,RTOS,AC7911BA,PI32V2,PI32V2 r3 Empty Compiler
+74.0,深圳汀灵智能科技有限公司,听力熊R3,RTOS,ASR3603S,windows,DS-5 Professional 5.26.0
+75.0,智驿未来,AI耳机,RTOS,AB5656C3,不可编译,Toolchain
+76.0,智驿未来,AI录音卡,RTOS,AC7911BA,PI32V2,PI32V2 r3 Empty Compiler
+77.0,噜咔博士,噜咔博士,Linux,V853,不涉及,不涉及
+78.0,升腾,云平板,JAVA,否,否,否
+79.0,北京寸阴成器科技有限公司,小猿学练机 S2,安卓,高通QCS6125,云云对接，不涉及,云云对接，不涉及
+80.0,思必驰,思必驰Ai办公本,1900-01-13 00:00:00,4G,无,不支持
+81.0,山东卡尔电气股份有限公司,卡尔-AI元宝,RTOS，方案提供商：ASR,ASR1609,Win10+msys2,armcc（通过DS5安装）
+82.0,杭州登虹科技有限公司,可梨-伴宠机器人,LINUX,MC3303,Ubuntu,arm-fhv512c-linux-uclibcgnueabihf-b1.tgz /arc toolchain v3.tgz，备注：云云对接，无需提供
+83.0,研和智能科技（杭州）有限公司,YHE 研和,RTOS（微克）定制 研和os,思澈525,,
+84.0,倍轻松,Breo倍轻松,MCU：无,TM52eF1386,MCU：keil,MCU：HT-LINK
+85.0,北京慧聆智家科技有限公司,聆葵AI陪伴台灯,Linux,SV822D,ubuntu18.04,https://yun.139.com/shareweb/#/w/i/2rAc8o04k2dxo 提取码:grck
+86.0,爱奥乐医疗器械（深圳）有限公司,爱奥乐臂式电子血压计,否,BH67F2265,否,否
+87.0,深圳市星桐科技有限公司,学而思学练机,Android,MT8781（MTK）,Ubuntu18.04,open jdk11及以上，gcc version 7.5.0，Python 3.6.9
+88.0,卢卡（北京）智能科技有限公司,Luka卢卡AI学伴,Android,MT6737V/TM,Ubuntu14.04,GCC
+89.0,温州颖联科技有限公司,定位器(4G无线数据终端),threadx ,GX306,arm gcc系统,gcc-arm-none-eabi-10-2020-q4-major
+90.0,易视腾科技股份有限公司,爱小宝,RTOS,"TB8V9HS 
+A01-CN",/,/
+91.0,北京寸阴成器科技有限公司,小猿学练机S2,安卓,高通6125,云云对接，不涉及,云云对接，不涉及
+92.0,上海数果科技有限公司,S35,Android,MT8766,ubuntu,https://cn.ubuntu.com/download
+93.0,上海数果科技有限公司,PoC-D31,Android,MT6761,ubuntu,https://cn.ubuntu.com/download
+94.0,钉钉,钉钉,RTOS系统-自研,BES2800HP,arm-none-eabi-gcc 13.2.1,https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+95.0,杭州登虹科技有限公司,可梨-宠物喂食器,LINUX,AK3918EV200,Ubuntu,anyka_uclibc_gcc.tar.bz2，备注：云云对接，无需提供
+96.0,杭州登虹科技有限公司,可梨-宠物喂食器,LINUX,AK3918EV200,Ubuntu,anyka_uclibc_gcc.tar.bz2，备注：云云对接，无需提供
+97.0,深圳市爱学宝科技有限公司,快译通,安卓,T606,ubuntu,
+98.0,安徽声云智能科技有限公司,语鼠智能体-AI大模型鼠标,无,TLSR8251, Telink IDE,telink 私有
+99.0,四川九州电子科技股份有限公司,九洲-AI智能语音鼠标,Windows、Mac OS,TLSR8251F512ET48,Windows,https://www.telink-semi.cn/development-tools
+100.0,北京寸阴成器科技有限公司,小猿学练机 S6,安卓,高通6125,云云对接，不涉及,云云对接，不涉及
+101.0,天津钛极智能科技有限公司,钛极-智能桌面呼,RTOS 广和通MC665模组,USI8850,-,-
+102.0,深圳市瑞翼通信设备有限公司,R68,RTOS,展锐W217(UWS6121EG),WIN10,DS-5
+103.0,深圳腾信百纳科技有限公司,KUMI AI Note录音卡,Zephyr,ATS3085S4,Windows/Linux,Cmake
+104.0,快上云（上海）网络科技有限公司,小水智能 Box 1,RTOS,XR872,不涉及,不涉及
+105.0,西安德朴智联科技有限公司,德朴智联健康手表,RTOS 翱捷科技股份有限公司 定制,ASR3602S,windows,"
+链接: https://pan.baidu.com/s/1yftlgsJrKO7JFazPjwOOjw?pwd=7jj4 "
+106.0,武漢艾德蒙科技有限公司,AOC,Android,rk3566,Android Build System ,"NDK r15 https://developer.android.com/ndk/downloads,GCC 12.2"
+107.0,北京慧聆智家科技有限公司,聆葵AI陪伴台灯,Linux,SV822D,ubuntu18.04,https://yun.139.com/shareweb/#/w/i/2rAc8o04k2dxo 提取码:grck
+108.0,深圳市雄帝科技股份有限公司,AI电子学生证,ThreadX V5.1,ASR1606S,/,/
+109.0,思特,思特电子学生证-C81,RTOS,UWS6121EG,WINDOW,GCC
+110.0,福建升腾资讯有限公司,智能收银机,Android系统,RK3568、RK3566,Ubuntu, aarch64-linux-gnu
+111.0,上学啦（深圳）科技有限公司,贴近-电子学生证,ThreadX V5.1,ASR3603C,/,/
+112.0,深圳市瑞翼通信设备有限公司,R68,RTOS,展锐W217(UWS6121EG),WIN10,DS-5
+113.0,升腾,云平板,Android 14,T760,JAVA,Android下面的交叉编译，直接使用NDK
+114.0,温州颖联科技有限公司,速学霸AI鼠标YL008,无,TLSR8251F512ET48,windows,https://wiki.telink-semi.cn/wiki/IDE-and-Tools/Telink_IoT_Studio/
+115.0,瑞翼互通（深圳）智能技术有限公司,RichEast M7,RTOS,展锐W217(UWS6121EG),WIN10,DS-5
+116.0,沸蛇,沸蛇AI语音鼠标,无,Telink 825X,windows,tc32-elf-gcc
+117.0,成都读写科技有限公司,,基于安卓15的讯飞定制DUI6.0,MT 8189,,
+118.0,四川九州电子科技股份有限公司,九洲-AI智能语音鼠标,Windows、Mac OS,TLSR8258F512ET48,Windows,https://www.telink-semi.cn/development-tools
+119.0,深圳市星桐科技有限公司,学而思学练机,Android,MT8781（MTK）,Ubuntu18.04,open jdk11及以上，gcc version 7.5.0，Python 3.6.9
+120.0,深圳市爱学宝科技有限公司,快译通,安卓,T606,ubuntu,
+121.0,东莞佳晟实业有限公司,多尼斯,FreeRTOS,BL2028N,Debian/Ubuntu/Linux,gcc-arm-none-eabi(https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
+122.0,福建量信为智能科技有限公司,量信为-电子学生证,RTOS,UWS6121EG,WINDOW,GCC
+123.0,Ling灵宇宙,Ling灵宇宙AI学伴,Android 13,2G,arm-linux-androideabi-4.9.1,mqtt3.3.0
+124.0,艾听智能（深圳）有限公司,M9 AI智能鼠标,"Windows7,10,11/Mac10.15+",iTingM7,"MSVC2019,NodeJs",Visual Studio 202，Nodejs
+125.0,永州市小马智营科技有限公司,智能行泊仪XM-A7,Linux,Allwinner V851S3,Linux,v85x_tina_toolchain/gcc/linux-x86\arm/toolchain-sunxi-musl/toolchain/toolchain-sunxi-musl/toolchain/bin/arm-openwrt-linux-muslgnueabi-
+126.0,永州市小马智营科技有限公司,智能行泊仪XM-X6,Linux,Sigmastar 8627QE,Linux,arm-sigmastar-linux-uclibcgnueabihf-gcc
+127.0,深圳正指向科技有限公司,CMCC CW5300 AI儿童手表（5G RTOS 长续航版）,RTOS ,ASR3901,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+128.0,沃特沃德,4G AI耳机,Android 14,SL8541e,ubuntu20.04,
+129.0,研和智能科技（杭州）有限公司,YHE 研和,RTOS（微克）定制 研和os,思澈525,,
+130.0,心永（天津）科技有限公司,vitavas,展锐 UNC_RTOS MOCOR,ARM Cortex-A5,ARM DS-5 v5.26.0,
+131.0,安徽咪鼠科技有限公司,咪鼠-咪鼠KB6 AI键盘,windows / macos,B11 ,windows、macos,webpack、electron-builder
+132.0,安徽咪鼠科技有限公司,咪鼠-咪鼠MK17 AI键盘,windows / macos,B11 ,windows、macos,webpack、electron-builder
+133.0,安徽咪鼠科技有限公司,咪鼠-咪鼠MK87 AI键盘,windows / macos,B11 ,windows、macos,webpack、electron-builder
+134.0,思必驰,思必驰Ai办公本,Android,MT6789,Mac,无
+135.0,山东卡尔电气股份有限公司,卡尔-AI元宝,RTOS，方案提供商：ASR,ASR1609,Win10+msys2,armcc（通过DS5安装）
+136.0,湖南纽曼爱家科技有限公司,纽曼,无,TLSR8251, Telink IDE,telink 私有
+137.0,江西星驰电子科技有限公司,AOC,安卓9.0,Hi3751V352F,ubuntu 16.04,
+138.0,飛生(上海)電子科技有限公司,AOC,Android,RK3576,Android Build System ,"NDK r15 https://developer.android.com/ndk/downloads,GCC 12.2"
+139.0,瑞翼互通（深圳）智能技术有限公司,RichEast M6,RTOS,ASR3901,WIN10,DS-5
+140.0,深圳市酷诺智能设备有限公司,NWO N6,RTOS,ASR3901,WIN10,DS-5
+141.0,瑞翼互通(深圳)智能技术有限公司,RichEast M5,RTOS,ASR3901,WIN10,ARM DS-5 V5.26.2 (64-bit)
+142.0,深圳市平静科技有限公司,Cleer ARC AIR 2开放式AI耳机,Qualcomm FreeRTOS,高通QCC3091,高通MDE,高通ADK_Toolkit（高通内部系统下载）
+143.0,九川智能科技(东莞)有限公司,AI语伴BOX,ESP-IDF FreeRTOS,ESP32-S3-WROOM-1-N16R8,ESP-IDF v5.4.1,https://dl.espressif.cn/dl/esp-idf/
+144.0,四川影目科技有限公司,INMO GO3,Threadx,w337,windows,闭源编译工具链(Arm compiler6.13)
+145.0,温州颖联科技有限公司,颖联智信-AI护眼仪,FreeROTS,AC6951C8,code blocks,GUN GCC Compiler
+146.0,郑州泰坦科技有限公司,音千束,Real-Time Operating System,7103D4,JLStudio,可视化配置工具安装包(2).exe
+147.0,武汉慧联无限科技有限公司,聆犀,Zephyr RTOS,ATS3085S,Cygwin / Linux,GCC / MIPS-SDE
+148.0,深圳熠邦实业有限公司,中献,"RTOS系统,自研， 深圳市爱都科技有限公司",JL7012F6,WINDOWS,https://pkgman.jieliapp.com/s/win-toolchain
+149.0,杭州登虹科技有限公司,可梨-宠物喂食器,LINUX,AK3918AV130N,Ubuntu,anyka_uclibc_gcc.tar.bz2，备注：云云对接，无需提供
+150.0,杭州登虹科技有限公司,可梨-宠物喂食器,LINUX,AK3918AV130N,Ubuntu,anyka_uclibc_gcc.tar.bz2，备注：云云对接，无需提供
+151.0,杭州登虹科技有限公司,可梨-宠物喂食器,LINUX,AK3918AV130N,Ubuntu,anyka_uclibc_gcc.tar.bz2，备注：云云对接，无需提供
+152.0,天津讯飞极智科技有限公司,AIR2453,基于安卓定制系统,,,
+153.0,成都读写科技有限公司,XF-DX-T510E,基于安卓15的讯飞定制DUI6.0,MT 8189,,
+154.0,咪鼠,咪鼠-A10 AI智能语音鼠标,windows / macos,B11，B12,windows,webpack、electron-builder
+155.0,浙江天猫供应链管理有限公司,天猫精灵智能一体机（电脑显示一体机）,Android系统,MT8167S,安卓无需编译,安卓无需编译
+156.0,创维,酷开,RTOS 海思 LiteOS,YH601S,Windows/Linux,"clang 链接:https://caiyun.139.com/w/i/2rJV7Nubj6ncx
+提取码:efpf"
+157.0,安徽咪鼠科技有限公司,咪鼠-咪鼠M5 AI鼠标,windows / macos,B11 ,windows、macos,webpack、electron-builder
+158.0,安徽咪鼠科技有限公司,咪鼠-咪鼠P20 AI会议笔,windows / macos,B11 ,windows、macos,webpack、electron-builder
+159.0,深圳跃然创新科技有限公司,HAIVIVI Pal / 迪迦奥特曼 AI 智能体,FreeRTOS (ESP-IDF 5.4.0),ESP32-S3,CMake,xtensa-esp32s3-elf-gcc (ESP-IDF工具链)
+160.0,深圳跃然创新科技有限公司,HAIVIVI Pal / CocoMate,FreeRTOS (ESP-IDF 5.4.0),ESP32-S3,CMake,xtensa-esp32s3-elf-gcc (ESP-IDF工具链)
+161.0,喜马拉雅,喜马拉雅跃动手表,RTOS,ASR3607,Windows 10,不支持
+162.0,KUMI,KUMI AI Note录音卡,Zephyr,ATS3085S4,Windows/Linux,Cmake
+163.0,酷碁,Acer,RT-Thread,AB5756C,codeblocks,无
+164.0,深圳市康佳智通科技有限公司,康佳智能学习台灯KTL-X29Y,Linux,GK7201V300,Linux,GOKE-GK7202V300-liteos-arm-gcc7.3-rtos-musleabi.tar.gz
+165.0,Leion Hey,Leion Hey 2（亮亮视野听语者2）,Freertos,BES2800,GCC,arm-none-eabi-gcc
+166.0,深圳熠邦实业有限公司,中献,否,nRF52832,Keil,https://www.keil.com/
+167.0,深圳市英得尔实业有限公司,魅米MEEMI-AI相机,Android,ASR8601,/,/
+168.0,瑞翼互通（深圳）智能设备有限公司,RichEast M10,RTOS,ASR3602S,WIN10,DS-5
+169.0,深圳市瑞翼通信设备有限公司,R67,RTOS,ASR3603S,WIN10,DS-5
+170.0,汉王科技股份有限公司,汉王教育平板,安卓,8 核高性能处理器,Win11,gradle
+171.0,深圳市香柚物联网有限公司,诺亚信智能视频学习护眼台灯L29,Linux,GK7201V300,Linux,GOKE-GK7202V300-liteos-arm-gcc7.3-rtos-musleabi.tar.gz
+172.0,深圳汀灵智能科技有限公司,Mooni,THREADX,ASR3602C,Windows， ASR有自己的编译工具和SDK,ARM DS-5 V5.26.2，ActivePerl 5.28.1 Build 2801，msys2-x86_64-20190524
+173.0,中山市佳维商贸有限公司,香山,无,CMS8H1205,无,无
+174.0,上海喵帮科技有限公司,作业帮学习机,Android,MT8786,ubuntu,Android编译工具链
+175.0,四川九州电子科技股份有限公司,九洲-智能戒指,PAR OS,PAR2860,WIN10,KEIL V5.2.6（https://www.keil.com/download/）
+176.0,喜马拉雅,喜马拉雅 Ai耳机XMLY Air5,JL Smart 0s,JL7003D8,杰理专用交叉编译工具链(基于GCC),不支持
+177.0,深圳市英得尔实业有限公司,魅米MEEMI-IND5,ThreadX,ASR3602,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+178.0,深圳市英得尔实业有限公司,indell-IND2,ThreadX,ASR3602,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+179.0,广州灵耀视界信息科技有限公司,时客玩-AI智拍机,安卓系统,ASR8601,,标准Android编译工具链即可

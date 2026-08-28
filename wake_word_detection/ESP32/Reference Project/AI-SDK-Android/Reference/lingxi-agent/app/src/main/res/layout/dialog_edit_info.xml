@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_270"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded_background"
+    android:orientation="vertical">
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_19"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_19">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/btn_change_name"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <!-- Input Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/input_background"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_beautiful"
+                android:inputType="textCapSentences"
+                android:paddingLeft="@dimen/dp_8"
+                android:maxLines="3"
+                android:minLines="1"
+                android:scrollbars="vertical"
+                android:textColor="#1E1E1E"
+                android:textColorHint="#B2B2B2"
+                android:textSize="@dimen/font_16" />
+
+            <!-- Cursor indicator -->
+            <View
+                android:id="@+id/v_cursor"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_17"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:background="#1C77FF"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="#5C3C3C43" />
+
+    <!-- Action Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:orientation="horizontal">
+
+        <!-- Cancel Button -->
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/btn_cancel"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_17" />
+
+        <!-- Center Divider -->
+        <View
+            android:layout_width="@dimen/dp_0.5"
+            android:layout_height="match_parent"
+            android:background="#5C3C3C43" />
+
+        <!-- Confirm Button -->
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/btn_confirm"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_17" />
+
+    </LinearLayout>
+
+</LinearLayout>

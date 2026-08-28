@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outline_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:padding="@dimen/dp_12"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 主标题区 - 可点击区域 -->
+    <RelativeLayout
+        android:id="@+id/title_clickable_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:padding="@dimen/dp_12"
+        android:background="@drawable/bg_outline_item_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Vue版本的三角形图标 -->
+        <View
+            android:id="@+id/triangle_icon"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_8"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@drawable/triangle_icon" />
+
+        <!-- 主标题输入框 -->
+        <EditText
+            android:id="@+id/title_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/triangle_icon"
+            android:layout_toStartOf="@id/button_container"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:text="@string/label_title"
+            android:textSize="@dimen/font_16"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:hint="@string/hint_title"
+            android:padding="@dimen/dp_4"
+            android:minHeight="@dimen/dp_36"
+            android:enabled="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false" />
+
+        <!-- 按钮容器 - 固定在右侧 -->
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_4">
+
+            <!-- 添加按钮 -->
+            <ImageButton
+                android:id="@+id/add_button"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_add"
+                app:tint="#666666"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:padding="@dimen/dp_6"/>
+
+            <!-- 删除按钮 -->
+            <ImageButton
+                android:id="@+id/delete_button"
+               android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete"
+                app:tint="#999999"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:padding="@dimen/dp_6"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 子标题列表-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sub_items_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:nestedScrollingEnabled="false" />
+
+</LinearLayout>

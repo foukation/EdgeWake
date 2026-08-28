@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingEnd="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_16"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- 单选按钮放左侧 -->
+    <View
+        android:id="@+id/radio_button"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/selector_radio_button" />
+    <!-- 语言信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_language_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_english"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/figma_text_primary"
+            android:layout_marginBottom="@dimen/dp_2" />
+
+        <TextView
+            android:id="@+id/tv_language_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_english_us_full"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

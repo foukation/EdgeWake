@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_4"
+    android:background="@drawable/bg_ratio_item_selector"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/tv_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_ratio_9_16"
+        android:textColor="@color/text_ratio_selector"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_ratio_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="@string/label_portrait"
+        android:textColor="@color/text_ratio_desc_selector"
+        android:textSize="@dimen/font_12" />
+
+</LinearLayout>

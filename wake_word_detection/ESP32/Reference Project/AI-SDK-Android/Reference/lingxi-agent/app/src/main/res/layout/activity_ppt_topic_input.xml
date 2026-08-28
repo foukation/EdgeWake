@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部栏 - 完全复刻会议页面 -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/PptIconButton"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/ppt_accessibility_back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal"
+            android:fontWeight="500" />
+
+        <ImageView
+            android:id="@+id/iv_history"
+            style="@style/PptIconButton"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_history"
+            android:visibility="gone"
+            android:contentDescription="@string/ppt_accessibility_history_button" />
+
+    </RelativeLayout>
+
+    <!-- 可滚动的内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!-- Logo和标题区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_76"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/dp_142"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:visibility="gone"
+                android:src="@drawable/ic_deepseek"/>
+
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/PptTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ppt_module_name"
+                android:layout_marginBottom="@dimen/ppt_spacing_small"/>
+
+            <TextView
+                android:id="@+id/subtitle_text"
+                style="@style/PptSubtitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ppt_tip_topic_input"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- 输入框区域 -->
+        <androidx.cardview.widget.CardView
+            style="@style/PptCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginBottom="@dimen/dp_16"
+            app:cardElevation="@dimen/dp_2"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/topicInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/inputActionContainer"
+                    android:hint="@string/ppt_topic_input_hint"
+                    android:maxLines="3"
+                    android:paddingStart="@dimen/dp_10"
+                    android:background="@null"
+                    android:textSize="@dimen/ppt_text_size_large"
+                    android:textColor="@color/ppt_text_primary"
+                    android:textColorHint="@color/ppt_text_hint"
+                    android:maxLength="40"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="@string/ppt_topic_input_hint"/>
+
+                <!-- 输入框右侧按钮容器 -->
+                <LinearLayout
+                    android:id="@+id/inputActionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <!-- 语音输入按钮 -->
+                    <ImageView
+                        android:id="@+id/voiceIcon"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@drawable/home_voice"
+                        android:visibility="gone"
+                        android:contentDescription="@string/ppt_accessibility_voice_input_button"
+                        android:importantForAccessibility="yes"/>
+
+                    <!-- 发送按钮 -->
+                    <ImageView
+                        android:id="@+id/sendButton"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_margin="@dimen/dp_14"
+
+                        android:background="@drawable/home_send_grey"
+                        android:contentDescription="@string/ppt_accessibility_send_button"
+
+                        android:visibility="visible"
+                        android:importantForAccessibility="yes"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 错误信息和网络状态显示区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <!-- 错误信息显示 -->
+            <TextView
+                android:id="@+id/error_message_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_14"
+                android:textColor="#F44336"
+                android:background="@drawable/bg_error_message"
+                android:padding="@dimen/dp_12"
+                android:drawableStart="@drawable/ic_error"
+                android:drawablePadding="@dimen/dp_8"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/dp_8" />
+
+        </LinearLayout>
+
+
+
+        <!-- 推荐主题标签容器 - 换行显示 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <!-- 第一行标签 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tag1"
+                    android:background="@drawable/bg_stoke_e0_r8"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="#333333"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tag2"
+                    android:background="@drawable/bg_stoke_e0_r8"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="#333333"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingEnd="@dimen/dp_10"   android:layout_marginEnd="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- 第二行标签 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tag3"
+                    android:background="@drawable/bg_stoke_e0_r8"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="#333333"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tag4"
+                    android:background="@drawable/bg_stoke_e0_r8"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="#333333"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- 第三行标签 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tag5"
+                    android:background="@drawable/bg_stoke_e0_r8"
+                    android:textSize="@dimen/font_12"
+                    android:textColor="#333333"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!-- 底部留出空间 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

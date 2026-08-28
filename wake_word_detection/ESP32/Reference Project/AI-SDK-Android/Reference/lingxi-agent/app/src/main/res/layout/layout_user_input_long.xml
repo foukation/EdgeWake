@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_303"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_64">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_user_input_bg" />
+
+    <TextView
+        android:id="@+id/tv_user_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_12"
+        android:text="@string/sample_metaverse_article"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/font_16"
+        android:lineHeight="@dimen/dp_24"
+        android:gravity="start|center_vertical" />
+
+</FrameLayout>

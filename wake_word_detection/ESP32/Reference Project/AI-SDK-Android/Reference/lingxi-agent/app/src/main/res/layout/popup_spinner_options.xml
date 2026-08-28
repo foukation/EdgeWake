@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_152"
+    android:layout_height="@dimen/dp_242"
+    android:paddingStart="@dimen/dp_24"
+    android:orientation="vertical"
+    android:background="@drawable/spinner_dropdown_background">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/spinner_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:paddingBottom="@dimen/dp_16"
+        />
+
+</LinearLayout>

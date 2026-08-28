@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    //noinspection GroovyAssignabilityCheck
+    compileSdk rootProject.ext.compileSdkVersion as int
+    buildToolsVersion rootProject.ext.buildSdkVersion
+
+    //noinspection GroovyAssignabilityCheck
+    defaultConfig {
+        applicationId "com.cmdc.ai.assist.demo"
+        minSdk rootProject.ext.minSdkVersion as int
+        targetSdk rootProject.ext.targetSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "androidx.appcompat:appcompat:1.3.1"
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.2'
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.9.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.squareup.okhttp3:okhttp-sse:4.9.3")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.jakewharton.timber:timber:4.7.1")
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.1'
+    implementation "androidx.annotation:annotation:1.5.0"
+
+    /*api project(':ai-sdk')*/
+
+    api(name: 'AI-SDK-release_1.1.7_', ext: 'aar')
+
+}

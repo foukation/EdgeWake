@@ -1,0 +1,173 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.kezong.fat-aar'
+}
+apply from: 'dokka-config.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "SDK_VERSION", SDK_VERSION
+
+        // 将同一份集中规则传递给开启 R8 的客户 App。
+        consumerProguardFiles 'proguard-rules.pro'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // 剥离 x86 / x86_64 native 库：生产 Android 设备均为 ARM，x86/x86_64 仅供模拟器，
+    // 且随唤醒 wakeup.aar 引入的 libonnxruntime/libsherpa-onnx-jni 在这两个 ABI 下体积巨大，
+    // 排除后可显著减小最终 AAR 体积（abiFilters 无法过滤 fat-aar embed 进来的预编译 .so）。
+    packagingOptions {
+        jniLibs {
+            excludes += ['**/x86/**', '**/x86_64/**']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // -------------------------------------------------------------------------
+    // 第三方库依赖（仅为给 ai-sdk 宿主的 R8 提供「编译类路径」，不会被 fat-aar 嵌入）
+    //
+    // 背景：4 个子模块以 implementation 方式声明这些库，而 implementation 依赖
+    //       不会被 fat-aar embed 进 AAR；同时子模块已关闭混淆、仅在 ai-sdk 宿主
+    //       单次混淆。若宿主缺少这些库，R8 看不到「被嵌入的 SDK 类实现/继承第三方
+    //       接口」的 override 关系，会把 onResponse/onMessage/onError 等回调方法
+    //       改名，导致运行时真库按原名回调 → java.lang.AbstractMethodError。
+    // 作用：补齐与子模块完全一致的版本，让 R8 拥有正确类路径以识别 override；
+    //       这些库不被聚合进最终 AAR，运行期仍由客户 App 的传递依赖提供。
+    // -------------------------------------------------------------------------
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.squareup.okhttp3:okhttp-sse:4.9.3")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.jakewharton.timber:timber:4.7.1")
+
+    // Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.1'
+    implementation "androidx.annotation:annotation:1.5.0"
+
+    /*api project(':deviceAccess_gatewayProxy')
+    api project(':aiFoundationKit')
+    api project(':asrTranslation')
+    api project(':asrIntelligentDialogue')
+    api project(':voiceWakeUp')
+    api project(':voiceAssistant')*/
+
+    /*embed project(':deviceAccess_gatewayProxy')
+    embed project(':aiFoundationKit')
+    embed project(':asrTranslation')
+    embed project(':asrIntelligentDialogue')
+    embed project(':voiceWakeUp')
+    embed project(':voiceAssistant')*/
+
+    embed project(path: ':deviceAccess_gatewayProxy', configuration: 'default')
+    embed project(path: ':aiFoundationKit', configuration: 'default')
+    embed project(path: ':asrTranslation', configuration: 'default')
+    embed project(path: ':asrIntelligentDialogue', configuration: 'default')
+    embed project(path: ':voiceWakeUp', configuration: 'default')
+    embed project(path: ':voiceAssistant', configuration: 'default')
+
+    /*api(name: 'deviceAccess_gatewayProxy-release_1.0.1_', ext: 'aar')
+    api(name: 'asrIntelligentDialogue-release_1.0.1_', ext: 'aar')
+    api(name: 'asrTranslation-release_1.0.1_', ext: 'aar')
+    api(name: 'aiFoundationKit-release_1.0.1_', ext: 'aar')*/
+
+    /*api(name: 'AI-SDK-release_1.1.3.2_', ext: 'aar')*/
+
+}
+
+// ============================================================================
+// 构建后从最终 AAR 剥离无用资源，减小交付体积。剥离项：
+//   1) assets/customwakeupmodel/ —— 「自定义唤醒词」模型（encoder/decoder/joiner
+//      .onnx，压缩后约 11.3MB）。仅供 WakeupInitConfig.isCustomWords=true 路径使用，
+//      而本 SDK 该开关为 internal 且恒为 false（对外不可开启），此模型永远加载不到。
+//   2) assets/16k.pcm —— demo 测试用的预录音频，生产不使用。
+//   3) assets/hht_ctx4.conf_backup —— 冗余备份副本（无任何引用）。
+// 注意：内置「灵犀灵犀」用的 assets/duwakeupmodel/lingxi_v15.onnx 与 ASR 使用的
+//       assets/hht_ctx4.conf 均不在剥离范围，功能不受影响。
+// assets 无法用 packagingOptions 过滤（其仅作用于 jniLibs/resources），故在最终
+// AAR 产出后以 zip 方式剔除对应条目并重打包。
+// 注意：fat-aar 为两段式打包——bundleReleaseAar 先产「瘦 aar」，随后
+//       reBundleAarRelease 才把各子模块与 wakeup.aar 的 classes/jni/assets 注入
+//       并重新打包出最终交付 aar。故必须挂在最后执行的 reBundleAarRelease 上，
+//       否则剥离会被 reBundleAarRelease 的重打包覆盖。
+// ============================================================================
+afterEvaluate {
+    tasks.named('reBundleAarRelease').configure { t ->
+        t.doLast {
+            def aar = file("${buildDir}/outputs/aar/ai-sdk-release.aar")
+            if (!aar.exists()) { return }
+
+            def dropPrefixes = ['assets/customwakeupmodel/']            // 按前缀剔除（整目录）
+            def dropExact = ['assets/16k.pcm', 'assets/hht_ctx4.conf_backup'] // 按精确文件名剔除
+            def tmp = new File(aar.parentFile, 'ai-sdk-release.stripped.aar')
+
+            def zin = new java.util.zip.ZipInputStream(new BufferedInputStream(new FileInputStream(aar)))
+            def zout = new java.util.zip.ZipOutputStream(new BufferedOutputStream(new FileOutputStream(tmp)))
+            long dropped = 0
+            try {
+                def entry
+                byte[] buf = new byte[8192]
+                while ((entry = zin.getNextEntry()) != null) {
+                    def name = entry.name
+                    if (dropPrefixes.any { name.startsWith(it) } || dropExact.contains(name)) {
+                        dropped++
+                        continue                                        // 跳过=从最终 AAR 删除
+                    }
+                    zout.putNextEntry(new java.util.zip.ZipEntry(name))
+                    int n
+                    while ((n = zin.read(buf)) > 0) { zout.write(buf, 0, n) }
+                    zout.closeEntry()
+                }
+            } finally {
+                zin.close(); zout.close()
+            }
+
+            if (dropped > 0 && aar.delete()) {
+                tmp.renameTo(aar)
+                println "[strip-aar] 已剥离无用资源（${dropped} 条），最终 AAR = ${(aar.length() / 1024 / 1024).round(2)} MB"
+            } else {
+                tmp.delete()
+                println "[strip-aar] 未发现可剥离条目，AAR 未改动"
+            }
+        }
+    }
+}

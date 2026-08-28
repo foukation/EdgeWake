@@ -1,0 +1,68 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url "https://jitpack.io" }
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.22"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        google()
+        mavenCentral()
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+            sourceCompatibility = JavaVersion.VERSION_11
+            targetCompatibility = JavaVersion.VERSION_11
+        }
+
+        tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+            kotlinOptions.jvmTarget = "11"
+        }
+
+        flatDir {
+            dirs '../app-voice-wake-up/libs'
+        }
+    }
+
+    tasks.withType(Test) {
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+
+    configurations.configureEach {
+        resolutionStrategy {
+            force(
+                    "org.jetbrains.kotlin:kotlin-stdlib:1.7.22",
+                    "org.jetbrains.kotlin:kotlin-stdlib-common:1.7.22",
+                    "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.22",
+                    "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.22"
+            )
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+    buildSdkVersion = BUILD_SDK_VERSION.toString()
+    minSdkVersion = MIN_SDK_VERSION.toInteger()
+    targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+}

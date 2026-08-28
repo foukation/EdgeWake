@@ -1,0 +1,60 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center_horizontal"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/iv_ask"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/widget_ask_bg_container"
+        android:paddingStart="@dimen/dp_10"
+        tools:ignore="RtlSymmetry">
+
+        <!-- 左侧头像 -->
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/widget_ask_logo"
+            android:scaleType="centerCrop"
+            android:background="@drawable/widget_ask_bg_avatar_round"/>
+
+        <!-- 文案 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_8"
+            android:text="@string/btn_ask_lingxi"
+            android:textSize="18sp"
+            android:textColor="#8A8A8A"/>
+
+        <!-- 右侧蓝色背景 -->
+        <ImageView
+            android:id="@+id/iv_ai_bg"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/widget_ask_bg"/>
+
+        <!-- AI 图标 -->
+        <ImageView
+            android:id="@+id/iv_ai_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@id/iv_ai_bg"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/widget_ask_ai"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

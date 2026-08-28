@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dp_7">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ll_style_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardElevation="0dp">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_style_image"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_92"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_style_image_rounded"
+                    android:src="@drawable/ic_image_placeholder" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_style_name"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/dp_8"-->
+<!--                    android:text="@string/title_realistic"-->
+<!--                    android:textColor="#333333"-->
+<!--                    android:textSize="@dimen/font_10"-->
+<!--                    android:maxWidth="48dp"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="center"-->
+<!--                    android:lineSpacingExtra="1dp"-->
+<!--                    android:visibility="visible"-->
+<!--                    />-->
+
+            </LinearLayout>
+
+            <!-- 选中标记 -->
+            <FrameLayout
+                android:id="@+id/fl_check_mark"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:background="@drawable/bg_check_circle"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check_white" />
+
+            </FrameLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:background="@drawable/drawing_style_bg"
+                android:layout_gravity="center_horizontal|bottom"
+                android:visibility="visible"
+                />
+            <TextView
+                android:id="@+id/tv_style_name"
+                android:layout_width="wrap_content"
+                android:maxWidth="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/title_smart_recommend"
+                android:textSize="@dimen/font_11"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowColor="@color/text_gray"
+                />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="@dimen/dp_4">
+    
+    <!-- 功能标签区域 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_16">
+            
+            <TextView
+                android:id="@+id/tag_same_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/title_make_similar"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:background="@drawable/bg_tag_outline"
+                android:layout_marginEnd="@dimen/dp_8" />
+                
+            <TextView
+                android:id="@+id/tag_regenerate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/btn_regenerate"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:background="@drawable/bg_tag_outline"
+                android:layout_marginEnd="@dimen/dp_8" />
+                
+            <TextView
+                android:id="@+id/tag_download"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/btn_download_image"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:background="@drawable/bg_tag_outline"
+                android:layout_marginEnd="@dimen/dp_8" />
+                
+            <TextView
+                android:id="@+id/tag_share"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/btn_share"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_14"
+                android:background="@drawable/bg_tag_outline"
+                android:layout_marginEnd="@dimen/dp_8" />
+                
+        </LinearLayout>
+    </HorizontalScrollView>
+    
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#F0F0F0" />
+    
+    <!-- 输入框区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_12"
+        android:gravity="center_vertical">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_field"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+            
+            <EditText
+                android:id="@+id/et_result_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_send_message_short"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="@dimen/font_14"
+                android:maxLines="3" />
+                
+            <ImageView
+                android:id="@+id/iv_result_voice"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginStart="@dimen/dp_8"
+                android:src="@drawable/ic_voice"
+                android:tint="#666666"
+                android:clickable="true"
+                android:focusable="true" />
+                
+            <ImageView
+                android:id="@+id/iv_result_send"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@drawable/bg_send_button"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_send"
+                android:tint="#FFFFFF"
+                android:clickable="true"
+                android:focusable="true" />
+                
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>

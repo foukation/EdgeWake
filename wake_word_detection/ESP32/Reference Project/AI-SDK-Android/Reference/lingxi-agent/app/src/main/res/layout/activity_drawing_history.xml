@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context="com.fxzs.lingxiagent.view.drawing.DrawingHistoryActivity">
+
+    <!-- 顶部标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="#FFFFFF"
+        android:elevation="@dimen/dp_2">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_4"
+            android:padding="@dimen/dp_12"
+            android:src="@drawable/ic_back"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_drawing_history"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 搜索框 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="@dimen/dp_12">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_search_box">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_12"
+                android:src="@drawable/ic_search"
+                android:tint="#999999" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/iv_search"
+                android:layout_toStartOf="@id/iv_clear_search"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@null"
+                android:hint="@string/hint_search_prompts"
+                android:textColorHint="#999999"
+                android:textColor="#333333"
+                android:textSize="@dimen/font_14"
+                android:maxLines="1"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/iv_clear_search"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_close"
+                android:tint="#999999"
+                android:visibility="gone"
+                 />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- 过滤器 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:scrollbars="none"
+        android:paddingBottom="@dimen/dp_8">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_12">
+
+            <TextView
+                android:id="@+id/tv_filter_all"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/label_all"
+                android:textColor="@color/text_selector"
+                android:background="@drawable/bg_filter_selector"
+                android:layout_marginEnd="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/tv_filter_today"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/tab_today"
+                android:textColor="@color/text_selector"
+                android:background="@drawable/bg_filter_selector"
+                android:layout_marginEnd="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/tv_filter_week"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/label_this_week"
+                android:textColor="@color/text_selector"
+                android:background="@drawable/bg_filter_selector"
+                android:layout_marginEnd="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/tv_filter_month"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/label_this_month"
+                android:textColor="@color/text_selector"
+                android:background="@drawable/bg_filter_selector" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- 内容区域 -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+
+            <!-- 空视图 -->
+            <LinearLayout
+                android:id="@+id/ll_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_120"
+                    android:src="@drawable/ic_empty_history"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:id="@+id/tv_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="@string/msg_no_drawing_history"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

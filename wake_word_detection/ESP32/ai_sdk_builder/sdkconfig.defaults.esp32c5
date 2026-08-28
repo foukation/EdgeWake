@@ -1,0 +1,16 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-C5 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-C5
+# Architecture: RISC-V single-core
+# Max frequency: 240MHz
+# Features: WiFi 6 support, dual-band 2.4GHz/5GHz
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 240MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y

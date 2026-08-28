@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="16dp" />
+    <solid android:color="@color/white" />
+    <!-- 保留更多内边距，避免内容贴边，同时为外部阴影留空间不被裁剪 -->
+    <padding android:top="16dp"
+        android:bottom="16dp"
+        android:left="4dp"
+        android:right="4dp" />
+</shape>

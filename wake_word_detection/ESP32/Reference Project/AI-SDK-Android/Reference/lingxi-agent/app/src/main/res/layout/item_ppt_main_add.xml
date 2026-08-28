@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:id="@+id/root_view"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_8"
+    android:paddingTop="@dimen/dp_14"
+    android:paddingBottom="@dimen/dp_14"
+
+    android:background="@drawable/bg_outline_item_selected_gray">
+
+
+    <ImageView
+        android:id="@+id/iv_main_add"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:scaleType="fitXY"
+        android:background="@drawable/ppt_add_main" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/figma_text_primary"
+        android:textStyle="bold"
+        android:text="@string/btn_add_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        />
+
+</LinearLayout>

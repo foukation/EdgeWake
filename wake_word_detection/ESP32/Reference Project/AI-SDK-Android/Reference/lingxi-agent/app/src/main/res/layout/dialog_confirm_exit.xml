@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:clickable="true"
+        android:focusable="true" />
+    <!-- Dialog Container -->
+    <LinearLayout
+        android:layout_width="@dimen/dp_328"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white_rounded_16dp"
+        android:padding="@dimen/dp_22">
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Text Frame Container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <!-- Title Text -->
+                <TextView
+                    android:id="@+id/tv_dialog_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_back_no_save_meeting"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_18"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingMultiplier="1.5"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/dp_8" />
+
+                <!-- Subtitle Text -->
+                <TextView
+                    android:id="@+id/tv_dialog_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_confirm_exit"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_14"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingMultiplier="1.7"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Button Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <!-- Cancel Button -->
+            <LinearLayout
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_button_gray_rounded_8dp"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_cancel"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_16"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingMultiplier="1.4"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Exit Button -->
+            <LinearLayout
+                android:id="@+id/btn_exit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_button_gray_rounded_8dp"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_6"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_exit"
+                    android:textColor="#1C77FF"
+                    android:textSize="@dimen/font_16"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingMultiplier="1.4"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

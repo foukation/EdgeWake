@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色调 -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="colorPrimary">#4A90E2</color>
+    <color name="primary_color">#4A90E2</color>
+    <color name="primary_color_light">#B3D9FF</color>
+    <color name="primary_color_pressed">#3A7BD5</color>
+
+    <color name="background_start">#EAF5FF</color>
+    <color name="background_end">#FFFFFF</color>
+    <color name="text_title">#333333</color>
+    <color name="text_subtitle">#666666</color>
+    <color name="tag_background">#F5F5F7</color>
+    <color name="tag_background_pressed">#EAEAF0</color>
+    <color name="recent_item_background">#FFFFFF</color>
+    <color name="recent_icon_background">#F0F5FF</color>
+    <color name="input_border">#E0E0E0</color>
+    <color name="input_border_focused">#4B4BFF</color>
+
+    <!-- 文本颜色 -->
+    <color name="text_primary">#0F1012</color>
+    <color name="text_secondary">#757575</color>
+    <color name="nav_unselected">#384456</color>
+    <color name="text_000000">#99000000</color>
+    <color name="text_999999">#FF999999</color>
+    <color name="text_1E1E1E">#FF1E1E1E</color>
+    <!-- 对话模式特定颜色 -->
+    <color name="language_a_text">#2196F3</color>
+    <color name="language_b_text">#333333</color>
+
+    <!-- 背景颜色 -->
+    <color name="background">#F5F5F5</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <!-- 边框和分割线 -->
+    <color name="divider">#E0E0E0</color>
+    <color name="border">#E0E0E0</color>
+    <color name="divider_color">#E5E5E5</color>
+    
+    <!-- 其他颜色 -->
+    <color name="error">#F44336</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+
+
+    <color name="text_color">#FF384456</color>
+    <color name="text_hint_color">#FF7F7F7F</color>
+    <color name="text_blue">#FF126BFB</color>
+    <color name="text_black">#FF0F1012</color>
+    <color name="text_999">#999999</color>
+    <color name="text_888">#888888</color>
+    <color name="text_555">#555555</color>
+    <color name="text_AAA">#AAAAAA</color>
+    <color name="text_CCC">#CCCCCC</color>
+    <color name="text_red">#E60027</color>
+    <color name="bg">#F7F7F7</color>
+    
+    <!-- PPT模块颜色 -->
+    <color name="chip_background">#F0F0F0</color>
+    <color name="chip_text">#666666</color>
+    <color name="ppt_primary">#1976D2</color>
+    <color name="ppt_accent">#4CAF50</color>
+    <color name="ppt_background">#F5F5F5</color>
+    <color name="ppt_card_background">#FFFFFF</color>
+    <color name="ppt_text_primary">#333333</color>
+    <color name="ppt_text_secondary">#666666</color>
+    <color name="ppt_text_hint">#999999</color>
+    <color name="ppt_divider">#E0E0E0</color>
+    <color name="ppt_button_primary">#333333</color>
+    <color name="ppt_button_outline">#E0E0E0</color>
+    <color name="ppt_progress_green">#4CAF50</color>
+    <color name="ppt_deepseek_blue">#4169E1</color>
+    <color name="ppt_card_selected">#E3F2FD</color>
+
+    <!-- 账号模块颜色 -->
+    <color name="account_theme">#1C77FF</color>
+    <color name="account_text_primary">#1E1E1E</color>
+    <color name="account_text_secondary">#999999</color>
+    <color name="login_text_hint">#B2B2B2</color>
+    <color name="login_text_agreement">#999999</color>
+    <color name="login_checkbox_border">#D9DDE5</color>
+    <color name="login_checkbox_checked">#126BFB</color>
+    <color name="login_gradient_start">#E6F2FA</color>
+    <color name="login_gradient_purple">#BFB0FF</color>
+    <color name="login_gradient_blue_start">#A1BAFF</color>
+    <color name="login_gradient_blue_end">#B0F2FF</color>
+    <color name="login_button_primary">#1C77FF</color>
+    <color name="login_button_secondary">#F5F5F5</color>
+    <color name="login_bg_gradient_pink">#FFCEE6</color>
+    <color name="login_bg_gradient_blue">#89AAFF</color>
+    <color name="account_bg">#F7F7F7</color>
+    <color name="account_border">#E5E5E5</color>
+    <color name="account_dividing_line">#E5E5E5</color>
+    <color name="account_image_tint">#CCCCCC</color>
+
+    <!-- 登录页面专用颜色 (基于 Figma 设计规范) -->
+    <color name="login_primary">#1C77FF</color>
+    <color name="login_background">#FFFFFF</color>
+    <color name="login_text_primary">#1E1E1E</color>
+    <color name="login_text_secondary">#B2B2B2</color>
+    <color name="login_text_light">#F7F7F7</color>
+    <color name="login_border">#D9DDE5</color>
+
+    <!-- 缺失的颜色定义 -->
+    <color name="danger_color">#F44336</color>
+    <color name="danger_color_pressed">#D32F2F</color>
+    <color name="secondary_color">#757575</color>
+    <color name="secondary_color_pressed">#616161</color>
+    <color name="background_primary">#F5F5F5</color>
+    <color name="progress_background">#E0E0E0</color>
+    <color name="color_primary">#2196F3</color>
+    <color name="success_color">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+    <color name="dialog_save">#FC3E39</color>
+
+    <!-- Meeting Fragment Colors (Based on Figma Design) -->
+    <color name="background_gradient">#FFFFFF</color>
+    <color name="primary_blue">#1C77FF</color>
+    <color name="text_hint">#B2B2B2</color>
+    <color name="card_background">#F7F7F7</color>
+    <color name="input_field_background">#F7F7F7</color>
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="error_red">#E60027</color>
+    
+    <!-- Figma Exact Colors -->
+    <color name="figma_text_primary">#1E1E1E</color>
+    <color name="figma_text_secondary">#B2B2B2</color>
+    <color name="figma_text_hint">#B2B2B2</color>
+    <color name="figma_card_background">#F7F7F7</color>
+    <color name="figma_card_stroke">#FFFFFF</color>
+    <color name="figma_primary_blue">#1C77FF</color>
+    <color name="figma_error_red">#E60027</color>
+    <color name="figma_gradient_start">#E6F2FA</color>
+    <color name="figma_gradient_blue_1">#A1BAFF</color>
+    <color name="figma_gradient_blue_2">#B0F2FF</color>
+    <color name="figma_gradient_purple">#BFB0FF</color>
+    <color name="figma_stroke_inactive">#E5E5E5</color>
+    <color name="figma_language_selected_bg">#CCFFFFFF</color>
+    
+    <!-- Tab Navigation Colors (From Figma Node 456-13720) -->
+    <color name="tab_text_selected">#1E1E1E</color>
+    <color name="tab_text_unselected">#999999</color>
+    <color name="tab_indicator">#1E1E1E</color>
+    
+    <!-- History Page Colors -->
+    <color name="text_gray">#999999</color>
+
+    <!-- Table Colors -->
+    <color name="text_333">#333333</color>
+    <color name="text_666">#666666</color>
+
+
+    <color name="color_999999">#999999</color>
+    <color name="color_1E1E1E">#1E1E1E</color>
+    <color name="color_606F8B">#1ACCCBCB</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="color_EE3636">#EE3636</color>
+    <color name="color_A0A0A0">#A0A0A0</color>
+    <color name="float_background">#80404040</color>
+    <color name="default_text">#FF333333</color>
+    <color name="default_button_background">#FFDDDDDD</color>
+    <color name="primary_button_background">#74a3f3</color>
+    <color name="color_738FB4">#738FB4</color>
+
+
+    <!-- Code Block Colors - Light Theme -->
+    <color name="code_background">#FFFFFF</color>
+    <color name="code_header_background">#F8F9FA</color>
+    <color name="code_text">#24292F</color>
+    <color name="code_border">#E1E4E8</color>
+    <color name="code_language_text">#656D76</color>
+    <color name="code_button_background">#FFFFFF</color>
+    <color name="code_keyword">#D73A49</color>
+    <color name="code_string">#032F62</color>
+    <color name="code_comment">#6A737D</color>
+    <color name="code_number">#005CC5</color>
+
+    <!-- Code Block Colors - Dark Theme Alternative -->
+    <color name="code_background_dark">#0D1117</color>
+    <color name="code_header_background_dark">#161B22</color>
+    <color name="code_text_dark">#E6EDF3</color>
+    <color name="code_border_dark">#30363D</color>
+
+    <color name="tag_text_selected">#1C77FF </color>
+    <color name="tag_indicator_selected">#4690FF </color>
+    <color name="tag_text_unselected">#1E1E1E</color>
+
+    <color name="color_9e9fa2">#9E9FA2</color>
+    <color name="color_99000000">#99000000</color>
+    <color name="color_38000000">#38000000</color>
+    <color name="color_61000000">#61000000</color>
+    <color name="color_1587ff">#1587FF</color>
+
+    <!-- 同声传译模块专用颜色 -->
+    <color name="language_a_background">#F0F8FF</color>
+    <color name="language_b_background">#FFF8F0</color>
+    <color name="deep_research_gray">#7A7A7A</color>
+    <color name="color_f7f7f7">#F7F7F7</color>
+    <color name="color_E0E0E0">#E0E0E0</color>
+    <color name="color_1C77FF">#1C77FF</color>
+    <color name="color_7A7A7A">#7A7A7A</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="float_color_primary">#7922E7</color>
+
+    <!--    跑马灯效果-->
+    <color name="color_7922E7">#FF7922E7</color>
+    <color name="color_14A4F7">#FF14A4F7</color>
+
+    <color name="color_179FF6">#FF179FF6</color>
+    <color name="color_2391F5">#FF2391F5</color>
+    <color name="color_3B71F1">#FF3B71F1</color>
+    <color name="color_574DEC">#FF574DEC</color>
+    <color name="color_7823E7">#FF7823E7</color>
+    <color name="color_6837E9">#FF6837E9</color>
+    <color name="color_4465EF">#FF4465EF</color>
+
+
+    <color name="color_9C8EF6">#FF9C8EF6</color>
+    <color name="color_6EB4F5">#FF6EB4F5</color>
+    <color name="color_60E0EE">#FF60E0EE</color>
+    <color name="color_7DE7D2">#FF7DE7D2</color>
+
+    <color name="color_344386">#344386</color>
+    <color name="color_395A7C">#395A7C</color>
+
+
+    <!--    弹窗字体颜色-->
+    <color name="color_0BBF6E">#FF0BBF6E</color>
+    <color name="gray">#0A000000</color>
+    <color name="text_5956E9">#FF5956E9</color>
+    <color name="set_title">#1E1E1E</color>
+    <color name="set_bg">#ffffff</color>
+    <color name="set_sub_title">#999999</color>
+    <color name="set_card_bg">#F7F7F7</color>
+    <color name="set_back_icon">#1E1E1E</color>
+
+
+
+</resources>

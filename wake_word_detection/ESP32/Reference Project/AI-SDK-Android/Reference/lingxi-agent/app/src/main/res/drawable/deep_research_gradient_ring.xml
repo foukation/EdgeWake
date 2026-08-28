@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:thickness="2dp"
+    android:useLevel="false"
+    android:innerRadius="5dp"
+    >
+    <!-- 定义从白色到蓝色的渐变 -->
+    <gradient
+        android:type="sweep"
+    android:startColor="#FFFFFF"
+    android:endColor="#4690FF"
+    android:angle="0"/>
+
+
+</shape>

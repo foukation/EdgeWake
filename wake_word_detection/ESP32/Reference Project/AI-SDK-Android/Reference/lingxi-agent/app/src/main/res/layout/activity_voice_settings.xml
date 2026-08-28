@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_12"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/title_agent_voice"
+            android:textColor="@color/figma_text_primary"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:fontFamily="sans-serif"
+            android:text="@string/btn_done"
+            android:textColor="#1C77FF"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 说明文字 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_stoke_e0_r16"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_11">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/setting_voice_play" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:text="@string/title_sunny_sweet"
+                android:textColor="@color/figma_text_primary"
+                android:textSize="@dimen/font_16" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/setting_voice_more" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_pitch"
+                    android:textColor="@color/text_black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/font_14" />
+
+
+                <TextView
+                    android:id="@+id/tv_voice_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_value_0_8"
+                    android:textColor="@color/figma_text_secondary"
+                    android:textSize="@dimen/font_12"
+
+                    />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/vol"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingLeft="0dp"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingRight="0dp"
+                android:paddingBottom="@dimen/dp_6"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_thumb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_speed"
+                    android:textColor="@color/text_black"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/font_14" />
+
+
+                <TextView
+                    android:id="@+id/tv_voice_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_value_0_5"
+                    android:textColor="@color/figma_text_secondary"
+                    android:textSize="@dimen/font_12"
+
+                    />
+            </LinearLayout>
+
+
+            <SeekBar
+                android:id="@+id/spd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingLeft="0dp"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingRight="0dp"
+                android:paddingBottom="@dimen/dp_6"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_thumb" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_weight="1">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

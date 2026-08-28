@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- PPT模块基础样式 -->
+    <style name="PptBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ppt_primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/ppt_accent</item>
+        <item name="android:windowBackground">@color/ppt_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- PPT标题样式 -->
+    <style name="PptTitleText">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/ppt_text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <!-- PPT副标题样式 -->
+    <style name="PptSubtitleText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/figma_text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.4</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- PPT正文样式 -->
+    <style name="PptBodyText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ppt_text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:letterSpacing">0.005</item>
+    </style>
+
+    <!-- PPT提示文本样式 -->
+    <style name="PptHintText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ppt_text_hint</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <!-- PPT卡片样式 -->
+    <style name="PptCardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_large</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/ppt_card_background</item>
+    </style>
+
+    <!-- PPT主要按钮样式 -->
+    <style name="PptButtonPrimary">
+        <item name="android:background">@drawable/bg_ppt_button_primary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:stateListAnimator">@animator/button_elevation</item>
+    </style>
+
+    <!-- PPT次要按钮样式 -->
+    <style name="PptButtonSecondary">
+        <item name="android:background">@drawable/bg_ppt_button_secondary</item>
+        <item name="android:textColor">@color/ppt_text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- PPT轮廓按钮样式 -->
+    <style name="PptButtonOutline">
+        <item name="android:background">@drawable/bg_ppt_button_outline</item>
+        <item name="android:textColor">@color/ppt_text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- PPT输入框样式 -->
+    <style name="PptEditText">
+        <item name="android:background">@drawable/bg_ppt_edit_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ppt_text_primary</item>
+        <item name="android:textColorHint">@color/ppt_text_hint</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:letterSpacing">0.005</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <!-- PPT标签样式 -->
+    <style name="PptTag">
+        <item name="android:background">@drawable/bg_ppt_tag</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/ppt_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- PPT选中标签样式 -->
+    <style name="PptTagSelected" parent="PptTag">
+        <item name="android:background">@drawable/bg_ppt_tag_selected</item>
+        <item name="android:textColor">@color/ppt_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- PPT工具栏样式 -->
+    <style name="PptToolbar">
+        <item name="android:background">@color/ppt_card_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+
+    <!-- PPT工具栏标题样式 -->
+    <style name="PptToolbarTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/ppt_text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- PPT图标按钮样式 -->
+    <style name="PptIconButton">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:tint">@color/ppt_text_secondary</item>
+    </style>
+
+    <!-- PPT浮动操作按钮样式 -->
+    <style name="PptFab">
+        <item name="android:background">@drawable/bg_ppt_fab</item>
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:stateListAnimator">@animator/fab_elevation</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!-- PPT进度条样式 -->
+    <style name="PptProgressBar">
+        <item name="android:progressTint">@color/ppt_progress_green</item>
+        <item name="android:progressBackgroundTint">@color/progress_background</item>
+        <item name="android:indeterminateTint">@color/ppt_primary</item>
+    </style>
+
+    <!-- PPT分割线样式 -->
+    <style name="PptDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/ppt_divider</item>
+        <item name="android:layout_marginVertical">8dp</item>
+    </style>
+
+    <!-- PPT列表项样式 -->
+    <style name="PptListItem">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- PPT底部栏样式 -->
+    <style name="PptBottomBar">
+        <item name="android:background">@color/ppt_card_background</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:minHeight">72dp</item>
+    </style>
+
+    <!-- PPT错误消息样式 -->
+    <style name="PptErrorMessage">
+        <item name="android:background">@drawable/bg_ppt_error_message</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="android:layout_marginVertical">8dp</item>
+    </style>
+
+    <!-- PPT成功消息样式 -->
+    <style name="PptSuccessMessage" parent="PptErrorMessage">
+        <item name="android:background">@drawable/bg_ppt_success_message</item>
+        <item name="android:textColor">@color/success</item>
+    </style>
+
+    <!-- PPT加载指示器样式 -->
+    <style name="PptLoadingIndicator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:indeterminateTint">@color/ppt_primary</item>
+    </style>
+
+    <!-- PPT模态对话框样式 -->
+    <style name="PptDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/bg_ppt_dialog</item>
+        <item name="android:windowMinWidthMajor">85%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowAnimationStyle">@style/PptDialogAnimation</item>
+    </style>
+
+    <!-- PPT对话框动画 -->
+    <style name="PptDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/ppt_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/ppt_dialog_exit</item>
+    </style>
+
+    <!-- PPT底部弹出对话框样式 -->
+    <style name="PptBottomSheetDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/PptBottomSheetAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- PPT底部弹出动画 -->
+    <style name="PptBottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/ppt_slide_up</item>
+        <item name="android:windowExitAnimation">@anim/ppt_slide_down</item>
+    </style>
+
+    <!-- PPT页面指示器样式 -->
+    <style name="PptPageIndicator">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:background">@drawable/bg_ppt_page_indicator</item>
+    </style>
+
+    <!-- PPT思考过程样式 -->
+    <style name="PptThinkingProcess">
+        <item name="android:background">@drawable/bg_ppt_thinking</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ppt_text_hint</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <!-- PPT DeepSeek 标识样式 -->
+    <style name="PptDeepSeekBrand">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ppt_deepseek_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>

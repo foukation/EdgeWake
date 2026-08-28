@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://www.jitpack.io" }
+
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+        // maven { url 'https://mvn.mob.com/android' } // 移除超时的仓库
+        // JitPack仓库
+        maven { url 'https://www.jitpack.io' }
+        // 阿里云maven仓库
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // 极光官方Maven仓库
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://mvnrepository.com/artifact' }
+        maven { url "https://www.jitpack.io" }
+
+    }
+}
+rootProject.name = "iyaproject"
+include ':app'

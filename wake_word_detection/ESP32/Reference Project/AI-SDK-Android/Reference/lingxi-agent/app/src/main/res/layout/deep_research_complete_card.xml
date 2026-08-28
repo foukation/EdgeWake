@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gray_r8"
+    android:layout_marginLeft="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_16"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:layout_marginTop="@dimen/dp_12"
+        android:id="@+id/view_line"
+        android:layout_width="2dp"
+        android:layout_height="@dimen/dp_18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:background="@color/color_CCCCCC"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_margin="@dimen/dp_10"
+        android:id="@+id/tv_complete_see"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_blue_radius_10"
+        android:gravity="center"
+        android:text="@string/btn_view"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/view_line"
+        app:layout_constraintLeft_toRightOf="@id/view_line"
+        app:layout_constraintRight_toLeftOf="@id/tv_complete_see"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_7A7A7A"
+        android:textSize="@dimen/font_12"
+        android:text="@string/sample_research_sports_car"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        app:layout_constraintLeft_toLeftOf="@id/view_line"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/tv_query"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/color_1E1E1E"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        tools:text="我已经完成了本次深度研究，您可以下载报告文件，获取完整的分析和建议"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tv_file"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        app:layout_constraintLeft_toLeftOf="@id/view_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_16"
+        android:drawablePadding="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_16"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawableLeft="@drawable/icon_word"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/color_1E1E1E"
+        android:background="@drawable/bg_white_radius_16"
+        tools:text="适合年轻人的20万级运动轿车推荐.doc"
+
+        />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@id/tv_file"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:background="@drawable/bg_blue_radius_2"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_progress_text"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_download"
+        tools:text="10%"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/color_1C77FF"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

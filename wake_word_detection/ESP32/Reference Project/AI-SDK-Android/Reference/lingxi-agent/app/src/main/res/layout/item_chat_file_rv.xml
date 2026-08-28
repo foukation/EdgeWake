@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_view"
+    android:layout_marginHorizontal="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_16">
+
+    <include layout="@layout/lingxi_base_radio_layout"
+        android:id="@+id/radio_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        app:layout_constraintStart_toEndOf="@+id/radio_layout"
+        app:layout_constraintTop_toTopOf="@+id/radio_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_file"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_64"
+            android:layout_marginStart="@dimen/dp_50" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/vw_empty"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/ll_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_content"
+        app:layout_constraintStart_toStartOf="@+id/ll_content"
+        app:layout_constraintEnd_toEndOf="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

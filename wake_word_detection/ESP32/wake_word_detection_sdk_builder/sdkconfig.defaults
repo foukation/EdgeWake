@@ -1,0 +1,15 @@
+# ===========================================================================
+# wake_word_detection_sdk_builder - sdkconfig.defaults (基准默认配置)
+# Target: ESP32-S3, ESP-IDF v5.4.3
+# ---------------------------------------------------------------------------
+# 【必须存在】IDF 只有读到"基准 sdkconfig.defaults"时，才会顺带读取同名的
+# sdkconfig.defaults.<target>（如 sdkconfig.defaults.esp32s3）。缺少本文件时
+# 默认列表为空，target 版本永远不会被读取，PSRAM 等配置全部失效。
+#
+# 说明：本工程只产出 libwake_word_detection_sdk.a（app_main 为空、无 tensor_arena），
+# PSRAM 开不开不影响库产物；此处配置仅为与 demo 工程保持一致。
+# ===========================================================================
+
+# 编库工程 app_main 为空，看门狗保持默认即可；此行仅占位以保证基准文件非空
+# 注意：IDF 该配置合法范围 1~60 秒，60 为上限（写 240 会超范围被拒、退回默认 5）
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=60

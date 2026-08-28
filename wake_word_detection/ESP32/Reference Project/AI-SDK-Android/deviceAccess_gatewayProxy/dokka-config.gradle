@@ -1,0 +1,29 @@
+apply plugin: 'org.jetbrains.dokka'
+
+dokkaHtml {
+    offlineMode.set(true)
+    outputDirectory.set(file("$buildDir/documentation"))
+
+    dokkaSourceSets {
+        named("main") {
+            moduleName.set("AI-Assist SDK")
+            includes.from("Module.md")
+
+            sourceRoots.from(file("src/main/java"))
+
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/aiModel"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/http"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/utils"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/constraint/ChatModel.kt"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/constraint/CheckUpdate.kt"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/constraint/Enum.kt"))
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/constraint/ModelsAvail.kt"))
+
+            sourceLink {
+                localDirectory.set(file("src/main/java"))
+                remoteUrl.set(new URL("https://github.com/your-repo/AI-Assist/tree/main/glasses/src/main/java"))
+                remoteLineSuffix.set("#L")
+            }
+        }
+    }
+}

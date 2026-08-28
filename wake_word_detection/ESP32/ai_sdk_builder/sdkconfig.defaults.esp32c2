@@ -1,0 +1,16 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-C2 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-C2 (also known as ESP8684)
+# Architecture: RISC-V single-core
+# Max frequency: 120MHz
+# Features: Low cost, suitable for simple IoT applications
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 120MHz (ESP32-C2 max frequency)
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_120=y

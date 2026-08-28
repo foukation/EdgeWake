@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_16">
+
+    <!-- 气泡内容容器 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_f7_r16"
+        android:padding="@dimen/dp_16">
+
+            <!-- 文字说明 -->
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_generated_images_2"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:lineSpacingExtra="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_12" />
+
+            <!-- 图片容器 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image_container"
+                android:layout_width="@dimen/dp_240"
+                android:layout_height="@dimen/dp_320"
+                app:cardCornerRadius="@dimen/dp_12"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="@dimen/dp_12">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 生成的图片 -->
+                    <ImageView
+                        android:id="@+id/iv_generated_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:background="#F5F5F5" />
+
+                    <!-- 图片尺寸标签 -->
+                    <TextView
+                        android:id="@+id/tv_image_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="@dimen/dp_8"
+                        android:background="@drawable/bg_size_label"
+                        android:paddingStart="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_4"
+                        android:paddingBottom="@dimen/dp_4"
+                        android:text="@string/label_resolution_512_768"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/font_12"
+                        android:textStyle="bold" />
+
+                    <!-- 下载按钮 -->
+                    <ImageView
+                        android:id="@+id/ll_overlay_download"
+                        android:layout_width="@dimen/dp_27"
+                        android:layout_height="@dimen/dp_27"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="@dimen/dp_11"
+                        android:layout_marginBottom="@dimen/dp_11"
+                        android:src="@drawable/ic_download"
+                        android:background="@drawable/bg_download_overlay"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_13"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:paddingStart="@dimen/dp_13"
+                        android:tint="#FFFFFF"
+                        android:scaleType="center" />
+
+                    <!-- 继续编辑按钮 -->
+                    <TextView
+                        android:id="@+id/ll_overlay_edit"
+                        android:layout_width="@dimen/dp_74"
+                        android:layout_height="@dimen/dp_27"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="@dimen/dp_11"
+                        android:layout_marginBottom="@dimen/dp_11"
+                        android:background="@drawable/bg_continue_edit_overlay"
+                        android:gravity="center"
+                        android:text="@string/btn_continue_edit"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/font_12"
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <!-- 加载进度指示器 -->
+                    <ProgressBar
+                        android:id="@+id/pb_loading"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="#FFFFFF"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 操作按钮区域 -->
+            <LinearLayout
+                android:id="@+id/ll_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <!-- 分隔线 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="#E0E0E0" />
+
+                <!-- 按钮行 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <!-- 复制按钮 -->
+                    <ImageView
+                        android:id="@+id/iv_copy"
+                        android:layout_width="@dimen/dp_28"
+                        android:layout_height="@dimen/dp_28"
+                        android:src="@mipmap/chat_copy"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:padding="@dimen/dp_2" />
+
+                    <!-- 重新生成按钮 -->
+                    <ImageView
+                        android:id="@+id/iv_regenerate"
+                        android:layout_width="@dimen/dp_28"
+                        android:layout_height="@dimen/dp_28"
+                        android:src="@drawable/ic_refresh"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:padding="@dimen/dp_2" />
+
+                    <!-- 占位空间 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

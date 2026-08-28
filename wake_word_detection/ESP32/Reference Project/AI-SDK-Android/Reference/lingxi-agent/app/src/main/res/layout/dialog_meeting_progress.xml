@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_447"
+        android:layout_gravity="center_horizontal"
+
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardUseCompatPadding="true"
+        android:layout_centerInParent="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@mipmap/login_bg2"
+
+            android:gravity="center"
+            android:elevation="@dimen/dp_2">
+            <!-- Progress text -->
+            <RelativeLayout
+                android:layout_width="@dimen/dp_270"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="@dimen/dp_72"
+                android:layout_marginBottom="@dimen/dp_52"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                >
+
+
+<!--                <com.fxzs.lingxiagent.view.widget.CustomCircleView-->
+<!--                    android:id="@+id/circleView"-->
+<!--                    android:layout_width="@dimen/dp_270"-->
+<!--                    android:layout_height="@dimen/dp_270"-->
+<!--                    />-->
+                <com.fxzs.lingxiagent.view.widget.WaveView
+                    android:id="@+id/circleView"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_270"
+                    android:visibility="visible"
+                    />
+                <ImageView
+
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="@dimen/dp_77"
+                    android:layout_height="@dimen/dp_77"
+                    android:src="@mipmap/ic_app_logo"
+                    android:layout_centerInParent="true"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/head"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg_meeting_generating"
+                        android:textColor="#999999"
+                        android:textSize="@dimen/font_16"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:lineHeight="@dimen/dp_22" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="#E0E0E0"
+                    />
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/figma_text_primary"
+                    android:textSize="@dimen/dp_16"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:lineHeight="@dimen/dp_22" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

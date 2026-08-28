@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 根布局改为垂直方向（vertical），让内容和间隔线上下排列 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#f4f7ff"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20"
+    >
+
+    <!-- 嵌套水平布局：放图标、文字、箭头（原内容） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/icon_gui_fuc"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/label_open_tv_cctv1"
+        android:textColor="#ff1e1e1e"
+        android:textSize="@dimen/dp_16"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_20"
+        android:scaleType="center"
+        android:src="@drawable/gui_arrow"/>
+    </LinearLayout>
+
+    <!-- 间隔线：放在垂直布局最后，显示在条目最下方 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#EEEEEE"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+       />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- 文件背景 -->
+    <path
+        android:pathData="M20,10 L80,10 L100,30 L100,110 L20,110 Z"
+        android:fillColor="#E3F2FD"
+        android:strokeColor="#1976D2"
+        android:strokeWidth="2" />
+    
+    <!-- 文件角折叠 -->
+    <path
+        android:pathData="M80,10 L80,30 L100,30"
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#1976D2"
+        android:strokeWidth="2" />
+    
+    <!-- 音频波形图标 -->
+    <path
+        android:pathData="M40,50 L44,50 L44,70 L40,70 Z"
+        android:fillColor="#1976D2" />
+    
+    <path
+        android:pathData="M48,45 L52,45 L52,75 L48,75 Z"
+        android:fillColor="#1976D2" />
+    
+    <path
+        android:pathData="M56,47.5 L60,47.5 L60,72.5 L56,72.5 Z"
+        android:fillColor="#1976D2" />
+    
+    <path
+        android:pathData="M64,42.5 L68,42.5 L68,77.5 L64,77.5 Z"
+        android:fillColor="#1976D2" />
+    
+    <path
+        android:pathData="M72,49 L76,49 L76,71 L72,71 Z"
+        android:fillColor="#1976D2" />
+    
+</vector>

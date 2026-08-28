@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- 顶部栏 - 参考PPT首页样式 -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/back_button"
+            style="@style/PptIconButton"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/ppt_accessibility_back_button" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="50dp"
+            android:maxLines="1"
+            android:text="@string/title_outline_edit"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_16"
+            android:textStyle="normal"
+            android:fontWeight="500" />
+
+    </RelativeLayout>
+
+
+
+    <!-- 主内容滚动容器 -->
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="false"
+        android:scrollbars="none"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        >
+
+        <!-- 统一的内容块：思考过程和大纲 -->
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_f7_r16"
+            android:padding="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16">
+
+            <!-- 思考过程区域 - 默认展开 -->
+            <LinearLayout
+                android:id="@+id/thinking_process_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_10">
+
+                <!-- 思考状态标题 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/dp_8">
+
+                    <!-- DeepSeek图标 -->
+<!--                    <ImageView-->
+<!--                        android:layout_width="@dimen/dp_20"-->
+<!--                        android:layout_height="@dimen/dp_20"-->
+<!--                        android:src="@drawable/ic_deepseek"-->
+<!--                        android:layout_marginEnd="@dimen/dp_8" />-->
+
+                    <!-- 思考状态文本 -->
+                    <TextView
+                        android:id="@+id/thinking_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_thinking"
+                        android:textSize="@dimen/font_14"
+                        android:textColor="#999999" />
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:background="@mipmap/home_up_arrow" />
+
+                </LinearLayout>
+
+                <!-- 思考过程内容 -->
+                <TextView
+                    android:id="@+id/thinking_process_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/font_14"
+                    android:textColor="#999999"
+                    android:lineSpacingExtra="@dimen/dp_4" />
+
+            </LinearLayout>
+
+            <!-- 大纲内容区域 - 改为LinearLayout实现 -->
+            <LinearLayout
+                android:id="@+id/outline_linear_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <!-- 停止回答按钮 - 底部居中样式 -->
+    <LinearLayout
+        android:id="@+id/stop_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_stop_button"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        android:elevation="@dimen/dp_4"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:src="@mipmap/chat_stop"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_stop_reply"
+            android:textSize="@dimen/font_14"
+            android:textColor="#333333"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_16"
+        android:visibility="gone">
+
+        <!-- 换一个大纲按钮 -->
+        <LinearLayout
+            android:id="@+id/change_outline_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_button_outline_rounded"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/iv_sub_add"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:scaleType="fitXY"
+                android:background="@drawable/ppt_refresh"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_switch_outline"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/figma_text_primary"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <!-- 选择模版按钮 -->
+        <LinearLayout
+            android:id="@+id/select_template_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_8"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_button_blue_rounded"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_select_template"
+                android:textSize="@dimen/font_14"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+## IDF Component Manager Manifest File
+##
+## AI SDK Demo 托管组件依赖声明
+##
+## AI SDK 依赖的托管组件：
+## - espressif/esp_websocket_client: WebSocket 通信（ASR 实时语音识别）
+## - espressif/esp_codec_dev: 音频编解码器驱动（音频输入输出）
+## - espressif/esp_audio_effects: 音频效果处理（重采样等）
+## - espressif/esp_audio_codec: 音频编解码（MP3 解码，TTS 播放）
+##
+## 其他依赖（ESP-IDF 内置，无需声明）：
+## - esp_http_client: HTTP/HTTPS 通信
+## - esp_timer: 硬件定时器
+## - json (cJSON): JSON 数据处理
+##
+dependencies:
+  ## ESP-IDF 版本要求（AI SDK 需要 5.4.0 或更高版本）
+  idf:
+    version: '>=5.4.0'
+
+  ## WebSocket 客户端组件
+  ## AI SDK 使用此组件进行 ASR 语音识别的实时通信
+  espressif/esp_websocket_client: '*'
+
+  ## 音频编解码器驱动组件
+  ## AI SDK 使用此组件支持 ES8311/ES8388 等音频芯片驱动
+  espressif/esp_codec_dev: '~1.5.4'
+
+  ## 音频效果处理组件
+  ## AI SDK 使用此组件进行音频重采样（硬件采样率 → 16kHz）
+  espressif/esp_audio_effects: '~1.2.0'
+
+  ## 音频编解码组件
+  ## AI SDK 使用此组件进行 MP3 解码（TTS 播放时解码服务器返回的音频）
+  espressif/esp_audio_codec: '~2.4.0'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影层 -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#10000000"
+                android:endColor="#00000000"
+                android:angle="90" />
+        </shape>
+    </item>
+    
+    <!-- 白色背景 -->
+    <item android:top="2dp">
+        <shape>
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

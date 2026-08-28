@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<!--    android:background="@drawable/bg_bottom_sheet"-->
+
+    <!-- Top Handle -->
+    <View
+        android:id="@+id/viewHandle"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_5"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/bg_handle"
+        android:visibility="gone"/>
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_8">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_history"
+            android:textColor="#1E1E1E"
+            android:textSize="@dimen/font_16"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:padding="@dimen/dp_8" />
+
+        <!-- Close Button -->
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_4"
+            android:src="@drawable/ic_close"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:contentDescription="关闭" />
+
+    </RelativeLayout>
+
+    <!-- Tab Layout -->
+    <HorizontalScrollView
+        android:id="@+id/scrollViewTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTabChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_conversation"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:id="@+id/viewTabChatIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabAgent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_agent"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabAgentIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabDrawing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_ai_drawing"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabDrawingIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabMeeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_meeting"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabMeetingIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabPPT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/label_ppt"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabPPTIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabTranslate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_simultaneous_interpretation"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabTranslateIndicator"
+                   android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tvTabExcel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/title_ai_table"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_16"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <View
+                    android:id="@+id/viewTabExcel"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:background="#1E1E1E"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_translate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_listen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:background="@drawable/bg_stoke_blue_r16"
+            android:text="@string/title_listen"
+            android:textColor="@color/figma_primary_blue"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/bg_stoke_e0_r16"
+            android:text="@string/title_conversation"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_drawing_type_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_drawing_text2img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:background="@drawable/bg_stoke_blue_r16"
+            android:text="@string/title_text_to_image"
+            android:textColor="@color/figma_primary_blue"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tv_drawing_img2img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/bg_stoke_e0_r16"
+            android:text="@string/title_img2img"
+            android:textColor="@color/figma_text_hint"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- History List with SwipeRefresh -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="none" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_200"
+                android:background="@mipmap/icon_empty"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_no_history"
+                android:textSize="@dimen/font_14"
+                android:fontFamily="sans-serif-medium"
+                android:textFontWeight="400"
+                android:textColor="@color/figma_text_hint"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

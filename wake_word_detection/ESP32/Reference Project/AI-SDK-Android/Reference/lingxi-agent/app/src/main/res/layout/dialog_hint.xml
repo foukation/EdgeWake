@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_280"
+    android:layout_height="@dimen/dp_230"
+    android:padding="@dimen/dp_16"
+    android:background="@drawable/bg_dialog_white_rounded_12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_16"
+        android:text="@string/msg_export_success"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_100"
+        android:gravity="center"
+        android:textColor="@color/color_1E1E1E"
+        android:textSize="@dimen/font_16"
+        android:text="@string/msg_export_location"/>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_6"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_cancel"
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_11"
+            android:background="@drawable/bg_button_cancel_figma"
+            android:gravity="center"
+            android:text="@string/btn_later"
+            android:textColor="#000000"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:lineHeight="@dimen/dp_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_check"
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_button_update_figma"
+            android:gravity="center"
+            android:text="@string/btn_confirm_2"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:lineHeight="@dimen/dp_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

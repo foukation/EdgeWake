@@ -1,0 +1,37 @@
+tmp/
+# components/
+managed_components/
+build/
+.vscode/
+.devcontainer/
+# sdkconfig.old
+# sdkconfig
+dependencies.lock
+.env
+releases/
+main/assets/lang_config.h
+main/mmap_generate_emoji.h
+.DS_Store
+.cache
+*.pyc
+*.bin
+mmap_generate_*.h
+.clangd
+
+# Environment variables
+.env.local
+
+ai_sdk_builder/build_esp32
+ai_sdk_builder/build_esp32c2
+ai_sdk_builder/build_esp32c3
+ai_sdk_builder/build_esp32c5
+ai_sdk_builder/build_esp32c6
+ai_sdk_builder/build_esp32p4
+ai_sdk_builder/build_esp32s2
+ai_sdk_builder/build_esp32s3
+
+wake_word_sdk_builder/build_esp32
+wake_word_sdk_builder/build_esp32s3
+wake_word_sdk_builder/build_esp32p4
+
+RTOS-AI_SDK-测试/测试报告

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_24"
+                android:src="@mipmap/back"
+                android:scaleType="centerCrop"
+                android:paddingLeft="@dimen/dp_16"
+                android:visibility="invisible"
+                android:layout_gravity="center_vertical"
+
+                />
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/dp_30"
+                app:tabIndicatorColor="@color/text_black"
+                app:tabSelectedTextColor="@color/text_black"
+                app:tabTextColor="@color/text_999"
+                app:tabTextAppearance="@style/MyTabTextAppearance"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicator="@drawable/shape_tab_indicator"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabMode="scrollable"
+                app:tabPaddingBottom="@dimen/dp_7"
+                app:tabPaddingStart="@dimen/dp_1"
+                app:tabPaddingEnd="@dimen/dp_1"
+                />
+
+
+            <ImageView
+                android:id="@+id/iv_history"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_12"
+                android:src="@drawable/ic_history"
+                android:visibility="gone"
+                android:contentDescription="@string/history" />
+
+
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/recording_input_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_52"-->
+<!--            android:layout_marginStart="@dimen/dp_16"-->
+<!--            android:layout_marginEnd="@dimen/dp_16"-->
+<!--            android:layout_marginBottom="@dimen/dp_8"-->
+<!--            android:background="@drawable/bg_drawing_input"-->
+<!--            android:elevation="@dimen/dp_4"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingStart="@dimen/dp_16"-->
+<!--            android:paddingEnd="@dimen/dp_12"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/hint_describe_create"-->
+<!--                android:textColor="#B2B2B2"-->
+<!--                android:textSize="@dimen/font_16"-->
+<!--                android:lineHeight="@dimen/dp_24"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_microphone"-->
+<!--                android:layout_width="@dimen/dp_40"-->
+<!--                android:layout_height="@dimen/dp_40"-->
+<!--                android:src="@drawable/ic_voice_figma"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:visibility="gone"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless" />-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+    <!-- 输入框容器 -->
+    <LinearLayout
+        android:id="@+id/recording_input_container"
+        android:layout_width="@dimen/dp_151"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/drawing_home_start"
+        android:elevation="@dimen/dp_4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_12"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        >
+
+
+    </LinearLayout>
+</RelativeLayout>

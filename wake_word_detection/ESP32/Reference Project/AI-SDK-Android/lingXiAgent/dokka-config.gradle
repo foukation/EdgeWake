@@ -1,0 +1,66 @@
+apply plugin: 'org.jetbrains.dokka'
+
+dokkaHtml {
+    offlineMode.set(true)
+    outputDirectory.set(file("$buildDir/documentation"))
+
+    dokkaSourceSets {
+        named("main") {
+            moduleName.set("AI-Assist SDK")
+            includes.from("Module.md")
+
+            sourceRoots.from(file("src/main/java"))
+            sourceRoots.from(project(":deviceAccess_gatewayProxy").file("src/main/java"))
+            sourceRoots.from(project(":asrIntelligentDialogue").file("src/main/java"))
+            sourceRoots.from(project(":aiFoundationKit").file("src/main/java"))
+            sourceRoots.from(project(":asrTranslation").file("src/main/java"))
+
+            /*classpath.from(project(":deviceAccess_gatewayProxy").sourceSets.main.output)
+            classpath.from(project(":deviceAccess_gatewayProxy").sourceSets.main.compileClasspath)*/
+
+            suppressedFiles.from(file("src/main/java/com/cmdc/ai/assist/AIAssistantManagerTest.kt"))
+
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/aiModel"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/http"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/utils"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/constraint/ChatModel.kt"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/constraint/CheckUpdate.kt"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/constraint/Enum.kt"))
+            suppressedFiles.from(project(":deviceAccess_gatewayProxy").file("src/main/java/com/cmdc/ai/assist/constraint/ModelsAvail.kt"))
+
+            suppressedFiles.from(project(":asrIntelligentDialogue").file("src/main/java/com/cmdc/ai/assist/aiModel"))
+            suppressedFiles.from(project(":asrIntelligentDialogue").file("src/main/java/com/cmdc/ai/assist/utils"))
+
+            suppressedFiles.from(project(":asrTranslation").file("src/main/java/com/cmdc/ai/assist/aiModel"))
+
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/aiModel"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/http"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/api/SpeechRecognition.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/ChatCompletionRequest.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/ChatCompletionResponse.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/ImageClassify.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/ImageTranslate.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/TextToAudio.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/TextToImage.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/WordQuery.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/OcrRequest.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/OcrResponse.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/cmdc/ai/assist/constraint/SpeechRecognitionData.kt"))
+            suppressedFiles.from(project(":aiFoundationKit").file("src/main/java/com/baidu/voicesearch/opus/OpusTools.java"))
+
+            sourceLink {
+                localDirectory.set(file("src/main/java"))
+                remoteUrl.set(new URL("https://github.com/your-repo/AI-Assist/tree/main/glasses/src/main/java"))
+                remoteLineSuffix.set("#L")
+            }
+
+            /*sourceLink {
+                localDirectory.set(project(":deviceAccess_gatewayProxy").file("src/main/java"))
+                remoteUrl.set(new URL("https://github.com/your-repo/AI-Assist/tree/main/deviceAccess_gatewayProxy/src/main/java"))
+                remoteLineSuffix.set("#L")
+            }*/
+
+        }
+
+    }
+}

@@ -1,0 +1,197 @@
+(venv) PS E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo> idf.py -p COM8 flash monitor
+Executing action: flash
+Running ninja in directory E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo\build
+Executing "ninja flash"...
+[1/5] C:\Windows\system32\cmd.exe /C "cd /D E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo\build\esp-idf\esptool_py && C:\Espressif\to..._demo/build/partition_table/partition-table.bin E:/github/ESP32-RTOS-AI-SDK/wake_word_detection_sdk_builder_demo/build/wake_word_detection_sdk_demo.bin"wake_word_detection_sdk_demo.bin binary size 0x10dce0 bytes. Smallest app partition is 0x177000 bytes. 0x69320 bytes (28%) free.
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo\build\bootloader\esp-idf\esptool_py && C:\E...on_table/check_sizes.py --offset 0x8000 bootloader 0x0 E:/github/ESP32-RTOS-AI-SDK/wake_word_detection_sdk_builder_demo/build/bootloader/bootloader.bin"Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[4/5] C:\Windows\system32\cmd.exe /C "cd /D D:\issuser\AppData\esp\.espressif\v5.4.3\esp-idf\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bi...-RTOS-AI-SDK/wake_word_detection_sdk_builder_demo/build -P D:/issuser/AppData/esp/.espressif/v5.4.3/esp-idf/components/esptool_py/run_serial_tool.cmake"esptool.py --chip esp32s3 -p COM8 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 wake_word_detection_sdk_demo.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.0
+Serial port COM8
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 20:6e:f1:aa:3d:4c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0011dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20928 bytes to 13319...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13319 compressed) at 0x00000000 in 0.2 seconds (effective 737.6 kbit/s)...
+Hash of data verified.
+Compressed 1105120 bytes to 574320...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c2fa... (5 %)
+Writing at 0x00022a49... (8 %)
+Writing at 0x00027d6d... (11 %)
+Writing at 0x0002c95f... (13 %)
+Writing at 0x00032e81... (16 %)
+Writing at 0x00039939... (19 %)
+Writing at 0x0003fdd4... (22 %)
+Writing at 0x0004476e... (25 %)
+Writing at 0x00049c63... (27 %)
+Writing at 0x0005040a... (30 %)
+Writing at 0x00056dcb... (33 %)
+Writing at 0x0005b719... (36 %)
+Writing at 0x00060971... (38 %)
+Writing at 0x0006621d... (41 %)
+Writing at 0x0006aedc... (44 %)
+Writing at 0x0006f5ee... (47 %)
+Writing at 0x00073e58... (50 %)
+Writing at 0x000843c3... (52 %)
+Writing at 0x000989b1... (55 %)
+Writing at 0x000ab7ce... (58 %)
+Writing at 0x000c9a98... (61 %)
+Writing at 0x000d2703... (63 %)
+Writing at 0x000d887a... (66 %)
+Writing at 0x000df5df... (69 %)
+Writing at 0x000e4855... (72 %)
+Writing at 0x000ea1bb... (75 %)
+Writing at 0x000ef72e... (77 %)
+Writing at 0x000f4d93... (80 %)
+Writing at 0x000fa487... (83 %)
+Writing at 0x000ff3f7... (86 %)
+Writing at 0x00104aa7... (88 %)
+Writing at 0x0010b3e4... (91 %)
+Writing at 0x00110d15... (94 %)
+Writing at 0x00116d8c... (97 %)
+Writing at 0x0011d898... (100 %)
+Wrote 1105120 bytes (574320 compressed) at 0x00010000 in 5.4 seconds (effective 1634.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 878.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Executing action: monitor
+Running idf_monitor in directory E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo
+Executing "C:\Espressif\tools\python\v5.4.3\venv\Scripts\python.exe D:\issuser\AppData\esp\.espressif\v5.4.3\esp-idf\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 E:\github\ESP32-RTOS-AI-SDK\wake_word_detection_sdk_builder_demo\build\wake_word_detection_sdk_demo.elf --force-color -m 'C:\Espressif\tools\python\v5.4.3\venv\Scripts\python.exe' 'D:\issuser\AppData\esp\.espressif\v5.4.3\esp-idf\tools\idf.py' '-p' 'COM8'"...
+--- Warning: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM8 instead...
+--- esp-idf-monitor 1.9.0 on \\.\COM8 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+I (224) esp_image: segment 1: paddr=000cb8d4 vaddr=3fc93800 sizeESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200afd3
+--- 0x4200afd3: s_test_psram at D:/issuser/AppData/esp/.espressif/v5.4.3/esp-idf/components/esp_psram/esp_psram.c:538
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1564
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd24
+load:0x403cb700,len:0x2ed4
+entry 0x403c8928
+I (26) boot: ESP-IDF v5.4.3 2nd stage bootloader
+I (27) boot: compile time Aug 27 2026 12:02:01
+I (27) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (30) boot: efuse block revision: v1.3
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (37) boot.esp32s3: SPI Mode       : DIO
+I (41) boot.esp32s3: SPI Flash Size : 2MB
+I (45) boot: Enabling RNG early entropy source...
+I (49) boot: Partition Table:
+I (52) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (71) boot:  2 factory          factory app      00 00 00010000 00177000
+I (78) boot: End of partition table
+I (81) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=bb8ach (768172) map
+I (224) esp_image: segment 1: paddr=000cb8d4 vaddr=3fc93800 size=02f54h ( 12116) load
+I (227) esp_image: segment 2: paddr=000ce830 vaddr=40374000 size=017e8h (  6120) load
+I (229) esp_image: segment 3: paddr=000d0020 vaddr=42000020 size=3fcc0h (261312) map
+I (281) esp_image: segment 4: paddr=0010fce8 vaddr=403757e8 size=0dfach ( 57260) load
+I (294) esp_image: segment 5: paddr=0011dc9c vaddr=50000000 size=0001ch (    28) load
+I (301) boot: Loaded app from partition at offset 0x10000
+I (301) boot: Disabling RNG early entropy source...
+I (312) octal_psram: vendor id    : 0x0d (AP)
+I (312) octal_psram: dev id       : 0x02 (generation 3)
+I (312) octal_psram: density      : 0x03 (64 Mbit)
+I (314) octal_psram: good-die     : 0x01 (Pass)
+I (319) octal_psram: Latency      : 0x01 (Fixed)
+I (323) octal_psram: VCC          : 0x01 (3V)
+I (327) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (332) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (337) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (341) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (347) octal_psram: DriveStrength: 0x00 (1/1)
+I (351) MSPI Timing: PSRAM timing tuning index: 5
+I (355) esp_psram: Found 8MB PSRAM device
+I (359) esp_psram: Speed: 80MHz
+I (362) cpu_start: Multicore app
+I (797) esp_psram: SPI SRAM memory test OK
+I (822) cpu_start: Pro cpu start user code
+I (823) cpu_start: cpu freq: 160000000 Hz
+I (823) app_init: Application information:
+I (823) app_init: Project name:     wake_word_detection_sdk_demo
+I (828) app_init: App version:      v0.9.8-57-ge533e3e-dirty
+I (834) app_init: Compile time:     Aug 27 2026 12:00:43
+I (839) app_init: ELF file SHA256:  87c670677...
+I (843) app_init: ESP-IDF:          v5.4.3
+I (847) efuse_init: Min chip rev:     v0.0
+I (851) efuse_init: Max chip rev:     v0.99 
+I (855) efuse_init: Chip rev:         v0.2
+I (859) heap_init: Initializing. RAM available for dynamic allocation:
+I (865) heap_init: At 3FCA1B50 len 00047BC0 (286 KiB): RAM
+I (870) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (875) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (880) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (886) esp_psram: Adding pool of 7680K of PSRAM memory to heap allocator
+I (893) spi_flash: detected chip: generic
+I (896) spi_flash: flash io: dio
+W (899) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (919) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (919) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (925) main_task: Started on CPU0
+I (935) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (935) main_task: Calling app_main()
+I (935) app_main: tf_main task started
+I (945) tf_main: setup start
+I (945) tf_main: model loaded
+I (945) tf_main: creating interpreter...
+I (955) tf_main: interpreter created
+I (955) tf_main: AllocateTensors start...
+I (975) tf_main: AllocateTensors done
+I (985) tf_main: All input states initialized to zero
+I (985) tf_main: setup complete (chunk mode: 5s chunk, 400ms stride)
+I (5005) tf_main: ------------ seg_001 (offline) ------------
+I (5005) tf_main: audio_duration_ms: 2800
+I (5005) tf_main: outputs_windows: 7
+I (5005) tf_main: detected: True
+I (5005) tf_main: wake_word: LINGXILINGXI
+I (5005) tf_main: max_prob: 0.999089
+I (5015) tf_main: events: 1
+I (5015) tf_main:   [0] frame=159 timestamp_s=1.590000 score=0.731059
+I (9035) tf_main: ------------ seg_002 (offline) ------------
+I (9035) tf_main: audio_duration_ms: 2800
+I (9035) tf_main: outputs_windows: 7
+I (9035) tf_main: detected: True
+I (9045) tf_main: wake_word: LINGXILINGXI
+I (9045) tf_main: max_prob: 0.999999
+I (9045) tf_main: events: 1
+I (9055) tf_main:   [0] frame=200 timestamp_s=2.000000 score=0.997527
+I (13075) tf_main: ------------ seg_003 (offline) ------------
+I (13075) tf_main: audio_duration_ms: 2800
+I (13075) tf_main: outputs_windows: 7
+I (13075) tf_main: detected: True
+I (13075) tf_main: wake_word: LINGXILINGXI
+I (13085) tf_main: max_prob: 0.999877
+I (13085) tf_main: events: 1
+I (13085) tf_main:   [0] frame=198 timestamp_s=1.980000 score=0.993307
+I (15395) tf_main: ------------ bg_noise (offline) ------------
+I (15395) tf_main: audio_duration_ms: 1600
+I (15395) tf_main: outputs_windows: 4
+I (15395) tf_main: detected: False
+I (15395) tf_main: max_prob: 0.500000
+I (15405) tf_main: events: 0

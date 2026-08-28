@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--<com.scwang.smart.refresh.layout.SmartRefreshLayout-->
+<!--    android:id="@+id/refreshLayout"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="0dp"-->
+<!--    android:layout_weight="1">-->
+
+<!--    <com.scwang.smart.refresh.header.ClassicsHeader-->
+<!--        android:id="@+id/refresh_header"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:srlTextPulling="Pull to refresh"-->
+<!--        app:srlTextRelease="Release to refresh"-->
+<!--        app:srlTextRefreshing="Refreshing"-->
+<!--        app:srlTextFinish="Success"-->
+<!--        app:srlEnableLastTime="false"-->
+<!--        />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+<!--    <com.scwang.smart.refresh.footer.ClassicsFooter-->
+<!--        android:id="@+id/refresh_footer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:srlTextLoading="Loading"-->
+<!--        app:srlTextFinish="Success"-->
+<!--        app:srlTextNothing="no data"-->
+<!--        />-->
+
+<!--</com.scwang.smart.refresh.layout.SmartRefreshLayout>-->
+
+
+
+</LinearLayout>

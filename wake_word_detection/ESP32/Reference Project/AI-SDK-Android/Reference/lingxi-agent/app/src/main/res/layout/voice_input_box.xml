@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_343"
+    android:layout_height="@dimen/dp_52"
+    android:background="@drawable/bg_voice_input_box"
+    android:elevation="@dimen/dp_4"
+    android:layout_centerHorizontal="true">
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_52"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:hint="@string/hint_send_message_ellipsis"
+        android:textColorHint="#B2B2B2"
+        android:textColor="#1E1E1E"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionSend" />
+
+    <ImageButton
+        android:id="@+id/btn_voice"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:background="@drawable/bg_send_button_ripple"
+        android:src="@drawable/ic_voice_input"
+        android:scaleType="centerInside"
+        android:padding="@dimen/dp_8"
+        android:contentDescription="语音输入" />
+
+</RelativeLayout>

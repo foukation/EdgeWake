@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_primary"
+    android:padding="@dimen/dp_16">
+
+    <!-- 状态卡片 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:cardCornerRadius="@dimen/dp_12"
+        app:cardElevation="@dimen/dp_4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_stream_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_ready"
+                android:textSize="@dimen/font_16"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dp_12" />
+
+            <ProgressBar
+                android:id="@+id/progress_stream"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:progressTint="@color/color_primary"
+                android:progressBackgroundTint="@color/progress_background" />
+
+            <TextView
+                android:id="@+id/tv_progress_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_zero_percent"
+                android:textSize="@dimen/font_12"
+                android:textColor="@color/text_secondary"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 操作按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <Button
+            android:id="@+id/btn_start_stream"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:text="@string/label_start_stream"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_primary"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <Button
+            android:id="@+id/btn_api_stream"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:text="@string/title_api_stream_sim"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_secondary"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4" />
+
+        <Button
+            android:id="@+id/btn_stop_stream"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="1"
+            android:text="@string/btn_stop"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_danger"
+            android:layout_marginStart="@dimen/dp_8"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <!-- 清除按钮 -->
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="@string/btn_clear_content"
+        android:textColor="@color/text_secondary"
+        android:background="@drawable/button_outline"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:enabled="false" />
+
+    <!-- 内容显示区域 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="@dimen/dp_12"
+        app:cardElevation="@dimen/dp_4">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tv_stream_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_16"
+                android:text="@string/msg_waiting_stream"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/text_primary"
+                android:lineSpacingExtra="@dimen/dp_4"
+                android:gravity="start|top"
+                android:textIsSelectable="true" />
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- 加载指示器 -->
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_16"
+        android:visibility="gone"
+        android:indeterminateTint="@color/color_primary" />
+
+</LinearLayout>

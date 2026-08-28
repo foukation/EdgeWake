@@ -1,0 +1,16 @@
+# ===========================================================================
+# AI SDK Standalone Build Project - ESP32-S2 Specific Configuration
+# ===========================================================================
+#
+# Target chip: ESP32-S2
+# Architecture: Xtensa LX7 single-core
+# Max frequency: 240MHz
+# Features: USB OTG support, no Bluetooth
+#
+# ===========================================================================
+
+# Flash size: 4MB (minimal config for build project)
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# CPU frequency: 240MHz
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y

@@ -1,0 +1,12 @@
+﻿序号,产品品牌,产品名称（包含厂商、型号）,操作系统,芯片型号,编译系统,编译工具链
+10.0,深圳市五兴科技有限公司,4G版AI智能语音鼠标,threadX,1803sc,"LINUX,WINDOWS","gnumake-3.81,RVCT 3.1,armv7-marvell-eabi"
+48.0,KUMI库觅,KUMI Watch3S 5G AI学习手表,ThreadX,ASR3901,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+54.0,移柯通信,移柯通信,ThreadX,asr1607,windows,https://caiyun.139.com/w/i/2pbtTvkcgEPs2 提取码:uvh9
+71.0,纽曼,纽曼,ThreadX,ASR3603C,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+89.0,温州颖联科技有限公司,定位器(4G无线数据终端),threadx ,GX306,arm gcc系统,gcc-arm-none-eabi-10-2020-q4-major
+108.0,深圳市雄帝科技股份有限公司,AI电子学生证,ThreadX V5.1,ASR1606S,/,/
+111.0,上学啦（深圳）科技有限公司,贴近-电子学生证,ThreadX V5.1,ASR3603C,/,/
+144.0,四川影目科技有限公司,INMO GO3,Threadx,w337,windows,闭源编译工具链(Arm compiler6.13)
+172.0,深圳汀灵智能科技有限公司,Mooni,THREADX,ASR3602C,Windows， ASR有自己的编译工具和SDK,ARM DS-5 V5.26.2，ActivePerl 5.28.1 Build 2801，msys2-x86_64-20190524
+177.0,深圳市英得尔实业有限公司,魅米MEEMI-IND5,ThreadX,ASR3602,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)
+178.0,深圳市英得尔实业有限公司,indell-IND2,ThreadX,ASR3602,Windows系统msys2,ARM DS-5 V5.26.2 (64-bit)

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!-- 顶部栏 -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_14"
+            android:src="@drawable/ic_arrow_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_settings"
+            android:textColor="#1E1E1E"            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="normal"
+            android:fontWeight="500" />
+
+        <ImageView
+            android:id="@+id/iv_user_guide"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_user_guide"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:minHeight="@dimen/dp_22"
+            />
+    </RelativeLayout>
+
+    <!-- 设置列表块 -->
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@+id/layout_wakeup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_16"
+            >
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_voice_wakeup"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/guide_voice_btn_hint"
+                    android:textColor="#999999"
+                    android:maxLines="2"
+                    android:textSize="@dimen/font_12"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_wakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_power_wakeup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_50"            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_22"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_power_wakeup"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+                    android:text="@string/guide_power_btn_hint"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_12"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_power_wakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_keybord_wakeup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_22">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_keyboard_wakeup"
+                    android:textColor="#1E1E1E"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/guide_keyword_btn_hint"
+                    android:textColor="#999999"
+                    android:maxLines="2"
+                    android:textSize="@dimen/font_12"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif"
+                    android:fontWeight="400"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_keybord_wakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <!-- 首选大模型块 -->
+        <LinearLayout
+            android:id="@+id/layout_model"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_22"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_preferred_model"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:fontWeight="400" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_model_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_hunyuan"
+                android:textColor="#999999"
+                android:textSize="@dimen/font_15" />
+            <ImageView
+                android:id="@+id/iv_arrow_model"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_arrow_right_grey" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_voice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_22">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_sound"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:fontWeight="400" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#999999"
+                android:textSize="@dimen/font_15" />
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_arrow_right_grey" />
+        </LinearLayout>
+        <!-- 语音打字语言块 -->
+        <LinearLayout
+            android:id="@+id/layout_language"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_22">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_voice_typing_language"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:fontWeight="400" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_mandarin_canto_eng"
+                android:textColor="#999999"
+                android:textSize="@dimen/font_15" />
+            <ImageView
+                android:id="@+id/iv_arrow_language"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_arrow_right_grey" />
+        </LinearLayout>
+        <!-- 账号安全块 -->
+        <LinearLayout
+            android:id="@+id/layout_security"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_block_rounded_16_gray"
+            android:paddingLeft="@dimen/dp_16"
+            android:paddingRight="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_22">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_account_security"
+                android:textColor="#1E1E1E"
+                android:textSize="@dimen/font_16"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:fontWeight="400" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:src="@drawable/ic_arrow_right_grey" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

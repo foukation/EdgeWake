@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- External files directory -->
+    <external-files-path 
+        name="external_files" 
+        path="." />
+    
+    <!-- Documents directory for exports -->
+    <external-files-path 
+        name="exports" 
+        path="Documents/exports" />
+    
+    <!-- Cache directory -->
+    <external-cache-path 
+        name="external_cache" 
+        path="." />
+</paths>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_8"
+    app:cardCornerRadius="@dimen/dp_12"
+    app:cardElevation="@dimen/dp_4"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_24">
+
+        <!-- Background image for slide with zoom support -->
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/slide_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:alpha="0.9" />
+
+        <!-- Main content container -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:minHeight="@dimen/dp_400">
+
+                <!-- Slide title -->
+                <TextView
+                    android:id="@+id/slide_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_28"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:maxLines="3"
+                    android:ellipsize="end" />
+
+                <!-- Slide content -->
+                <TextView
+                    android:id="@+id/slide_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_16"
+                    android:textColor="#666666"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="1.5"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16" />
+
+                <!-- Chart container -->
+                <LinearLayout
+                    android:id="@+id/chart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp_24">
+
+                    <!-- Chart 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp_16">
+
+                        <View
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_100"
+                            android:background="@drawable/bg_circle_chart_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_sales_growth"
+                            android:textSize="@dimen/font_12"
+                            android:textColor="#666666"
+                            android:layout_marginTop="@dimen/dp_4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_pct_20"
+                            android:textSize="@dimen/font_24"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/dp_4" />
+
+                    </LinearLayout>
+
+                    <!-- Chart 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp_16">
+
+                        <View
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_100"
+                            android:background="@drawable/bg_circle_chart_2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_customer_satisfaction"
+                            android:textSize="@dimen/font_12"
+                            android:textColor="#666666"
+                            android:layout_marginTop="@dimen/dp_4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_pct_30"
+                            android:textSize="@dimen/font_24"
+                            android:textColor="#2196F3"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/dp_4" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Section number overlay -->
+        <TextView
+            android:id="@+id/section_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/label_num_01"
+            android:textSize="@dimen/font_48"
+            android:textColor="#E0E0E0"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:alpha="0.3" />
+
+        <!-- Slide type indicator -->
+        <View
+            android:id="@+id/slide_type_indicator"
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:background="#2196F3"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

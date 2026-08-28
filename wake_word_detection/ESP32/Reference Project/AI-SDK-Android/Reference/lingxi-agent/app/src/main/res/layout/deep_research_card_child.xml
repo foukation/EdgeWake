@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_32"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        >
+        <CheckBox
+            android:layout_marginLeft="@dimen/dp_12"
+            android:id="@+id/cb_checkbox_single"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_test_dummy"
+            android:textSize="@dimen/font_12"
+            android:paddingLeft="@dimen/dp_12"
+            android:button="@drawable/selector_checkbox_ring"
+            android:checked="false"
+            android:visibility="gone"
+        />
+        <CheckBox
+            android:layout_marginLeft="@dimen/dp_12"
+            android:id="@+id/cb_checkbox_multiple"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_test_dummy"
+            android:textSize="@dimen/font_12"
+            android:paddingLeft="@dimen/dp_12"
+            android:button="@drawable/selector_checkbox_white"
+            android:checked="false"
+            />
+        <!--            android:button="@drawable/selector_checkbox_white"-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_width="@dimen/dp_14"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:background="@color/color_E0E0E0" />
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rl_line"
+        android:background="@drawable/bg_gray_top_radius_8"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_child_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"
+            android:text="@string/title_design_focus_appearance"
+
+            />
+
+        <ImageView
+            android:layout_toEndOf="@+id/tv_child_item_content"
+            android:id="@+id/iv_child_item_arrow"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@drawable/deep_research_gradient_ring"
+            tools:ignore="ContentDescription"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

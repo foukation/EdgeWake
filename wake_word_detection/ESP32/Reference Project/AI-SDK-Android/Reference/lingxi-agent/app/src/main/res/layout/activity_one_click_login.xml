@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="com.fxzs.lingxiagent.view.auth.OneClickLoginActivity">
+
+    <!-- 顶部关闭按钮 -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:src="@drawable/ic_close_long"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 注册按钮 -->
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/btn_register"
+        android:textColor="@color/login_text_primary"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="sans-serif"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/dp_96"
+        android:layout_height="@dimen/dp_96"
+        android:layout_marginTop="157dp"
+        android:src="@drawable/icon_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 应用标题 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/title_lingxi"
+        android:textColor="@color/login_text_primary"
+        android:textSize="@dimen/font_24"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <!-- 按钮组容器 -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="@dimen/dp_313"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="347dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 一键登录按钮 -->
+        <Button
+            android:id="@+id/btnOneClickLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/login_button_primary_selector"
+            android:text="@string/btn_one_key_login"
+            android:textColor="@color/login_background"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="@dimen/dp_15" />
+
+        <!-- 切换登录方式按钮 -->
+        <Button
+            android:id="@+id/btnSwitchLoginMethod"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:background="@drawable/login_button_secondary_selector"
+            android:text="@string/btn_switch_login"
+            android:textColor="@color/login_text_primary"
+            android:textSize="@dimen/font_16"
+            android:fontFamily="sans-serif"
+            android:elevation="0dp"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+    <!-- 协议区 -->
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonContainer"
+        layout="@layout/view_service_statement"/>
+
+    <!-- Home Indicator -->
+<!--    <View-->
+<!--        android:layout_width="134dp"-->
+<!--        android:layout_height="@dimen/dp_5"-->
+<!--        android:layout_marginBottom="@dimen/dp_11"-->
+<!--        android:background="@drawable/bg_home_indicator"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

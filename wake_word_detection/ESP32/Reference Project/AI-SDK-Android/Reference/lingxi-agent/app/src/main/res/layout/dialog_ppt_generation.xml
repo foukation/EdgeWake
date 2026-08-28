@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <!-- 弹窗容器 -->
+    <LinearLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_rounded"
+        android:clipToPadding="false"
+        android:padding="@dimen/dp_24">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_ai_assembling_ppt"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/text_999"
+            android:textStyle="normal"
+            android:gravity="left"
+            android:layout_marginBottom="@dimen/dp_12" />
+
+        <!-- 副标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_render_ppt_page"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/text_999"
+            android:gravity="left"
+            android:layout_marginBottom="@dimen/dp_12" />
+
+        <!-- 进度信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_15">
+
+            <!-- 进度图标 -->
+            <ImageView
+                android:id="@+id/iv_progress"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:src="@mipmap/ppt_progressing"
+                android:layout_marginEnd="@dimen/dp_8" />
+
+            <!-- 进度文本 -->
+            <TextView
+                android:id="@+id/progress_status_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_generate_ppt"
+                android:textSize="@dimen/font_12"
+                android:textColor="@color/text_999" />
+
+        </LinearLayout>
+
+        <!-- 进度条容器 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8">
+
+            <!-- 进度条背景 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:background="@drawable/bg_progress_background" />
+
+            <!-- 进度条 -->
+            <View
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_6"
+                android:background="@drawable/bg_progress_foreground" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_progress_percentage"
+            android:layout_width="@dimen/dp_38"
+            android:layout_height="@dimen/dp_24"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_neg_19"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dp_5"
+                android:layout_height="@dimen/dp_5"
+                android:background="@drawable/ppt_progress_dot"
+                android:layout_marginBottom="@dimen/dp_neg_2"
+                />
+            <!-- 进度百分比 -->
+            <TextView
+                android:id="@+id/progress_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_pct_92"
+                android:textSize="@dimen/font_10"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:background="@drawable/bg_ppt_progress_r16"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/close_dialog"
+       android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/dialog_container"
+        android:layout_marginTop="@dimen/dp_24"
+        android:src="@drawable/ic_close_circle"
+        android:background="@drawable/bg_close_button"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>
