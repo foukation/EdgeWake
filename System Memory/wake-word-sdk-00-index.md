@@ -49,5 +49,17 @@
 | 固件体积 | ≈1.10MB，SINGLE_APP_LARGE 1.5MB 分区剩 ~28% |
 | .a 体积 | ≈379KB（strip 后），路径 `lib/esp32s3/libwake_word_detection_sdk.a` |
 
+## 6. 后续方向（2026-09-28 用户决策）
+
+- **需求：语音唤醒 SDK 本身要内置"音频驱动"**（让 `.a` 库自己驱动 ES7210 麦克风采集，不只被动收 PCM）。
+  - 现状：SDK 只暴露 `AcceptWaveform(int16*, len)` 收现成 PCM；demo 只跑内嵌 wav 离线识别；`esp_codec_dev`(ES7210) 依赖已声明但**零引用**（无任何 i2s/codec/采集代码）。
+  - 目标：在 **builder 源码侧**新增音频采集模块（如 `src/audio_capture.cc` + `include/`），对外给 `WakeWord_StartMic(引脚配置, 检测回调)` / `WakeWord_StopMic()`；内部 I2S+ES7210→16k/16bit/单声道→FeaturePipeline→Invoke→流式 RecognizeCommands→命中回调。原 `AcceptWaveform` 保留，两用法并存。
+  - 连带改动：组件 `CMakeLists.txt` 的 `REQUIRES` 现只有 `esp-tflite-micro`，需加 `esp_codec_dev` + `driver`(I2S)；重编库 → `.a` 变大；demo 改调新 API。
+  - **设计约束**：引脚**不可写死进库**，必须由 `StartMic` 参数传入（BCLK/WS/DIN/MCLK、I2C SDA/SCL、ES7210 地址），否则库绑死单板。
+  - 现成参考：`ai_sdk_builder/components/ai_sdk/src/audio/codecs/box_audio_codec.cc`（ES7210 完整初始化，可移植）；纯 I2S 参考 `no_audio_codec.cc`。
+  - 目标板注释：立创·实战派 ESP32-S3 / lichuang-dev（引脚待用户确认）。
+  - 流式判决参数：`RecognizeCommands(avg_window=1000, threshold=0.5, suppression=2000, min_count=1)`；`ProcessLatestResults` 的 `current_time_ms` 必须单调递增。
+  - **状态：方向已确认，未动手（详细实施方案待出→用户批准后再改）。**
+
 ---
 *本文件为 AI 记忆快照，供跨会话恢复上下文。*
